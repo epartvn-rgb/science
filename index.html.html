@@ -1,0 +1,1630 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sổ tay Đất hiếm – Báo cáo tổng hợp đặc biệt về Đất hiếm toàn cầu 2026</title>
+<style>
+  :root{
+    --primary:#0b3d91;
+    --secondary:#12539e;
+    --accent:#c8a45c;
+    --bg:#f7f8fa;
+    --text:#1c1c1c;
+    --muted:#555;
+    --border:#d9dde3;
+    --code:#eef2f7;
+    --flow-bg:#f0f4fa;
+    --flow-border:#8aa8d0;
+    --lib-bg:#fafbfd;
+    --chain-up:#1b5e20;
+    --chain-mid:#e65100;
+    --chain-down:#0d47a1;
+    --chain-rec:#6a1b9a;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;
+    line-height:1.7;
+    color:var(--text);
+    background:var(--bg);
+  }
+  section[id], h3[id], h4[id]{scroll-margin-top:110px;}
+  header.hero{
+    background:linear-gradient(135deg,#0b3d91 0%,#12539e 50%,#c8a45c 100%);
+    color:#fff;padding:60px 24px 50px;text-align:center;
+  }
+  header.hero h1{font-size:2.4rem;margin:0 0 12px;letter-spacing:1px;}
+  header.hero p.sub{font-size:1.05rem;opacity:.95;max-width:900px;margin:0 auto;}
+  header.hero .guidance{margin-top:18px;font-size:.95rem;opacity:.9;font-style:italic;}
+  header.hero .meta{margin-top:10px;font-size:.9rem;opacity:.85;}
+  nav.toc{
+    background:#fff;border-bottom:3px solid var(--primary);padding:14px 24px;
+    position:sticky;top:0;z-index:100;box-shadow:0 2px 6px rgba(0,0,0,.06);
+    max-height:56px;overflow:hidden;transition:max-height .35s ease;
+  }
+  nav.toc:hover,nav.toc:focus-within{max-height:75vh;overflow:auto;}
+  nav.toc h2{font-size:.95rem;margin:0 0 8px;color:var(--primary);text-transform:uppercase;letter-spacing:1px;cursor:default;}
+  nav.toc h2::after{content:" ▼ (di chuột để mở rộng)";font-size:.7rem;font-weight:400;text-transform:none;letter-spacing:0;color:var(--muted);}
+  nav.toc ol{columns:2;column-gap:32px;margin:0;padding-left:20px;font-size:.9rem;}
+  nav.toc a{color:var(--secondary);text-decoration:none;}
+  nav.toc a:hover{text-decoration:underline;}
+  main{max-width:1200px;margin:0 auto;padding:32px 24px 80px;}
+  section{background:#fff;border:1px solid var(--border);border-radius:8px;padding:26px 30px;margin-bottom:26px;box-shadow:0 1px 3px rgba(0,0,0,.04);}
+  section h2{color:var(--primary);border-bottom:2px solid var(--accent);padding-bottom:8px;margin-top:0;font-size:1.5rem;}
+  section h3{color:var(--secondary);margin-top:26px;font-size:1.2rem;}
+  section h4{color:#333;margin-top:20px;font-size:1.05rem;}
+  p{margin:10px 0;}
+  ul,ol{padding-left:24px;}
+  li{margin:5px 0;}
+  a{color:var(--secondary);}
+  a:hover{color:var(--primary);}
+  table{width:100%;border-collapse:collapse;margin:14px 0;font-size:.93rem;}
+  th,td{border:1px solid var(--border);padding:8px 10px;text-align:left;vertical-align:top;}
+  th{background:#eaf0f8;color:var(--primary);font-weight:600;}
+  tr:nth-child(even){background:#fafbfd;}
+  blockquote{border-left:4px solid var(--accent);background:#fdf9ef;margin:14px 0;padding:10px 16px;font-style:italic;color:#4a4232;}
+  .note{background:var(--code);border-left:4px solid var(--primary);padding:12px 16px;border-radius:4px;margin:14px 0;font-size:.94rem;}
+  .ref{font-size:.86rem;color:var(--muted);margin-top:6px;}
+  .ref a{color:#12539e;}
+  .badge{display:inline-block;background:var(--accent);color:#2a2107;font-size:.72rem;font-weight:700;padding:2px 8px;border-radius:10px;margin-left:6px;vertical-align:middle;letter-spacing:.5px;}
+  .badge-green{background:#4caf50;color:#fff;}
+  .badge-orange{background:#e65100;color:#fff;}
+  .badge-blue{background:#1565c0;color:#fff;}
+  .badge-purple{background:#7b1fa2;color:#fff;}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin:14px 0;}
+  .card{background:#f3f6fb;border:1px solid #d5dfee;border-radius:6px;padding:14px 16px;}
+  .card h5{margin:0 0 6px;color:var(--primary);font-size:1rem;}
+
+  /* Flowchart */
+  .flowchart{background:var(--flow-bg);border:1px solid var(--flow-border);border-radius:8px;padding:18px 20px;margin:18px 0;font-size:.9rem;overflow-x:auto;}
+  .flowchart .flow-title{font-weight:700;color:var(--primary);margin-bottom:12px;font-size:.95rem;letter-spacing:.3px;}
+  .flow-row{display:flex;align-items:center;flex-wrap:wrap;gap:6px;margin:6px 0;}
+  .flow-box{display:inline-block;background:#fff;border:2px solid var(--flow-border);border-radius:6px;padding:6px 12px;font-size:.85rem;white-space:nowrap;box-shadow:0 1px 2px rgba(0,0,0,.05);}
+  .flow-box.primary{background:#dce8f8;border-color:var(--primary);font-weight:600;}
+  .flow-box.accent{background:#fdf3df;border-color:var(--accent);}
+  .flow-box.green{background:#e6f4ea;border-color:#4caf50;}
+  .flow-box.red{background:#fde8e8;border-color:#e53935;}
+  .flow-box.purple{background:#f3e5f5;border-color:#7b1fa2;}
+  .flow-arrow{color:var(--primary);font-weight:700;font-size:1rem;}
+  .flow-note{font-size:.8rem;color:var(--muted);margin-top:8px;font-style:italic;}
+  .flow-branch{margin-left:24px;border-left:3px dashed var(--flow-border);padding-left:14px;margin-top:4px;}
+  .flow-branch .flow-row{margin:4px 0;}
+
+  /* Supply Chain Diagram */
+  .supply-chain{background:#f5f7fb;border:2px solid var(--primary);border-radius:10px;padding:24px;margin:24px 0;}
+  .sc-title{text-align:center;font-weight:800;color:var(--primary);font-size:1.15rem;margin-bottom:20px;letter-spacing:1px;}
+  .sc-tier{margin:0 0 22px 0;padding:16px 18px;border-radius:8px;position:relative;}
+  .sc-tier::before{content:attr(data-tier);position:absolute;top:-12px;left:18px;background:var(--primary);color:#fff;font-size:.72rem;font-weight:700;padding:2px 12px;border-radius:10px;letter-spacing:1px;}
+  .sc-tier.upstream{border:2px solid var(--chain-up);background:#e8f5e9;}
+  .sc-tier.midstream{border:2px solid var(--chain-mid);background:#fff3e0;}
+  .sc-tier.downstream{border:2px solid var(--chain-down);background:#e3f2fd;}
+  .sc-tier.recycling{border:2px solid var(--chain-rec);background:#f3e5f5;}
+  .sc-tier h4{margin:8px 0 10px;font-size:1rem;}
+  .sc-tier.upstream h4{color:var(--chain-up);}
+  .sc-tier.midstream h4{color:var(--chain-mid);}
+  .sc-tier.downstream h4{color:var(--chain-down);}
+  .sc-tier.recycling h4{color:var(--chain-rec);}
+  .sc-nodes{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin:10px 0;}
+  .sc-node{background:#fff;border-radius:6px;padding:10px 12px;font-size:.85rem;border:1px solid #ddd;box-shadow:0 1px 3px rgba(0,0,0,.06);}
+  .sc-node strong{display:block;margin-bottom:4px;font-size:.88rem;}
+  .sc-node small{color:var(--muted);font-size:.8rem;}
+  .sc-arrow-down{text-align:center;font-size:1.6rem;color:var(--primary);margin:6px 0;}
+  .sc-china-share{display:inline-block;background:#ffebee;color:#c62828;font-weight:700;font-size:.78rem;padding:1px 8px;border-radius:8px;margin-left:4px;}
+
+  /* Library */
+  .lib-section{background:var(--lib-bg);}
+  .lib-category{margin-top:24px;}
+  .lib-category h4{color:var(--primary);border-left:4px solid var(--accent);padding-left:10px;margin-bottom:12px;}
+  .lib-item{padding:10px 14px;border-bottom:1px solid #e8ecf1;font-size:.92rem;}
+  .lib-item:last-child{border-bottom:none;}
+  .lib-item .lib-title{font-weight:600;color:var(--secondary);}
+  .lib-item .lib-source{font-size:.82rem;color:var(--muted);margin-top:2px;}
+  .lib-item .lib-desc{font-size:.85rem;color:#444;margin-top:2px;}
+  .lib-item a{word-break:break-all;}
+
+  footer{background:#0b3d91;color:#e8eefc;padding:28px 24px;text-align:center;font-size:.9rem;}
+  footer a{color:#ffd97a;}
+  .back-top{display:inline-block;margin-top:12px;font-size:.85rem;color:var(--secondary);text-decoration:none;}
+  @media(max-width:720px){
+    nav.toc ol{columns:1;}
+    header.hero h1{font-size:1.5rem;}
+    section{padding:18px;}
+    .flow-box{white-space:normal;}
+    .sc-nodes{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <h1>SỔ TAY ĐẤT HIẾM</h1>
+  <p class="sub">Công nghệ khai thác – Làm giàu – Chế biến sâu – Chiết tách quặng – Ứng dụng – Chuỗi cung ứng – Đơn vị chủ chốt – Nghiên cứu mới nhất</p>
+  <div class="guidance">Hướng dẫn bởi TS. Nguyễn Huy Cường · Tổng hợp: TP</div>
+  <div class="meta">Phiên bản 2026 (Cập nhật đầy đủ) · Tổng hợp từ nguồn khoa học &amp; báo cáo ngành 2024–2026</div>
+</header>
+
+<nav class="toc" id="toc">
+  <h2>Mục lục</h2>
+  <ol>
+    <li><a href="#s1">Tổng quan về đất hiếm &amp; 17 nguyên tố</a></li>
+    <li><a href="#s2">Trữ lượng và sản lượng toàn cầu</a></li>
+    <li><a href="#s3">Công nghệ khai thác &amp; làm giàu quặng</a></li>
+    <li><a href="#s4">Chế biến sâu &amp; chiết tách quặng</a></li>
+    <li><a href="#s5">Ứng dụng của đất hiếm</a></li>
+    <li><a href="#s6">Chuỗi cung ứng toàn cầu &amp; địa chính trị</a></li>
+    <li><a href="#s7">Công nghệ chế biến theo từng loại quặng</a>
+      <ol>
+        <li><a href="#s7-1">Bastnäsite</a></li>
+        <li><a href="#s7-2">Monazite</a></li>
+        <li><a href="#s7-3">Đất sét hấp phụ ion (IAC)</a></li>
+        <li><a href="#s7-4">Xenotime</a></li>
+        <li><a href="#s7-5">Apatite</a></li>
+        <li><a href="#s7-6">Allanite</a></li>
+        <li><a href="#s7-7">Quặng hỗn hợp Bayan Obo</a></li>
+      </ol>
+    </li>
+    <li><a href="#s8">Các đơn vị trong chuỗi cung ứng</a></li>
+    <li><a href="#s9">Xu hướng công nghệ mới nhất</a></li>
+    <li><a href="#s10">Tác động môi trường</a></li>
+    <li><a href="#s11">Tái chế &amp; kinh tế tuần hoàn</a></li>
+    <li><a href="#s12">Triển vọng &amp; thách thức</a></li>
+    <li><a href="#s13">Kết luận</a></li>
+    <li><a href="#s15">Danh mục nguyên tố &amp; ứng dụng chi tiết</a></li>
+    <li><a href="#s14">Tài liệu cập nhật gần nhất (2026)</a></li>
+    <li><a href="#library">Thư viện tài liệu tham khảo</a></li>
+  </ol>
+</nav>
+
+<main>
+
+<!-- ===================== 1 ===================== -->
+<section id="s1">
+  <h2>1. Tổng quan về đất hiếm &amp; 17 nguyên tố</h2>
+  <p>Đất hiếm (Rare Earth Elements – REEs) là nhóm 17 nguyên tố hóa học bao gồm 15 nguyên tố lanthanide (từ lanthanum đến lutetium) cùng với scandium (Sc) và yttrium (Y). Chúng được biết đến với tên gọi "vitamin của ngành công nghiệp" nhờ các tính chất quang học, từ tính và xúc tác vượt trội, đóng vai trò không thể thay thế trong các công nghệ hiện đại và quốc phòng. Các REE là thành phần thiết yếu trong nam châm vĩnh cửu hiệu suất cao, chất phát quang, xúc tác, hợp kim và nhiều ứng dụng công nghệ cao khác.</p>
+
+  <h3>1.1. Phân loại 17 nguyên tố đất hiếm</h3>
+  <table>
+    <thead>
+      <tr><th>Nhóm</th><th>Nguyên tố</th><th>Ký hiệu</th><th>Z</th><th>Đặc điểm chính</th></tr>
+    </thead>
+    <tbody>
+      <tr><td rowspan="7"><strong>Đất hiếm nhẹ (LREE)</strong></td><td>Lanthanum</td><td>La</td><td>57</td><td>Thủy tinh quang học, xúc tác FCC, pin NiMH</td></tr>
+      <tr><td>Cerium</td><td>Ce</td><td>58</td><td>Đánh bóng, xúc tác ô tô, kính hấp thụ UV</td></tr>
+      <tr><td>Praseodymium</td><td>Pr</td><td>59</td><td>Nam châm Pr-Nd, màu vàng thủy tinh, laser</td></tr>
+      <tr><td>Neodymium</td><td>Nd</td><td>60</td><td>Nam châm NdFeB (mạnh nhất), laser NIF</td></tr>
+      <tr><td>Promethium</td><td>Pm</td><td>61</td><td>Nguồn nhiệt vệ tinh (đồng vị phóng xạ)</td></tr>
+      <tr><td>Samarium</td><td>Sm</td><td>62</td><td>Nam châm SmCo chịu nhiệt &gt;300°C</td></tr>
+      <tr><td>Europium</td><td>Eu</td><td>63</td><td>Phosphor đỏ cho LED trắng, màn hình LCD</td></tr>
+      <tr><td rowspan="10"><strong>Đất hiếm nặng (HREE)</strong></td><td>Gadolinium</td><td>Gd</td><td>64</td><td>Chất tương phản MRI, làm lạnh từ</td></tr>
+      <tr><td>Terbium</td><td>Tb</td><td>65</td><td>Phosphor xanh, từ giảo Terfenol-D</td></tr>
+      <tr><td>Dysprosium</td><td>Dy</td><td>66</td><td>Tăng coercivity nam châm NdFeB, thanh điều khiển hạt nhân</td></tr>
+      <tr><td>Holmium</td><td>Ho</td><td>67</td><td>Laser y tế Ho:YAG (2,1μm), điều trị glaucoma</td></tr>
+      <tr><td>Erbium</td><td>Er</td><td>68</td><td>EDFA khuếch đại sợi quang 1550nm</td></tr>
+      <tr><td>Thulium</td><td>Tm</td><td>69</td><td>Laser y tế 1930–2040nm, hàn nhựa</td></tr>
+      <tr><td>Ytterbium</td><td>Yb</td><td>70</td><td>Laser sợi quang hiệu suất 70–80%, ổn định perovskite</td></tr>
+      <tr><td>Lutetium</td><td>Lu</td><td>71</td><td>Điều trị ung thư, scintillator PET, xúc tác hóa dầu</td></tr>
+      <tr><td>Yttrium</td><td>Y</td><td>39</td><td>Siêu dẫn YBCO, YAG laser, lớp phủ chịu nhiệt</td></tr>
+      <tr><td>Scandium</td><td>Sc</td><td>21</td><td>"Vua hợp kim nhôm", SOFC, hàng không vũ trụ</td></tr>
+    </tbody>
+  </table>
+
+  <h3>1.2. Mô tả nguyên tố trọng tâm: Neodymium (Nd) – "Trái tim" của công nghệ hiện đại</h3>
+  <div class="note">
+    <strong>Neodymium (Nd, Z=60) – Nguyên tố đất hiếm quan trọng nhất về giá trị kinh tế</strong>
+    <p>Neodymium là nguyên tố đất hiếm nhẹ, được phát hiện năm 1885 bởi Carl Auer von Welsbach. Đây là nguyên tố có giá trị thương mại cao nhất trong nhóm LREE, chiếm phần lớn giá trị thị trường đất hiếm toàn cầu nhờ ứng dụng trong nam châm vĩnh cửu.</p>
+    <p><strong>Ứng dụng chính:</strong></p>
+    <ul>
+      <li><strong>Nam châm NdFeB (chiếm hơn 80% tiêu thụ Nd):</strong> Nam châm mạnh nhất được biết đến, năng lượng từ tối đa vượt 400 kJ/m³ – gấp 4–10 lần nam châm ferrite. Được sử dụng trong động cơ xe điện (EV), tuabin gió, ổ cứng máy tính, loa, tai nghe, điện thoại thông minh, robot hình người và hệ thống dẫn đường tên lửa. Theo McKinsey, nhu cầu nam châm đất hiếm từ tính dự kiến tăng gấp ba lần từ 59.000 tấn (2022) lên 186.000 tấn (2035).</li>
+      <li><strong>Laser NIF (National Ignition Facility):</strong> Kính neodymium là "trái tim" của laser, là môi trường laser có thể phát ra năng lượng lớn nhất trên Trái Đất. Cơ sở của NIF – cơ sở nghiên cứu nhiệt hạch lớn nhất thế giới tại Hoa Kỳ – sử dụng laser kính neodymium.</li>
+      <li><strong>Laser y tế:</strong> Nd:YAG (yttrium aluminum garnet pha tạp neodymium) là vật liệu laser phổ biến trong phẫu thuật mắt, da liễu và nha khoa.</li>
+      <li><strong>Thủy tinh quang học:</strong> Oxit neodymium nhuộm màu thủy tinh, tạo màu từ hồng ấm đến xanh lam tùy nguồn sáng, dùng cho kính bảo hộ hàn và kính lọc quang học.</li>
+      <li><strong>Hàng không vũ trụ:</strong> Neodymium được sử dụng rộng rãi trong vật liệu hàng không vũ trụ nhờ tỷ lệ độ bền/khối lượng cao.</li>
+    </ul>
+    <p><strong>Vị trí trong chuỗi cung ứng:</strong> Neodymium cùng với Praseodymium (Pr) tạo thành hợp kim PrNd – nguyên liệu đầu vào chính cho nam châm NdFeB. PrNd oxide là sản phẩm giao dịch chính trên thị trường đất hiếm toàn cầu, với giá khoảng 729.000–730.000 CNY/tấn (DDP Trung Quốc, tháng 9/2026).</p>
+  </div>
+
+  <p class="ref">Nguồn: <a href="https://science.house.gov" target="_blank" rel="noopener">Energy Critical Elements: The Rare Earths – U.S. House Science Committee</a> · <a href="https://news.chinatungsten.com" target="_blank" rel="noopener">17种稀土用途详解 – Chinatungsten</a> · <a href="https://www.sciencedirect.com/science/article/pii/S2405829725007962" target="_blank" rel="noopener">Sustainable transformation of rare earth metals value chain – ScienceDirect (2026)</a></p>
+</section>
+
+<!-- ===================== 2 ===================== -->
+<section id="s2">
+  <h2>2. Trữ lượng và sản lượng toàn cầu</h2>
+
+  <h3>2.1. Trữ lượng</h3>
+  <table>
+    <thead><tr><th>Quốc gia</th><th>Trữ lượng (triệu tấn REO)</th><th>Tỷ lệ</th><th>Ghi chú</th></tr></thead>
+    <tbody>
+      <tr><td>Trung Quốc</td><td>44.0</td><td>48,9%</td><td>Chủ yếu tại mỏ Bayan Obo (Nội Mông) và mỏ đất sét ion (miền Nam). Khoảng 90% trữ lượng đất sét hấp phụ ion tập trung tại Trung Quốc, với hơn 70% tài nguyên đất hiếm trung bình và nặng của thế giới nằm ở bảy tỉnh phía Nam</td></tr>
+      <tr><td>Brazil</td><td>21.0</td><td>23,3%</td><td>Trữ lượng lớn nhưng sản lượng rất thấp; Serra Verde Group đang phát triển</td></tr>
+      <tr><td>Ấn Độ</td><td>7.2</td><td>8,0%</td><td>Chủ yếu là cát ven biển chứa monazite; IREL độc quyền khai thác</td></tr>
+      <tr><td>Australia</td><td>6.3</td><td>7,0%</td><td>Mount Weld (Lynas), Browns Range, Nolans (Arafura)</td></tr>
+      <tr><td>Nga</td><td>3.8</td><td>4,2%</td><td>Đã điều chỉnh giảm từ 10 triệu tấn; Solikamsk Magnesium Plant</td></tr>
+      <tr><td>Việt Nam</td><td>3.5</td><td>3,9%</td><td>Đã giảm mạnh từ 22 triệu tấn; mỏ Đông Pao (Lai Châu) đang thí điểm</td></tr>
+      <tr><td>Hoa Kỳ</td><td>1.9</td><td>2,1%</td><td>Mỏ Mountain Pass (MP Materials), California</td></tr>
+      <tr><td>Khác</td><td>2.3</td><td>2,6%</td><td>Greenland, Tanzania, Nam Phi, Canada</td></tr>
+      <tr><td><strong>Tổng</strong></td><td><strong>90.0</strong></td><td><strong>100%</strong></td><td></td></tr>
+    </tbody>
+  </table>
+
+  <h3>2.2. Sản lượng khai thác và mức độ tập trung chuỗi cung ứng</h3>
+  <p>Theo dữ liệu IEA (2026), mức độ tập trung chuỗi cung ứng đất hiếm toàn cầu của Trung Quốc tăng dần từ thượng nguồn đến hạ nguồn:</p>
+  <table>
+    <thead><tr><th>Giai đoạn chuỗi cung ứng</th><th>Trung Quốc chiếm</th><th>Nguồn dữ liệu</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Khai thác (magnet REE: Pr, Nd, Dy, Tb)</strong></td><td><strong>~59%</strong> (nếu loại Myanmar, còn ~25%)</td><td>IEA 2026; 《财经》2026</td></tr>
+      <tr><td><strong>Chế biến / tinh luyện (tách chiết oxit riêng lẻ)</strong></td><td><strong>~84–91%</strong></td><td>IEA 2026; S&P Global 2026</td></tr>
+      <tr><td><strong>Sản xuất nam châm vĩnh cửu (sintered NdFeB)</strong></td><td><strong>~94%</strong></td><td>IEA 2024; 《财经》2026</td></tr>
+    </tbody>
+  </table>
+  <div class="note">
+    <strong>Năm 2025:</strong> Sản lượng khai thác đất hiếm toàn cầu đạt khoảng <strong>390.000 tấn</strong> (REO). Trung Quốc chiếm 69,2% sản lượng khai thác.
+  </div>
+  <p class="ref">Nguồn: <a href="https://www.askci.com" target="_blank" rel="noopener">AskCI – 2026年全球稀土储量及产量分布</a> · <a href="https://www.ctia.com.cn" target="_blank" rel="noopener">CTIA – Global Rare Earth Reserves 2025</a> · <a href="https://www.iea.org/reports/rare-earth-elements" target="_blank" rel="noopener">IEA – Rare Earth Elements Report (2026)</a> · <a href="https://www.mycaijing.com/article/detail/580369" target="_blank" rel="noopener">《财经》– 西方“稀土自主”进展追踪 (2026)</a></p>
+</section>
+
+<!-- ===================== 3 ===================== -->
+<section id="s3">
+  <h2>3. Công nghệ khai thác và làm giàu quặng</h2>
+
+  <h3>3.1. Phương pháp khai thác</h3>
+  <ul>
+    <li><strong>Khai thác lộ thiên (Open-pit mining)</strong>: Áp dụng cho các mỏ carbonatite như Bayan Obo (Trung Quốc) và Mountain Pass (Hoa Kỳ).</li>
+    <li><strong>Khai thác ngầm (Underground mining)</strong>: Sử dụng cho các mỏ có thân quặng nằm sâu.</li>
+    <li><strong>Khai thác tại chỗ (In-situ leaching – ISL)</strong>: Bơm dung dịch hóa học trực tiếp vào tầng quặng để hòa tan đất hiếm. Sử dụng rộng rãi tại các mỏ đất sét ion ở miền Nam Trung Quốc.</li>
+  </ul>
+
+  <h3>3.2. Làm giàu quặng (Beneficiation) – Quy trình tổng quát</h3>
+  <div class="flowchart">
+    <div class="flow-title">SƠ ĐỒ KHỐI: QUY TRÌNH LÀM GIÀU QUẶNG ĐẤT HIẾM</div>
+    <div class="flow-row">
+      <span class="flow-box primary">Quặng thô (ROM)</span>
+      <span class="flow-arrow">→</span>
+      <span class="flow-box">Nghiền &amp; phân loại (Comminution)</span>
+      <span class="flow-arrow">→</span>
+      <span class="flow-box">Tuyển trọng lực</span>
+      <span class="flow-arrow">→</span>
+      <span class="flow-box">Tuyển từ</span>
+      <span class="flow-arrow">→</span>
+      <span class="flow-box primary">Tuyển nổi</span>
+      <span class="flow-arrow">→</span>
+      <span class="flow-box accent">Tinh quặng REE</span>
+    </div>
+    <div class="flow-branch">
+      <div class="flow-row">
+        <span class="flow-arrow">↳</span>
+        <span class="flow-box red">Đuôi thải (Tailings)</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-box">Xử lý &amp; lưu trữ</span>
+      </div>
+    </div>
+    <div class="flow-note">* Tùy loại quặng, thứ tự và số bước có thể thay đổi. Tuyển nổi thường là bước then chốt cho bastnäsite và monazite.</div>
+  </div>
+
+  <h4>Chi tiết từng bước:</h4>
+  <ol>
+    <li><strong>Nghiền và phân loại (Comminution)</strong>: Quặng được nghiền qua nhiều giai đoạn (nghiền hàm, nghiền côn, nghiền bi) đến kích thước hạt phù hợp (thường &lt; 200 mesh, tức &lt; 74 µm) để giải phóng các khoáng vật chứa đất hiếm khỏi gangue.</li>
+    <li><strong>Tuyển trọng lực (Gravity separation)</strong>: Sử dụng sự khác biệt về tỷ trọng để tách các khoáng vật chứa đất hiếm khỏi gangue. Hiệu quả với quặng sa khoáng và quặng chứa monazite (tỷ trọng 4,9–5,5 g/cm³).</li>
+    <li><strong>Tuyển từ (Magnetic separation)</strong>: Tách các khoáng vật có tính từ tính như monazite và xenotime. Sử dụng tuyển từ trường gradient cao (HGMS) cho các khoáng vật có tính từ yếu.</li>
+    <li><strong>Tuyển nổi (Froth flotation)</strong>: Phương pháp phổ biến nhất cho quặng bastnasite và monazite. Sử dụng thuốc tuyển để làm nổi các hạt khoáng vật chứa đất hiếm.</li>
+  </ol>
+
+  <h3>3.3. Công nghệ làm giàu tiên tiến (2026)</h3>
+  <ul>
+    <li><strong>Tuyển nổi với thuốc tuyển chọn lọc</strong>: Sử dụng axit hydroxamic và dẫn xuất phosphonic để tăng độ chọn lọc.</li>
+    <li><strong>Tuyển nổi kết hợp rang oxy hóa (Roasting-Flotation)</strong>: Nghiên cứu năm 2026 sử dụng quy trình rang oxy hóa – tuyển nổi kết hợp để tách bastnaesite và monazite. Bastnaesite bị phân hủy decarboxyl hóa ở 450–600°C thành REOF, trong khi monazite giữ cấu trúc phosphate ổn định. Sử dụng axit phthalic (PA, 5 kg/t) làm thuốc tuyển và phèn nhôm (alum, 4 kg/t) làm chất ức chế ở pH 4, đạt được tinh quặng bastnaesite với độ tinh khiết 97,15%, thu hồi 94,17%, và sản phẩm monazite với độ tinh khiết 53,30%, thu hồi 87,97%.</li>
+    <li><strong>Rang kiềm kích hoạt carbonatite (Alkali-activated carbonatite)</strong>: Nghiên cứu trên carbonatite Amba Dongar (Ấn Độ) đề xuất quy trình: rang kiềm ở 550°C → hòa tách kép nước và HCl 5M → hấp phụ bằng kaolinite. Hàm lượng REE tổng đạt 20.010,81 ppm, chủ yếu là LREE (Ce, La, Nd, Pr).</li>
+  </ul>
+  <p class="ref">Nguồn: <a href="https://www.sciencedirect.com/science/article/abs/pii/S1002072126002772" target="_blank" rel="noopener">Roasting-flotation coupled process – ScienceDirect (2026)</a> · <a href="https://www.sciencedirect.com/science/article/abs/pii/S089268752600717X" target="_blank" rel="noopener">Alkali-activated carbonatite – ScienceDirect (2026)</a></p>
+</section>
+
+<!-- ===================== 4 ===================== -->
+<section id="s4">
+  <h2>4. Chế biến sâu và chiết tách quặng đất hiếm</h2>
+  <p>Đây là khâu phức tạp và tốn kém nhất trong chuỗi giá trị đất hiếm, đồng thời là lĩnh vực mà Trung Quốc nắm giữ ưu thế áp đảo toàn cầu.</p>
+
+  <h3>4.1. Quy trình chế biến sâu tổng quát</h3>
+  <div class="flowchart">
+    <div class="flow-title">SƠ ĐỒ KHỐI: CHẾ BIẾN SÂU &amp; CHIẾT TÁCH ĐẤT HIẾM</div>
+    <div class="flow-row">
+      <span class="flow-box accent">Tinh quặng REE</span>
+      <span class="flow-arrow">→</span>
+      <span class="flow-box primary">Phân hủy quặng</span>
+      <span class="flow-arrow">→</span>
+      <span class="flow-box">Hòa tách (Acid/Alkaline Leaching)</span>
+      <span class="flow-arrow">→</span>
+      <span class="flow-box">Lọc &amp; tinh chế dung dịch</span>
+    </div>
+    <div class="flow-row"><span class="flow-arrow">↓</span></div>
+    <div class="flow-row">
+      <span class="flow-box primary">Chiết dung môi (SX)</span>
+      <span class="flow-arrow">→</span>
+      <span class="flow-box">Rửa (Scrubbing)</span>
+      <span class="flow-arrow">→</span>
+      <span class="flow-box">Tách ngược (Stripping)</span>
+      <span class="flow-arrow">→</span>
+      <span class="flow-box accent">Oxit REE riêng lẻ</span>
+    </div>
+    <div class="flow-branch">
+      <div class="flow-row"><span class="flow-arrow">↳</span> <span class="flow-box green">Kết tủa &amp; nung</span> <span class="flow-arrow">→</span> <span class="flow-box green">Sản phẩm REO</span></div>
+      <div class="flow-row"><span class="flow-arrow">↳</span> <span class="flow-box red">Chất thải (Th/U, axit dư)</span> <span class="flow-arrow">→</span> <span class="flow-box red">Xử lý an toàn</span></div>
+    </div>
+  </div>
+
+  <h3>4.2. Các phương pháp phân hủy quặng</h3>
+  <ul>
+    <li><strong>Rang oxy hóa (Oxidative roasting)</strong>: Quặng tinh được nung ở nhiệt độ cao (400–600°C) để chuyển hóa các khoáng vật đất hiếm thành dạng oxit dễ hòa tan.</li>
+    <li><strong>Phân hủy kiềm (Caustic digestion)</strong>: Sử dụng NaOH nóng chảy hoặc dung dịch kiềm đậm đặc (140–160°C, nồng độ NaOH &gt;50%) để phân hủy quặng monazite và bastnasite.</li>
+    <li><strong>Hòa tách axit (Acid leaching)</strong>: Sử dụng H₂SO₄, HCl hoặc HNO₃ để hòa tan đất hiếm từ quặng đã nung. Phương pháp phổ biến nhất trong công nghiệp.</li>
+  </ul>
+
+  <h3>4.3. Các phương pháp hòa tách tiên tiến (2026)</h3>
+  <ul>
+    <li><strong>Hòa tách sinh học (Biological leaching)</strong>: Sử dụng vi sinh vật để hòa tan đất hiếm, thân thiện với môi trường nhưng tốc độ chậm.</li>
+    <li><strong>Hòa tách bằng dung môi ion (Ionic liquid leaching)</strong>: Dung môi ion thế hệ mới có độ chọn lọc cao và ít độc hại.</li>
+    <li><strong>Hòa tách hỗ trợ siêu âm (Ultrasonic-assisted leaching)</strong>: Sử dụng sóng siêu âm để tăng tốc độ hòa tách và hiệu suất thu hồi.</li>
+    <li><strong>Hòa tách chọn lọc với tác nhân đặc hiệu</strong>: Phòng thí nghiệm Quốc gia Ames (Hoa Kỳ) đã phát triển tác nhân hòa tách chọn lọc HREE, đạt hiệu suất thu hồi ~97% từ nguyên liệu thải mỏ.</li>
+    <li><strong>Hòa tách bằng axit citric (Citrate leaching) – không chứa amoni</strong>: Nghiên cứu năm 2026 sử dụng natri citrate (Na₃Cit) 0,15 M ở pH 6,4 để hòa tách đất hiếm từ đất sét hấp phụ ion, đạt hiệu suất thu hồi REE lên đến 1.300 mg/kg, vượt trội so với amoni sunfat truyền thống, đồng thời giảm hòa tan tạp chất Al, Fe. Kết tủa bằng axit oxalic đạt hiệu suất &gt;95% với độ tinh khiết REO 95–97%.</li>
+    <li><strong>Hòa tách hỗ trợ điện trường (Electric field-assisted leaching)</strong>: Nghiên cứu năm 2026 áp dụng cường độ điện trường 1 V/cm trong hệ thống hòa tách, giảm đáng kể thời gian hòa tách và tăng tốc độ thẩm thấu dung dịch hòa tách lên trung bình 20,8% so với hòa tách magiê sunfat thông thường.</li>
+  </ul>
+  <p class="ref">Nguồn: <a href="https://www.sciencedirect.com/science/article/pii/S0304386X26000885" target="_blank" rel="noopener">Ammonia-free recovery of REE from ion-adsorption clays – ScienceDirect (2026)</a> · <a href="https://www.sciencedirect.com/science/article/abs/pii/S0304389426012719" target="_blank" rel="noopener">Liquid–liquid phase separation of designer EF-hand peptides – ScienceDirect (2026)</a></p>
+
+  <h3>4.4. Chiết tách và tinh chế đất hiếm</h3>
+  <p>Do tính chất hóa học gần như tương đồng của các nguyên tố đất hiếm, việc tách riêng từng nguyên tố là thách thức kỹ thuật lớn nhất trong toàn bộ chuỗi giá trị.</p>
+  <ul>
+    <li><strong>Chiết dung môi (Solvent extraction – SX)</strong>: Sử dụng dung môi hữu cơ như D2EHPA, P350, TBP. Đòi hỏi hàng trăm đến hàng nghìn bậc chiết liên tục. Nghiên cứu năm 2026 thiết kế quy trình SX bốn tầng ngược dòng để sản xuất Pr và Nd độ tinh khiết 4N (99,99%) từ dung dịch clorua REE. Phân tách Pr/Nd là nút thắt kỹ thuật chính, cần 62 bậc cân bằng do hệ số phân tách thấp (β = 1,70).</li>
+    <li><strong>Chiết dung môi với tác nhân mới (HTEAMP)</strong>: Nghiên cứu năm 2026 phát triển axit α-aminophosphonic phân nhánh cao (HTEAMP) cho tách đất hiếm nặng. Quy trình chiết phân đoạn gồm 5 bậc chiết, 11 bậc rửa và 2 bậc tách ngược làm giàu hàm lượng Yb/Lu tổng từ 8,87% lên 96,01%.</li>
+    <li><strong>Chiết dung môi kết hợp hai chất chiết trung tính (Dual Neutral Extractant)</strong>: Phòng thí nghiệm Ames (2026) phát triển quy trình SX mới sử dụng hai chất chiết trung tính để tách chọn lọc NdPr, SEG (Sm/Eu/Gd) và HREE, giảm đáng kể số bậc tách và lượng thuốc thử cần thiết. Quy trình đạt được tách HREE và LREE hiệu quả trong bảy bậc.</li>
+    <li><strong>Ligand picolinate mạch hở (H4aapa)</strong>: Nghiên cứu năm 2026 công bố chelator picolinate mạch hở H4aapa, có chi phí thấp, liên kết ưu tiên LREE hơn HREE. Hệ số phân tách Ce³⁺/Lu³⁺ đạt 38,6 tại pH 4. Khi tiếp xúc với phế liệu nam châm và xỉ autocatalyst, dung dịch aapa 20 mM ở pH trung tính làm giàu Nd³⁺ và Dy³⁺ lần lượt 56,9% và 3,0% khối lượng, cải thiện gấp 4 lần so với sử dụng HNO₃ 4 M.</li>
+    <li><strong>Kết tủa chiết (Extraction-Precipitation – CP)</strong>: Nghiên cứu năm 2026 sử dụng chiến lược kết tủa chiết với creatine phosphate để làm giàu ion đất hiếm từ dung dịch hòa tách giàu Mg²⁺/Ca²⁺. Ở pH 3,5, tỷ lệ mol RE:CP = 1:2, CP cho phép tách chọn lọc RE³⁺ (La, Nd, Y, Yb) khỏi Mg²⁺ và Ca²⁺, làm giàu RE lên 198,73 g/L trong một bước, gấp 933,65 lần so với dung dịch ban đầu. Độ tinh khiết sản phẩm RE đạt 99,33%.</li>
+    <li><strong>Sắc ký dịch chuyển có ligand hỗ trợ (LAD chromatography)</strong>: Quy trình ba vùng cho phép sản xuất Nd, Pr, Ce và La độ tinh khiết cao với năng suất tăng hơn 170 lần.</li>
+  </ul>
+  <p class="ref">Nguồn: <a href="https://www.sciencedirect.com/science/article/abs/pii/S1002072126003984" target="_blank" rel="noopener">Recovery of REE from NdFeB magnets – Journal of Rare Earths (2026)</a> · <a href="https://www.sciencedirect.com/science/article/abs/pii/S2213343726009905" target="_blank" rel="noopener">Selective enrichment of rare earth ions – ScienceDirect (2026)</a> · <a href="https://pubs.rsc.org" target="_blank" rel="noopener">Picolinate-based acyclic ligand – Chemical Science (2026)</a></p>
+
+  <h3>4.5. Công nghệ chế biến sâu tại Việt Nam</h3>
+  <p>Tháng 9/2026, UBND TP Hà Nội đã phê duyệt dự án thí điểm sản xuất oxit đất hiếm tổng hợp (TREO) có độ tinh khiết &gt;95% từ quặng Đông Pao (Lai Châu). Dây chuyền thiết kế công suất 100 kg quặng/giờ, sử dụng tối đa 100 tấn quặng cho toàn bộ thí điểm. Công nghệ gồm hai giai đoạn chính: (1) tuyển nổi làm giàu tinh quặng; (2) thủy luyện kim sản xuất oxit đất hiếm. Quy trình áp dụng giải pháp tuần hoàn nước, kết hợp thu hồi sản phẩm phụ có giá trị như barit và fluorit.</p>
+  <p class="ref">Nguồn: <a href="https://www.vietnam.vn" target="_blank" rel="noopener">Hanoi approves pilot project for rare earth oxides – Vietnam.vn (2026)</a> · <a href="https://english.news.cn" target="_blank" rel="noopener">Xinhua – Pilot production of rare earth oxides approved in Vietnam (2026)</a></p>
+</section>
+
+<!-- ===================== 5 ===================== -->
+<section id="s5">
+  <h2>5. Ứng dụng của đất hiếm</h2>
+
+  <h3>5.1. Nam châm vĩnh cửu</h3>
+  <p>Đây là ứng dụng quan trọng nhất và có giá trị kinh tế cao nhất. Nam châm NdFeB được sử dụng rộng rãi trong:</p>
+  <div class="grid">
+    <div class="card"><h5>Động cơ xe điện (EV)</h5><p>Nam châm NdFeB là thành phần thiết yếu của động cơ kéo, giúp tăng hiệu suất và giảm kích thước. Theo McKinsey, nhu cầu toàn cầu đối với nam châm đất hiếm từ tính dự kiến tăng gấp ba lần từ 59.000 tấn năm 2022 lên 186.000 tấn vào năm 2035.</p></div>
+    <div class="card"><h5>Tuabin gió</h5><p>Máy phát điện nam châm vĩnh cửu sử dụng Nd, Dy hoạt động hiệu quả ở tốc độ thấp.</p></div>
+    <div class="card"><h5>Thiết bị điện tử</h5><p>Ổ cứng, loa, tai nghe, điện thoại thông minh.</p></div>
+    <div class="card"><h5>Y tế</h5><p>Máy chụp cộng hưởng từ (MRI), thiết bị y tế chính xác.</p></div>
+    <div class="card"><h5>Quốc phòng</h5><p>Radar, hệ thống dẫn đường tên lửa, thiết bị nhìn đêm. Nam châm SmCo cho F-35 engine, tên lửa dẫn đường.</p></div>
+    <div class="card"><h5>Robot hình người</h5><p>Động cơ chính xác cho robot hình người và tự động hóa công nghiệp là lĩnh vực tăng trưởng mới.</p></div>
+  </div>
+
+  <h3>5.2. Ứng dụng quang học và laser</h3>
+  <ul>
+    <li><strong>Chất phát quang (Phosphors)</strong>: Eu, Tb dùng trong đèn huỳnh quang, màn hình LCD, LED. Các vật liệu phát quang pha tạp lanthanide (REVO₄ với RE = Y, Gd, Lu, La) được ứng dụng rộng rãi trong chiếu sáng phổ đầy đủ, NIR phosphors cho nông nghiệp, giám sát an ninh và kiểm tra thực phẩm/y tế.</li>
+    <li><strong>Laser rắn</strong>: Nd:YAG, Er:YAG cho laser công nghiệp và y tế.</li>
+    <li><strong>Khuếch đại quang</strong>: Er dùng trong khuếch đại sợi quang viễn thông (EDFA).</li>
+    <li><strong>Thủy tinh quang học</strong>: La, Gd dùng trong thấu kính máy ảnh chất lượng cao.</li>
+  </ul>
+
+  <h3>5.3. Xúc tác</h3>
+  <ul>
+    <li><strong>Xúc tác FCC</strong>: La, Ce dùng trong lọc dầu. Xúc tác chiếm 75% ứng dụng REE trong lĩnh vực này.</li>
+    <li><strong>Xúc tác ô tô</strong>: Ce, Zr trong bộ chuyển đổi xúc tác để giảm khí thải.</li>
+    <li><strong>Xúc tác quang hóa</strong>: Nghiên cứu năm 2026 phát triển vật liệu Ce₂(MoO₄)₃ pha tạp Er³⁺ và Yb³⁺ cho ứng dụng đồng thời làm xúc tác phản ứng photo-Fenton và cảm biến nhiệt độ phát quang tại chỗ.</li>
+  </ul>
+
+  <h3>5.4. Ứng dụng khác</h3>
+  <ul>
+    <li><strong>Hợp kim</strong>: Ce, La trong hợp kim nhôm độ bền cao, hợp kim magiê.</li>
+    <li><strong>Gốm sứ</strong>: Y, Zr trong gốm kỹ thuật, vật liệu siêu dẫn.</li>
+    <li><strong>Nông nghiệp</strong>: Ce, La dùng làm phân bón vi lượng.</li>
+    <li><strong>Pin</strong>: La, Ce trong pin NiMH.</li>
+    <li><strong>Đánh bóng</strong>: CeO₂ là vật liệu đánh bóng chính cho kính quang học, tấm LCD và wafer bán dẫn.</li>
+  </ul>
+  <p class="ref">Nguồn: <a href="https://science.house.gov" target="_blank" rel="noopener">Energy Critical Elements – U.S. House Science Committee</a> · <a href="https://news.chinatungsten.com" target="_blank" rel="noopener">17种稀土用途详解 – Chinatungsten</a></p>
+</section>
+
+<!-- ===================== 6 ===================== -->
+<section id="s6">
+  <h2>6. Chuỗi cung ứng toàn cầu và địa chính trị</h2>
+
+  <h3>6.1. Sơ đồ chuỗi cung ứng đất hiếm toàn cầu – Chi tiết đầy đủ</h3>
+
+  <div class="supply-chain">
+    <div class="sc-title">SƠ ĐỒ CHUỖI CUNG ỨNG ĐẤT HIẾM TOÀN CẦU 2026</div>
+
+    <!-- TẦNG 1: THƯỢNG NGUỒN -->
+    <div class="sc-tier upstream" data-tier="TẦNG 1 – THƯỢNG NGUỒN (UPSTREAM)">
+      <h4>⛏️ KHAI THÁC &amp; LÀM GIÀU QUẶNG (Mining &amp; Beneficiation)</h4>
+      <div class="sc-nodes">
+        <div class="sc-node">
+          <strong>Mỏ carbonatite</strong>
+          <small>Bayan Obo (TQ) – lớn nhất TG, Mountain Pass (Mỹ), Mount Weld (Úc)</small>
+          <span class="sc-china-share">TQ: ~59%</span>
+        </div>
+        <div class="sc-node">
+          <strong>Đất sét hấp phụ ion (IAC)</strong>
+          <small>Miền Nam TQ (Giang Tây, Quảng Đông), Myanmar</small>
+          <span class="sc-china-share">TQ: ~90% trữ lượng</span>
+        </div>
+        <div class="sc-node">
+          <strong>Sa khoáng ven biển</strong>
+          <small>Ấn Độ (monazite), Brazil, Australia, Việt Nam</small>
+        </div>
+        <div class="sc-node">
+          <strong>Công nghệ làm giàu</strong>
+          <small>Nghiền → tuyển trọng lực → tuyển từ → tuyển nổi</small>
+        </div>
+      </div>
+      <p style="font-size:.85rem;margin:10px 0 0"><strong>Sản phẩm đầu ra:</strong> Tinh quặng REE (bastnäsite, monazite, xenotime) hoặc hỗn hợp muối đất hiếm.</p>
+      <p style="font-size:.82rem;color:var(--muted);margin:6px 0 0">Các đơn vị chủ chốt: China Northern Rare Earth, China Rare Earth Group, MP Materials (Mountain Pass), Lynas (Mount Weld), IREL (Ấn Độ), Serra Verde (Brazil).</p>
+    </div>
+
+    <div class="sc-arrow-down">▼</div>
+
+    <!-- TẦNG 2: TRUNG NGUỒN – CHẾ BIẾN SÂU -->
+    <div class="sc-tier midstream" data-tier="TẦNG 2 – TRUNG NGUỒN: ĐIỂM THẮT CỔ CHAI (MIDSTREAM CHOKEPOINT)">
+      <h4>🔬 CHẾ BIẾN SÂU &amp; TÁCH CHIẾT (Separation &amp; Refining) <span class="sc-china-share">Trung Quốc: ~84–91%</span></h4>
+      <div class="sc-nodes">
+        <div class="sc-node">
+          <strong>Phân hủy quặng</strong>
+          <small>Rang axit H₂SO₄ (400–600°C), phân hủy kiềm NaOH (&gt;50%, 140–160°C)</small>
+        </div>
+        <div class="sc-node">
+          <strong>Hòa tách (Leaching)</strong>
+          <small>HCl, H₂SO₄, HNO₃; hòa tách tại chỗ (ISL) cho IAC</small>
+        </div>
+        <div class="sc-node">
+          <strong>Tách chiết dung môi (SX)</strong>
+          <small>D2EHPA, P350, TBP; hàng trăm đến hàng nghìn bậc chiết liên tục</small>
+          <span class="sc-china-share">TQ: ~91%</span>
+        </div>
+        <div class="sc-node">
+          <strong>Công nghệ mới (2026)</strong>
+          <small>DES, LAD chromatography, kết tủa chiết (CP), ligand picolinate</small>
+        </div>
+      </div>
+      <p style="font-size:.85rem;margin:10px 0 0"><strong>Sản phẩm đầu ra:</strong> Oxit REE riêng lẻ (99,99–99,999%), kim loại REE, hợp kim REE.</p>
+      <p style="font-size:.82rem;color:var(--muted);margin:6px 0 0">Các đơn vị chủ chốt: China Northern Rare Earth, China Rare Earth Group (Hunan Rare Earth, Dingnan Dahua), Lynas Malaysia (LAMP), Solvay (La Rochelle), Ucore (RapidSX™).</p>
+    </div>
+
+    <div class="sc-arrow-down">▼</div>
+
+    <!-- TẦNG 3: HẠ NGUỒN -->
+    <div class="sc-tier downstream" data-tier="TẦNG 3 – HẠ NGUỒN (DOWNSTREAM)">
+      <h4>⚙️ KIM LOẠI → HỢP KIM → NAM CHÂM → ỨNG DỤNG CUỐI (Metal → Alloy → Magnet → End-Use)</h4>
+      <div class="sc-nodes">
+        <div class="sc-node">
+          <strong>Sản xuất kim loại</strong>
+          <small>Điện phân muối nóng chảy, nhiệt nhôm; Nd, Pr, Dy, Tb → kim loại</small>
+        </div>
+        <div class="sc-node">
+          <strong>Sản xuất hợp kim</strong>
+          <small>PrNd alloy, SmCo alloy, Terfenol-D (Tb-Dy-Fe)</small>
+        </div>
+        <div class="sc-node">
+          <strong>Nam châm NdFeB</strong>
+          <small>Nghiền bột → ép → thiêu kết; SmCo cho nhiệt độ cao &gt;300°C</small>
+          <span class="sc-china-share">TQ: ~94%</span>
+        </div>
+        <div class="sc-node">
+          <strong>Ứng dụng cuối</strong>
+          <small>EV, tuabin gió, robot, thiết bị điện tử, quốc phòng, y tế (MRI)</small>
+        </div>
+      </div>
+      <p style="font-size:.82rem;color:var(--muted);margin:6px 0 0">Các đơn vị chủ chốt: JL MAG, Zhong Ke San Huan, VAC (Đức), Less Common Metals (Anh), Shin-Etsu (Nhật), Proterial (Nhật).</p>
+    </div>
+
+    <div class="sc-arrow-down">▼</div>
+
+    <!-- TẦNG 4: TÁI CHẾ -->
+    <div class="sc-tier recycling" data-tier="TẦNG 4 – TÁI CHẾ (RECYCLING – NHÁNH PHỤ)">
+      <h4>♻️ TÁI CHẾ &amp; KINH TẾ TUẦN HOÀN (Recycling &amp; Circular Economy)</h4>
+      <div class="sc-nodes">
+        <div class="sc-node">
+          <strong>Phế liệu nam châm</strong>
+          <small>Phế liệu sản xuất, nam châm cuối vòng đời, ổ cứng máy tính</small>
+        </div>
+        <div class="sc-node">
+          <strong>Thủy luyện kim</strong>
+          <small>Hòa tách axit, kết tủa double-salt, DES điều chỉnh nước</small>
+        </div>
+        <div class="sc-node">
+          <strong>Điện hóa thu hồi</strong>
+          <small>Xung điện clo, điện kết tủa từ trường, nung muối nóng chảy (INL 2026)</small>
+        </div>
+        <div class="sc-node">
+          <strong>Dự án quốc tế</strong>
+          <small>USA Rare Earth (Wheat Ridge), REEPRODUCE (EU), FREECOVER (EU), HARMONY (EU), NEO-CYCLE (EU)</small>
+        </div>
+      </div>
+      <p style="font-size:.85rem;margin:10px 0 0"><strong>Hiệu quả:</strong> Thu hồi REE 97% bằng DES; thu hồi Dy 97,76% bằng HNO₃ + double-salt; giảm 87% năng lượng, 54% chi phí bằng xung điện clo. Tái chế tiết kiệm 54,8% GWP so với sản xuất nguyên sinh.</p>
+    </div>
+  </div>
+
+  <div class="note">
+    <strong>Điểm thắt cổ chai quan trọng nhất:</strong> Tầng 2 (Chế biến sâu &amp; Tách chiết) là giai đoạn có giá trị gia tăng cao nhất và cũng là giai đoạn mà Trung Quốc kiểm soát ~84–91% thị trường toàn cầu. Chỉ có Lynas Malaysia (LAMP) là nhà máy tách chiết đất hiếm nặng quy mô thương mại duy nhất ngoài Trung Quốc. Nghiên cứu Taylor &amp; Francis (2026) gọi đây là "midstream chokepoint" – điểm thắt cổ chai không thể bỏ qua: việc bỏ qua một bước không có nghĩa là bỏ qua toàn bộ chuỗi.
+  </div>
+
+  <h3>6.2. Căng thẳng thương mại và chính sách (cập nhật 2026)</h3>
+  <ul>
+    <li><strong>Trung Quốc siết chặt xuất khẩu</strong>: Từ tháng 4/2025, Trung Quốc áp dụng biện pháp hạn chế xuất khẩu đất hiếm và nam châm vĩnh cửu. Tháng 5/2026, Bộ Thương mại Trung Quốc khẳng định việc thực hiện kiểm soát xuất khẩu tuân thủ pháp luật. Đến tháng 7/2026, Trung Quốc xuất khẩu 4.224 tấn đất hiếm, lũy kế 7 tháng đạt 34.706 tấn, giảm 10% so với cùng kỳ.</li>
+    <li><strong>Giai đoạn tạm hoãn</strong>: Các biện pháp kiểm soát xuất khẩu công bố ngày 9/10/2025 đã được tạm hoãn đến ngày 10/11/2026.</li>
+    <li><strong>Phản ứng của Hoa Kỳ và EU</strong>: MP Materials đã công bố quan hệ đối tác công-tư trị giá hàng tỷ USD với Bộ Quốc phòng Hoa Kỳ, bao gồm khoản đầu tư vốn cổ phần 400 triệu USD và hợp đồng bao tiêu 10 năm cho 100% sản lượng nam châm từ nhà máy 10X dự kiến. Lynas Rare Earths đã ký thỏa thuận sơ bộ trị giá 96 triệu USD với Lầu Năm Góc để cung cấp sản phẩm đất hiếm, bao gồm oxit samarium cho nam châm chịu nhiệt, với giá sàn 110 USD/kg cho PrNd oxide trong 4 năm.</li>
+    <li><strong>IEA cảnh báo</strong>: Nếu Trung Quốc áp dụng hạn chế xuất khẩu hoàn toàn, gần 6,5 nghìn tỷ USD giá trị sản xuất hạ nguồn bên ngoài Trung Quốc có thể bị ảnh hưởng mỗi năm.</li>
+    <li><strong>Việt Nam và hợp tác quốc tế</strong>: Việt Nam đã tăng cường hợp tác với Hàn Quốc, Ấn Độ, Nhật Bản, EU và Australia. Dự kiến Trung tâm Chuỗi cung ứng Khoáng sản Chiến lược Hàn Quốc – Việt Nam sẽ đi vào hoạt động trong năm 2026.</li>
+  </ul>
+
+  <h3>6.3. Thị trường và giá cả (tháng 9/2026)</h3>
+  <table>
+    <thead><tr><th>Sản phẩm</th><th>Giá DDP Trung Quốc</th><th>Giá CIF Bắc Mỹ / châu Âu</th><th>Chênh lệch</th></tr></thead>
+    <tbody>
+      <tr><td>Oxit PrNd (Pr₆O₁₁·Nd₂O₃)</td><td>~729.000 CNY/tấn (≈101 USD/kg)</td><td>~125 USD/kg (CIF Bắc Mỹ)</td><td>~24%</td></tr>
+      <tr><td>Oxit Dysprosium (Dy₂O₃)</td><td>~1.425.600 CNY/tấn (≈198 USD/kg)</td><td>~3.500 USD/kg (CIF châu Âu)</td><td>~16,3×</td></tr>
+      <tr><td>Oxit Terbium (Tb₄O₇)</td><td>~6.665.000 CNY/tấn (≈925 USD/kg)</td><td>~6.745 USD/kg (CIF châu Âu)</td><td>~7,3×</td></tr>
+      <tr><td>Oxit Yttrium (Y₂O₃)</td><td>~22 USD/kg (≈160 CNY/kg)</td><td>~4.300 USD/kg (CIF Bắc Mỹ)</td><td>~196×</td></tr>
+      <tr><td>Oxit Samarium (Sm₂O₃)</td><td>~175 USD/kg CIF Bắc Mỹ (31/3/2026)</td><td>—</td><td>—</td></tr>
+    </tbody>
+  </table>
+  <div class="note">
+    <strong>Xu hướng Q3/2026:</strong> Giá đất hiếm nặng ngoài Trung Quốc tăng mạnh do nguồn cung thiếu hụt trầm trọng. Oxit Dysprosium CIF châu Âu tăng 150% trong Q3, đạt trung bình 3.500 USD/kg vào tháng 9. Oxit Yttrium CIF Bắc Mỹ cao gấp 196 lần giá DDP Trung Quốc. Ngược lại, giá PrNd ngoài Trung Quốc giảm xuống dưới mức sàn 110 USD/kg do dư cung nhẹ.
+  </div>
+  <p class="ref">Nguồn: <a href="https://source.benchmarkminerals.com/article/ex-china-heavy-rare-earths-continue-to-surge-q3-2026-rare-earths-price-review" target="_blank" rel="noopener">Benchmark Minerals – Q3 2026 Rare Earths Price Review</a> · <a href="https://www.iea.org/reports/rare-earth-elements" target="_blank" rel="noopener">IEA – Rare Earth Elements Report (2026)</a> · <a href="https://www.spglobal.com" target="_blank" rel="noopener">S&P Global – Rare Earths Series</a></p>
+</section>
+
+<!-- ===================== 7 ===================== -->
+<section id="s7">
+  <h2>7. Công nghệ chế biến chi tiết theo từng loại quặng</h2>
+
+  <!-- ===== 7.1 BASTNÄSITE ===== -->
+  <h3 id="s7-1">7.1. Quặng Bastnäsite (Fluorocarbonat) <span class="badge">LREE</span></h3>
+  <h4>Đặc điểm quặng</h4>
+  <p>Bastnäsite có công thức hóa học (Ce, La, Nd, Pr)CO₃F, là nguồn cung cấp đất hiếm nhẹ (LREE) quan trọng nhất thế giới. Mỏ Bayan Obo (Nội Mông, Trung Quốc) là mỏ đất hiếm lớn nhất toàn cầu, chứa hỗn hợp bastnäsite và monazite. Mỏ Mountain Pass (California, Hoa Kỳ) cũng là mỏ bastnäsite carbonatite điển hình.</p>
+
+  <h4>Quy trình làm giàu chi tiết</h4>
+  <div class="flowchart">
+    <div class="flow-title">SƠ ĐỒ KHỐI: LÀM GIÀU QUẶNG BASTNÄSITE</div>
+    <div class="flow-row">
+      <span class="flow-box primary">Quặng thô</span> <span class="flow-arrow">→</span>
+      <span class="flow-box">Nghiền hàm</span> <span class="flow-arrow">→</span>
+      <span class="flow-box">Nghiền côn</span> <span class="flow-arrow">→</span>
+      <span class="flow-box">Nghiền bi (-200 mesh)</span>
+    </div>
+    <div class="flow-row"><span class="flow-arrow">↓</span></div>
+    <div class="flow-row">
+      <span class="flow-box">Tuyển trọng lực</span> <span class="flow-arrow">→</span>
+      <span class="flow-box">Tuyển từ (HGMS)</span> <span class="flow-arrow">→</span>
+      <span class="flow-box primary">Tuyển nổi (Axit béo/Hydroxamic)</span>
+    </div>
+    <div class="flow-row"><span class="flow-arrow">↓</span></div>
+    <div class="flow-row">
+      <span class="flow-box accent">Tinh quặng Bastnäsite</span>
+      <span class="flow-arrow">+</span>
+      <span class="flow-box">Tinh quặng Monazite (đồng sản phẩm)</span>
+    </div>
+    <div class="flow-note">Quy trình rang oxy hóa – tuyển nổi kết hợp: Bastnaesite → REOF ở 450–600°C; Monazite giữ ổn định. Dùng axit phthalic (5 kg/t) + phèn nhôm (4 kg/t) ở pH 4.</div>
+  </div>
+
+  <h4>Chế biến sâu – Quy trình chi tiết</h4>
+  <div class="flowchart">
+    <div class="flow-title">SƠ ĐỒ KHỐI: CHẾ BIẾN SÂU BASTNÄSITE</div>
+    <div class="flow-row">
+      <span class="flow-box accent">Tinh quặng Bastnäsite</span> <span class="flow-arrow">→</span>
+      <span class="flow-box primary">Rang axit H₂SO₄ (400–600°C)</span> <span class="flow-arrow">→</span>
+      <span class="flow-box">Hòa tách nước</span> <span class="flow-arrow">→</span>
+      <span class="flow-box">Dung dịch REE sunfat</span>
+    </div>
+    <div class="flow-row"><span class="flow-arrow">↓</span></div>
+    <div class="flow-row">
+      <span class="flow-box">Loại bỏ tạp chất (Fe, Al, Th)</span> <span class="flow-arrow">→</span>
+      <span class="flow-box primary">Chiết dung môi (D2EHPA/P350/TBP)</span> <span class="flow-arrow">→</span>
+      <span class="flow-box accent">Oxit La, Ce, Pr, Nd</span>
+    </div>
+    <div class="flow-branch">
+      <div class="flow-row"><span class="flow-arrow">↳</span> <span class="flow-box red">Chất thải chứa F, SOx</span> <span class="flow-arrow">→</span> <span class="flow-box red">Xử lý khí thải &amp; nước thải</span></div>
+    </div>
+  </div>
+
+  <!-- ===== 7.2 MONAZITE ===== -->
+  <h3 id="s7-2">7.2. Quặng Monazite (Phosphate đất hiếm) <span class="badge">LREE + Th/U</span></h3>
+  <h4>Đặc điểm quặng</h4>
+  <p>Monazite có công thức (Ce, La, Nd, Th)PO₄, chứa chủ yếu đất hiếm nhẹ cùng với thorium (4–12%) và uranium (0,2–0,5%). Khai thác từ sa khoáng ven biển (Ấn Độ, Brazil, Australia, Việt Nam) và từ mỏ carbonatite (Bayan Obo).</p>
+
+  <h4>Quy trình làm giàu chi tiết</h4>
+  <div class="flowchart">
+    <div class="flow-title">SƠ ĐỒ KHỐI: LÀM GIÀU QUẶNG MONAZITE</div>
+    <div class="flow-row">
+      <span class="flow-box primary">Quặng sa khoáng</span> <span class="flow-arrow">→</span>
+      <span class="flow-box">Nghiền (-325 mesh)</span> <span class="flow-arrow">→</span>
+      <span class="flow-box">Tuyển trọng lực (bàn tuyển/xoáy nước)</span>
+    </div>
+    <div class="flow-row"><span class="flow-arrow">↓</span></div>
+    <div class="flow-row">
+      <span class="flow-box">Tuyển từ (HGMS)</span> <span class="flow-arrow">→</span>
+      <span class="flow-box">Tuyển tĩnh điện</span> <span class="flow-arrow">→</span>
+      <span class="flow-box primary">Tuyển nổi (hạt mịn)</span> <span class="flow-arrow">→</span>
+      <span class="flow-box accent">Tinh quặng Monazite (85–95%)</span>
+    </div>
+    <div class="flow-row"><span class="flow-arrow">↓</span></div>
+    <div class="flow-row">
+      <span class="flow-box">Tuyển từ nâng cấp</span> <span class="flow-arrow">→</span>
+      <span class="flow-box accent">Tinh quặng Monazite (99%)</span>
+    </div>
+    <div class="flow-note">Tuyển từ nâng cấp giúp tăng hàm lượng monazite từ 85–95% lên 99% trước khi chế biến sâu.</div>
+  </div>
+
+  <h4>Chế biến sâu – Quy trình kiềm (Alkaline Cracking)</h4>
+  <div class="flowchart">
+    <div class="flow-title">SƠ ĐỒ KHỐI: CHẾ BIẾN SÂU MONAZITE BẰNG KIỀM</div>
+    <div class="flow-row">
+      <span class="flow-box accent">Tinh quặng Monazite (99%)</span> <span class="flow-arrow">→</span>
+      <span class="flow-box primary">Phân hủy kiềm NaOH (&gt;50%, 140–160°C, 8–10 giờ)</span>
+    </div>
+    <div class="flow-row"><span class="flow-arrow">↓</span></div>
+    <div class="flow-row">
+      <span class="flow-box">Pha loãng &amp; rửa bằng nước nóng</span> <span class="flow-arrow">→</span>
+      <span class="flow-box">Loại bỏ phosphate (Na₃PO₄)</span> <span class="flow-arrow">→</span>
+      <span class="flow-box">Lọc bã hydroxide (REE, Th, U)</span>
+    </div>
+    <div class="flow-row"><span class="flow-arrow">↓</span></div>
+    <div class="flow-row">
+      <span class="flow-box primary">Hòa tách HCl</span> <span class="flow-arrow">→</span>
+      <span class="flow-box">Loại bỏ gangue &amp; thành phần không tan</span> <span class="flow-arrow">→</span>
+      <span class="flow-box">Trung hòa (pH kiểm soát)</span>
+    </div>
+    <div class="flow-row"><span class="flow-arrow">↓</span></div>
+    <div class="flow-row">
+      <span class="flow-box accent">Dung dịch REE clorua</span>
+      <span class="flow-arrow">|</span>
+      <span class="flow-box red">Kết tủa Th/U (oxalat/hydroxit)</span>
+    </div>
+    <div class="flow-branch">
+      <div class="flow-row"><span class="flow-arrow">↳</span> <span class="flow-box red">Loại bỏ Ra (đồng kết tủa BaSO₄)</span> <span class="flow-arrow">→</span> <span class="flow-box green">Na₃PO₄ (sản phẩm phụ)</span></div>
+    </div>
+  </div>
+
+  <h4>Chế biến sâu – Quy trình axit (Acid Cracking)</h4>
+  <div class="flowchart">
+    <div class="flow-title">SƠ ĐỒ KHỐI: CHẾ BIẾN SÂU MONAZITE BẰNG AXIT</div>
+    <div class="flow-row">
+      <span class="flow-box accent">Tinh quặng Monazite</span> <span class="flow-arrow">→</span>
+      <span class="flow-box primary">Hòa tách H₂SO₄</span> <span class="flow-arrow">→</span>
+      <span class="flow-box">REE sunfat + Th sunfat trong dung dịch phosphate</span>
+    </div>
+    <div class="flow-row"><span class="flow-arrow">↓</span></div>
+    <div class="flow-row">
+      <span class="flow-box">Rửa bằng nước ở nhiệt độ phòng</span> <span class="flow-arrow">→</span>
+      <span class="flow-box">Thêm Na₂SO₄ → kết tủa RE-Na double sulphate</span>
+    </div>
+    <div class="flow-row"><span class="flow-arrow">↓</span></div>
+    <div class="flow-row">
+      <span class="flow-box">Tách khỏi dung dịch chứa P, U, Th</span> <span class="flow-arrow">→</span>
+      <span class="flow-box primary">Hòa tan RE-Na double sulphate trong NaOH → RE(OH)₃</span>
+    </div>
+    <div class="flow-row"><span class="flow-arrow">↓</span></div>
+    <div class="flow-row">
+      <span class="flow-box">Lọc &amp; thu hồi Na₂SO₄ (tái tuần hoàn)</span> <span class="flow-arrow">→</span>
+      <span class="flow-box">Oxy hóa chọn lọc Ce₂O₃ → CeO₂</span> <span class="flow-arrow">→</span>
+      <span class="flow-box accent">RECl₃ (nguyên liệu cho SX)</span>
+    </div>
+    <div class="flow-note">Quy trình axit tạo ra lượng lớn SOx và dư lượng chứa flo cần xử lý. Quy trình kiềm được ưu tiên hơn vì cho phép thu hồi phosphate dưới dạng natri triphosphate (TSP) có giá trị thương mại.</div>
+  </div>
+
+  <div class="note"><strong>Quản lý thorium/uranium:</strong> Thorium (4–12%) và uranium (0,2–0,5%) là thách thức lớn nhất về môi trường và an toàn phóng xạ. Quy trình phải bao gồm tách và quản lý chất thải phóng xạ (kết tủa thorium hydroxide hoặc oxalate).</div>
+
+  <!-- ===== 7.3 IAC ===== -->
+  <h3 id="s7-3">7.3. Đất sét hấp phụ ion (Ion-Adsorption Clay – IAC) <span class="badge">HREE</span></h3>
+  <h4>Đặc điểm</h4>
+  <p>Nguồn cung cấp đất hiếm nặng (HREE) quan trọng nhất thế giới, đặc biệt ở miền Nam Trung Quốc và Myanmar. Các HREE như Dy, Tb, Y được hấp phụ trên bề mặt khoáng vật sét (kaolinite, halloysite) thông qua cơ chế trao đổi ion. Trong quặng đất sét hấp phụ ion, hơn 80% REE tồn tại ở dạng ion có thể trao đổi, cho phép thu hồi thông qua trao đổi ion. Đây là nguồn cung gần 100% đất hiếm nặng tách riêng của thế giới.</p>
+
+  <h4>Hòa tách tại chỗ (In-Situ Leaching – ISL) – Quy trình chi tiết</h4>
+  <div class="flowchart">
+    <div class="flow-title">SƠ ĐỒ KHỐI: HÒA TÁCH TẠI CHỖ (ISL) ĐẤT SÉT HẤP PHỤ ION</div>
+    <div class="flow-row">
+      <span class="flow-box primary">Hệ thống giếng khoan</span> <span class="flow-arrow">→</span>
+      <span class="flow-box">Bơm dung dịch hòa tách (NH₄)₂SO₄ / MgSO₄ / Na₃Cit</span> <span class="flow-arrow">→</span>
+      <span class="flow-box">Ngấm qua tầng quặng</span>
+    </div>
+    <div class="flow-row"><span class="flow-arrow">↓</span></div>
+    <div class="flow-row">
+      <span class="flow-box">Trao đổi ion tại chỗ</span> <span class="flow-arrow">→</span>
+      <span class="flow-box">Thu dung dịch giàu (PLS) tại giếng thu gom</span> <span class="flow-arrow">→</span>
+      <span class="flow-box primary">Xử lý trên mặt đất</span>
+    </div>
+    <div class="flow-branch">
+      <div class="flow-row"><span class="flow-arrow">↳</span> <span class="flow-box">Thêm CPAM (ức chế trương nở sét)</span></div>
+      <div class="flow-row"><span class="flow-arrow">↳</span> <span class="flow-box red">Kiểm soát hấp phụ ngược (reverse adsorption)</span></div>
+    </div>
+  </div>
+
+  <h4>Xử lý dung dịch giàu (PLS) – Quy trình chi tiết</h4>
+  <div class="flowchart">
+    <div class="flow-title">SƠ ĐỒ KHỐI: XỬ LÝ PLS &amp; CHIẾT TÁCH</div>
+    <div class="flow-row">
+      <span class="flow-box primary">PLS (dung dịch giàu REE)</span> <span class="flow-arrow">→</span>
+      <span class="flow-box">Kết tủa bằng axit oxalic (pH 2,5–3,5) hoặc amoni bicarbonate</span>
+    </div>
+    <div class="flow-row"><span class="flow-arrow">↓</span></div>
+    <div class="flow-row">
+      <span class="flow-box">Nung kết tủa → Oxit REE hỗn hợp</span> <span class="flow-arrow">→</span>
+      <span class="flow-box">Hòa tan trong HCl → RECl₃</span> <span class="flow-arrow">→</span>
+      <span class="flow-box primary">Chiết dung môi (SX) đa bậc</span>
+    </div>
+    <div class="flow-row"><span class="flow-arrow">↓</span></div>
+    <div class="flow-row">
+      <span class="flow-box accent">15 oxit REE riêng lẻ (99,99–99,999%)</span>
+    </div>
+    <div class="flow-note">Chiết dung môi cho IAC đòi hỏi hàng trăm bậc. Nghiên cứu 2026 thiết kế quy trình SX bốn tầng cho IAC Jeli (Malaysia), phân tách Pr/Nd cần 62 bậc cân bằng do hệ số phân tách thấp (β = 1,70).</div>
+  </div>
+
+  <p><strong>Chất hòa tách truyền thống:</strong> Amoni sunfat (NH₄)₂SO₄ đạt hiệu suất chiết tách 70–90% nhưng gây ô nhiễm amoni và suy thoái đất.</p>
+  <p><strong>Chất hòa tách thay thế:</strong> Magiê sunfat (MgSO₄) có tác động môi trường thấp hơn. Nghiên cứu năm 2026 phân tích cơ chế trao đổi Mg²⁺–REE và hiệu suất hòa tách ở quy mô phòng thí nghiệm, cột và thí điểm. Hệ thống hòa tách dựa trên MgSO₄ đại diện cho con đường triển vọng hướng tới chiết tách đất hiếm bền vững hơn.</p>
+  <p><strong>Công nghệ không chứa amoni (2026):</strong> Natri citrate (Na₃Cit) 0,15 M ở pH 6,4 đạt hiệu suất hòa tách REE 1.300 mg/kg, vượt trội so với amoni sunfat, giảm hòa tan tạp chất. Kết tủa oxalat đạt &gt;95% thu hồi với độ tinh khiết REO 95–97%.</p>
+  <p><strong>Hòa tách hỗ trợ điện trường (2026):</strong> Áp dụng cường độ điện trường 1 V/cm giảm đáng kể thời gian hòa tách và tăng tốc độ thẩm thấu dung dịch hòa tách lên trung bình 20,8% so với hòa tách magiê sunfat thông thường.</p>
+  <p><strong>Hòa tách bằng nước thải mỏ axit (AMD) – Nghiên cứu 2026:</strong> Sử dụng nước thải mỏ axit (AMD) làm chất hòa tách tự duy trì để thu hồi REE từ đuôi thải đất sét hấp phụ ion. Hiệu suất chiết tách REE đạt 70–92% với zero đầu vào hóa chất nguyên sinh. Điều kiện tối ưu: tỷ lệ rắn/lỏng 1:50, 50°C, 135 rpm, 3 giờ.</p>
+
+  <!-- ===== 7.4 XENOTIME ===== -->
+  <h3 id="s7-4">7.4. Quặng Xenotime (Yttrium Phosphate) <span class="badge">HREE</span></h3>
+  <h4>Đặc điểm</h4>
+  <p>Xenotime là khoáng vật phosphate đất hiếm giàu yttrium (Y) và HREE như Dy, Er, Yb. Công thức (Y, HREE)PO₄. Nguồn cung cấp HREE quan trọng tại Malaysia, Australia và Brazil.</p>
+
+  <h4>Làm giàu</h4>
+  <p>Kỹ thuật kết hợp tuyển từ và tuyển nổi: độ tinh quặng đất hiếm tăng lên 14,29% và hiệu suất thu hồi đạt 94,48%.</p>
+
+  <h4>Chế biến sâu – Nung kiềm (Alkaline Fusion)</h4>
+  <div class="flowchart">
+    <div class="flow-title">SƠ ĐỒ KHỐI: CHẾ BIẾN SÂU XENOTIME BẰNG NUNG KIỀM</div>
+    <div class="flow-row">
+      <span class="flow-box accent">Tinh quặng Xenotime</span> <span class="flow-arrow">→</span>
+      <span class="flow-box">Nghiền mịn</span> <span class="flow-arrow">→</span>
+      <span class="flow-box primary">Trộn với NaOH (tỷ lệ 1:2)</span> <span class="flow-arrow">→</span>
+      <span class="flow-box primary">Nung 350°C trong 3 giờ</span>
+    </div>
+    <div class="flow-row"><span class="flow-arrow">↓</span></div>
+    <div class="flow-row">
+      <span class="flow-box">Rửa bằng nước khử ion nóng (~80°C) đến pH trung tính (6–8)</span> <span class="flow-arrow">→</span>
+      <span class="flow-box">Khuấy &amp; lọc</span> <span class="flow-arrow">→</span>
+      <span class="flow-box">Loại bỏ phosphate (100%)</span>
+    </div>
+    <div class="flow-row"><span class="flow-arrow">↓</span></div>
+    <div class="flow-row">
+      <span class="flow-box primary">Hòa tách axit (HCl 6M)</span> <span class="flow-arrow">→</span>
+      <span class="flow-box">Kết tủa chọn lọc (axit oxalic/amoniac)</span> <span class="flow-arrow">→</span>
+      <span class="flow-box accent">Dung dịch REE clorua</span>
+    </div>
+  </div>
+
+  <p><strong>Chiết tách:</strong> Sử dụng D2EHPA. Nghiên cứu thu hồi Nd và Dy từ dung dịch hòa tách axit axetic của xenotime: điều kiện tối ưu 10% v/v D2EHPA, pH 1,5, tỷ lệ A/O = 1:1, hiệu suất &gt;90% cho HREE (Dy 90,9%, Yb 99,0%).</p>
+
+  <!-- ===== 7.5 APATITE ===== -->
+  <h3 id="s7-5">7.5. Quặng Apatite (Phosphate canxi chứa đất hiếm) <span class="badge">REE phụ</span></h3>
+  <p>Apatite (Ca₅(PO₄)₃(F,Cl,OH)) là khoáng vật phosphate phổ biến, chứa đất hiếm thay thế đồng hình cho Ca²⁺. Hàm lượng REE thấp (0,1–1,3%) nhưng khối lượng khai thác khổng lồ cho phân bón.</p>
+  <div class="flowchart">
+    <div class="flow-title">SƠ ĐỒ KHỐI: CHẾ BIẾN APATITE</div>
+    <div class="flow-row">
+      <span class="flow-box primary">Quặng apatite</span> <span class="flow-arrow">→</span>
+      <span class="flow-box">Nghiền &amp; phân loại</span> <span class="flow-arrow">→</span>
+      <span class="flow-box">Tuyển trọng lực &amp; tuyển từ</span> <span class="flow-arrow">→</span>
+      <span class="flow-box accent">Tinh quặng apatite (1,28% REE)</span>
+    </div>
+    <div class="flow-row"><span class="flow-arrow">↓</span></div>
+    <div class="flow-row">
+      <span class="flow-box">Tiền hòa tách (loại bỏ phi-REE)</span> <span class="flow-arrow">→</span>
+      <span class="flow-box">Hòa tách áp suất</span> <span class="flow-arrow">→</span>
+      <span class="flow-box">Kết tủa REE</span>
+    </div>
+    <div class="flow-row"><span class="flow-arrow">↓</span></div>
+    <div class="flow-row">
+      <span class="flow-box green">Phân hủy HNO₃: P → dung dịch nitrat-phosphate (96%)</span>
+      <span class="flow-arrow">|</span>
+      <span class="flow-box">F → CaF₂ (65%)</span>
+      <span class="flow-arrow">|</span>
+      <span class="flow-box">REE → tinh quặng (80%)</span>
+    </div>
+  </div>
+
+  <!-- ===== 7.6 ALLANITE ===== -->
+  <h3 id="s7-6">7.6. Quặng Allanite (Silicate đất hiếm) <span class="badge">LREE</span></h3>
+  <p>Allanite (A₂M₃Si₃O₁₂[OH]) là khoáng vật silicat chứa đất hiếm phổ biến nhất, với REE thay thế đồng hình cho Ca²⁺. Có ở mỏ lớn tại Wyoming (Hoa Kỳ) và Halleck Creek.</p>
+  <ul>
+    <li><strong>Làm giàu</strong>: Tuyển trọng lực ướt và tuyển từ khô cho vật liệu -300/+86 µm. Tuyển nổi allanite còn thách thức do hạt thô, giải phóng kém, xen kẽ với biotite và chlorite gangue.</li>
+    <li><strong>Chế biến sâu</strong>: Hòa tách axit sulfuric (tương tự bastnäsite), hòa tách nhiệt độ thấp, hòa tách HCl + kết tủa loại bỏ Fe. Sản xuất axit oxalic sinh học bởi <em>Issatchenkia orientalis</em> để thu hồi đất hiếm bền vững.</li>
+  </ul>
+
+  <!-- ===== 7.7 BAYAN OBO ===== -->
+  <h3 id="s7-7">7.7. Quặng hỗn hợp Bayan Obo <span class="badge">Đa kim</span></h3>
+  <p>Mỏ Bayan Obo (Nội Mông, Trung Quốc) là mỏ đất hiếm lớn nhất thế giới, chứa hỗn hợp bastnäsite và monazite cùng với sắt, niobium và fluorit. Nghiên cứu 2026 xử lý tinh quặng hỗn hợp bằng cách trộn với 20% NaOH, rang ở 650°C trong 2 giờ. Bastnasite và monazite bị phân hủy hoàn toàn, chuyển thành oxit đất hiếm (REyOx), ferit đất hiếm (LaFeO₃) và nacaphite (Na₃₀Ca₁₅P₁₅O₆₀F₁₅). Sản phẩm chính: LREE (La, Ce, Pr, Nd).</p>
+</section>
+
+<!-- ===================== 8 ===================== -->
+<section id="s8">
+  <h2>8. Các đơn vị trong chuỗi cung ứng đất hiếm toàn cầu</h2>
+
+  <h3>8.1. Trung Quốc</h3>
+  <div class="grid">
+    <div class="card"><h5>China Northern Rare Earth (北方稀土)</h5><p>Công ty đất hiếm lớn nhất thế giới với chuỗi công nghiệp hoàn chỉnh nhất. Mã cổ phiếu 600111 (Thượng Hải).</p></div>
+    <div class="card"><h5>China Rare Earth Group (中国稀土集团)</h5><p>Nắm giữ <strong>Hunan Rare Earth</strong> và <strong>Dingnan Dahua</strong> (oxit đơn nguyên tố 99,999%).</p></div>
+    <div class="card"><h5>China Minmetals (五矿集团)</h5><p>Một trong bốn tập đoàn đất hiếm lớn của Trung Quốc.</p></div>
+    <div class="card"><h5>Shenghe Resources (盛和资源)</h5><p>Tham gia chuỗi cung ứng toàn cầu.</p></div>
+    <div class="card"><h5>JL MAG Rare-Earth (金力永磁)</h5><p>Nhà sản xuất nam châm NdFeB hàng đầu cho EV và tuabin gió.</p></div>
+    <div class="card"><h5>Beijing Zhong Ke San Huan (中科三环)</h5><p>Một trong những nhà sản xuất nam châm đất hiếm lớn nhất.</p></div>
+    <div class="card"><h5>Ganzhou Rare Earth Group (赣州稀土集团)</h5><p>Tập đoàn khu vực Giang Tây, chuyên khai thác IAC.</p></div>
+    <div class="card"><h5>Xiamen Tungsten (厦门钨业)</h5><p>Chế biến và sản xuất vật liệu đất hiếm.</p></div>
+    <div class="card"><h5>Funing Rare Earth (阜宁稀土)</h5><p>Công ty tách chiết đất hiếm.</p></div>
+    <div class="card"><h5>Jiangsu Guosheng Rare Earth (Chalco)</h5><p>Công suất 2.000 tấn SEO/năm.</p></div>
+    <div class="card"><h5>Yixing Xinwei Leeshing Rare Earth</h5><p>Thuộc China Rare Earth Holdings Ltd.</p></div>
+    <div class="card"><h5>Guangdong Fuyuan Rare Earth (广东富远稀土)</h5><p>Thành lập năm 2002.</p></div>
+    <div class="card"><h5>Xinfeng Baogang Xinli Rare Earth (信丰包钢新利稀土)</h5><p>Công ty con China Northern Rare Earth, chuyên tách chiết và chế biến phế liệu NdFeB.</p></div>
+  </div>
+
+  <h3>8.2. Hoa Kỳ</h3>
+  <ul>
+    <li><strong>MP Materials Corp.</strong> – Sở hữu mỏ Mountain Pass, mỏ đất hiếm duy nhất đang hoạt động tại Bắc Mỹ. Đã công bố quan hệ đối tác công-tư trị giá hàng tỷ USD với Bộ Quốc phòng Hoa Kỳ, bao gồm khoản đầu tư vốn cổ phần 400 triệu USD và hợp đồng bao tiêu 10 năm cho 100% sản lượng nam châm từ nhà máy 10X dự kiến. Sản lượng PrNd Q1/2026 đạt 917 tấn, tăng 63% so với cùng kỳ.</li>
+    <li><strong>USA Rare Earth (USAR)</strong> – Sản xuất oxit dysprosium và NdPr từ phế liệu nam châm tại Wheat Ridge, Colorado. Đã mua lại <strong>Less Common Metals</strong> (Anh) và <strong>Serra Verde Group</strong> (Brazil, 2,8 tỷ USD).</li>
+    <li><strong>Energy Fuels Inc. (UUUU)</strong> – Vận hành White Mesa Mill (Utah). Đã mua lại <strong>Australian Strategic Materials (ASM)</strong> với giá 299 triệu USD, và tháng 6/2026 công bố thâu tóm VAC (Đức) với 1,9 tỷ USD, sở hữu nhà máy nam châm Sumter (Nam Carolina) công suất 2.000 tấn/năm, có thể mở rộng lên 12.000 tấn/năm.</li>
+  </ul>
+
+  <h3>8.3. Australia</h3>
+  <ul>
+    <li><strong>Lynas Rare Earths Limited (LYC.ASX)</strong> – Nhà cung cấp hợp chất đất hiếm lớn nhất ngoài Trung Quốc. Đã sản xuất oxit Dy và Tb tại Malaysia. Tháng 3/2026, ký thỏa thuận sơ bộ 96 triệu USD với Lầu Năm Góc, bao gồm oxit samarium cho nam châm chịu nhiệt. Giá sàn PrNd oxide được ấn định ở mức 110 USD/kg trong 4 năm. Sản lượng NdPr oxide quý 2/2026 đạt 1.857 tấn. Lynas Malaysia là nhà sản xuất tách chiết đất hiếm nặng quy mô thương mại duy nhất ngoài Trung Quốc.</li>
+    <li><strong>Iluka Resources Ltd.</strong> – Phát triển nhà máy tinh luyện Eneabba (Tây Australia).</li>
+    <li><strong>Alkane Resources</strong> – Dự án Dubbo (New South Wales).</li>
+    <li><strong>Arafura Resources</strong> – Dự án Nolans Bore (Bắc Territory), dự kiến cung cấp 4.440 tấn NdPr oxide/năm từ nửa cuối 2029, chiếm ~4% nguồn cung toàn cầu.</li>
+  </ul>
+
+  <h3>8.4. Các quốc gia khác</h3>
+  <ul>
+    <li><strong>Brazil – Serra Verde Group</strong>: Mỏ tại Pela Ema, sản xuất Dy, NdPr, Tb. Đã được USA Rare Earth mua lại.</li>
+    <li><strong>Nga – Solikamsk Magnesium Plant OJSC</strong>: Đang mở rộng tách chiết đất hiếm.</li>
+    <li><strong>Ấn Độ – Indian Rare Earths Limited (IREL)</strong>: Công ty nhà nước chuyên khai thác monazite ven biển. Đã ký thỏa thuận hợp tác với Viện Công nghệ Xạ hiếm Việt Nam về nghiên cứu, chế biến sâu và tinh luyện đất hiếm.</li>
+    <li><strong>Malaysia – LAMP</strong>: Nhà máy tách chiết đất hiếm lớn nhất bên ngoài Trung Quốc, vận hành bởi Lynas.</li>
+    <li><strong>Việt Nam</strong>: <strong>VTRE</strong> – thí điểm sản xuất TREO &gt;95% từ Đông Pao (Lai Châu). <strong>Viện Công nghệ Xạ hiếm (ITR)</strong> – nòng cốt nghiên cứu. <strong>Star Group</strong> – sản xuất nam châm.</li>
+    <li><strong>LS Eco Energy (Hàn Quốc)</strong>: Hợp tác Lynas xây dựng nhà máy sản xuất kim loại đất hiếm tại Việt Nam, ưu tiên samarium.</li>
+  </ul>
+
+  <h3>8.5. Các công ty tách chiết và tinh luyện chuyên biệt</h3>
+  <div class="grid">
+    <div class="card"><h5>Solvay (Bỉ)</h5><p>Cơ sở La Rochelle – một trong số ít địa điểm có khả năng tách chiết đất hiếm quy mô lớn.</p></div>
+    <div class="card"><h5>Ucore Rare Metals Inc.</h5><p>Công nghệ RapidSX™. Xây dựng Louisiana Strategic Metals Complex (LA-SMC).</p></div>
+    <div class="card"><h5>Phoenix Tailings Inc.</h5><p>Tách chiết và tinh luyện đất hiếm, Burlington, Massachusetts.</p></div>
+    <div class="card"><h5>ReElement Technologies</h5><p>Chuyên tách chiết và tinh luyện, thuộc American Resources.</p></div>
+    <div class="card"><h5>Carester (Pháp)</h5><p>Công ty tách chiết đất hiếm.</p></div>
+    <div class="card"><h5>Geomega Resources (Canada)</h5><p>Tái chế đất hiếm từ nam châm phế thải.</p></div>
+    <div class="card"><h5>REEtec (Na Uy)</h5><p>Công nghệ tách chiết đất hiếm thay thế.</p></div>
+    <div class="card"><h5>Vacuumschmelze (VAC – Đức)</h5><p>Nhà sản xuất nam châm và hợp kim đất hiếm. Đã được Energy Fuels mua lại với 1,9 tỷ USD (6/2026).</p></div>
+    <div class="card"><h5>Less Common Metals (LCM – Anh)</h5><p>Nhà sản xuất kim loại, hợp kim và strip cast. Kế hoạch 3.000 tấn/năm vào Q4/2026.</p></div>
+    <div class="card"><h5>Australian Strategic Materials (ASM)</h5><p>Nhà máy kim loại Hàn Quốc (Korean Metals Plant) công suất 1.300 tấn/năm.</p></div>
+    <div class="card"><h5>Técnicas Reunidas (Tây Ban Nha)</h5><p>Công nghệ RARETECH® – thủy luyện kim cho monazite, thu hồi TSP và Ce hydroxide làm sản phẩm phụ.</p></div>
+  </div>
+</section>
+
+<!-- ===================== 9 ===================== -->
+<section id="s9">
+  <h2>9. Xu hướng công nghệ chế biến sâu mới nhất (2025–2026)</h2>
+
+  <h3>9.1. Chiết dung môi hiệp lực (Synergistic Solvent Extraction)</h3>
+  <p><strong>Hệ D2EHPA–DGA (Diglycolamide)</strong>: Kết hợp D2EHPA với ligand diglycolamide (TODGA, HDEHDGA) trong kerosene. Điều kiện tối ưu: D2EHPA (1,8 M) + TODGA (0,2 M), đạt hiệu suất chiết tách tổng cộng 96% cho tất cả REE qua hai giai đoạn chiết ngược dòng.</p>
+
+  <h3>9.2. Dung môi Eutectic sâu (Deep Eutectic Solvents – DES)</h3>
+  <ul>
+    <li><strong>DES D2EHPA–Thymol</strong> (tỷ lệ mol 1:1): Chiết tách Nd³⁺ và Pr³⁺ trong môi trường sunfat. Kết quả thiết lập DES D2EHPA–thymol như một hệ dung môi không đắt tiền đầy triển vọng cho chiết tách Nd–Pr.</li>
+    <li><strong>DES điều chỉnh nước cho tái chế NdFeB</strong>: Nghiên cứu 2026 phát triển DES ChCl-OA-H₂O để tách trực tiếp REE và Fe từ phế liệu NdFeB, đạt hiệu suất thu hồi REE 97% ở tỷ lệ rắn/lỏng 100 g/L, với hiệu suất tái chế DES &gt;90%.</li>
+  </ul>
+
+  <h3>9.3. Hòa tách chọn lọc với tác nhân đặc hiệu</h3>
+  <p>Phòng thí nghiệm Quốc gia Ames (Hoa Kỳ): Tác nhân hòa tách chọn lọc HREE đạt hiệu suất ~97% từ nguyên liệu thải mỏ, đồng thời tách HREE và LREE trong một bước duy nhất.</p>
+
+  <h3>9.4. Tách từ trường (Magnetophoretic Separation)</h3>
+  <p>Sử dụng từ trường cục bộ để tăng cường kết tinh và tách đất hiếm hòa tan, giảm tiêu thụ năng lượng và hóa chất. Nghiên cứu năm 2026 tại PNNL chứng minh rằng gradient từ trường cục bộ có hiệu ứng tầm xa đối với nồng độ ion đất hiếm trong dung dịch.</p>
+
+  <h3>9.5. Sắc ký dịch chuyển có ligand hỗ trợ (LAD Chromatography)</h3>
+  <p><strong>Quy trình ba vùng (Three-Zone LAD)</strong>: Cho phép sản xuất Nd, Pr, Ce và La độ tinh khiết cao với năng suất tăng hơn 170 lần so với phương pháp đơn vùng.</p>
+
+  <h3>9.6. Điện hóa thu hồi (Electrochemical Recovery)</h3>
+  <ul>
+    <li><strong>Điện kết tủa từ trường</strong>: Kết hợp với chiết tách antisolvent — thu hồi &gt;90% đất hiếm với độ tinh khiết 99%.</li>
+    <li><strong>Xung điện trong môi trường clo</strong>: Thu hồi &gt;90% đất hiếm từ nam châm, giảm 87% năng lượng và 54% chi phí vận hành.</li>
+    <li><strong>Nung muối nóng chảy điện hóa</strong>: Phương pháp mới của INL (2026) sử dụng quá trình nung muối nóng chảy dưới 500°C, không phát thải, vận hành vòng kín để thu hồi kim loại REE từ nam châm NdFeB.</li>
+  </ul>
+
+  <h3>9.7. Tách pha lỏng-lỏng (Liquid–Liquid Phase Separation – LLPS) sử dụng peptide</h3>
+  <p>Nghiên cứu năm 2026 phát triển hệ thống LLPS lấy cảm hứng sinh học dựa trên peptide EF-hand được thiết kế, cho phép thu hồi REE hiệu quả cao và chọn lọc thông qua quy trình hoàn toàn trong nước, xanh và chi phí thấp. Hệ thống đạt được tách chọn lọc LREE liền kề (Nd/Ce) với hệ số phân tách vượt quá 2,8 tại pH 5,6.</p>
+
+  <h3>9.8. Tái chế và kinh tế tuần hoàn (2026)</h3>
+  <ul>
+    <li><strong>USA Rare Earth</strong>: Sản xuất oxit dysprosium và NdPr từ phế liệu nam châm tái chế tại Wheat Ridge, Colorado. Phế liệu từ nhà máy Stillwater, Oklahoma dự kiến cung cấp tới 30% nhu cầu nguyên liệu oxit đất hiếm từ nam châm.</li>
+    <li><strong>Tích hợp HNO₃ leaching + double-salt precipitation</strong>: Nghiên cứu 2026 phát triển quy trình tích hợp cho nam châm NdFeB: hòa tách HNO₃ (3 mol/L, 90°C, tỷ lệ rắn/lỏng 1:10, 150 phút) đạt hiệu suất &gt;93% cho Nd, Pr, Dy. Kết tủa double-salt kiểm soát nhiệt độ hai giai đoạn: thu hồi chọn lọc LREE ở 25°C, sau đó thu hồi Dy ở 90°C, đạt thu hồi tích lũy 97,76% cho Dy.</li>
+    <li><strong>Dự án REEPRODUCE (EU)</strong>: Thiết lập chuỗi giá trị tái chế REE hoàn chỉnh từ sản phẩm điện tử thải (WEEE) đến sản xuất nam châm bằng vật liệu tái chế.</li>
+    <li><strong>Dự án FREECOVER (EU)</strong>: Sử dụng axit tự nhiên để hòa tách nam châm thải, tách REE bằng dung môi ion thân thiện môi trường trên màng polymer.</li>
+    <li><strong>Dự án HARMONY (EU)</strong>: Dự án do EU tài trợ tiên phong quy trình tái chế vòng kín cho nam châm vĩnh cửu NdFeB cuối vòng đời.</li>
+    <li><strong>Dự án NEO-CYCLE (EU)</strong>: Mục tiêu trình diễn ở cấp độ TRL6 việc tái chế bền vững nam châm NdFeB từ ổ cứng máy tính.</li>
+  </ul>
+</section>
+
+<!-- ===================== 10 ===================== -->
+<section id="s10">
+  <h2>10. Tác động môi trường của khai thác đất hiếm</h2>
+  <ul>
+    <li><strong>Phóng xạ tự nhiên</strong>: Quặng đất hiếm thường chứa thorium và uranium. Toàn bộ chuỗi làm giàu và tách chiết đều tạo ra chất thải chứa phóng xạ tự nhiên (NORM).</li>
+    <li><strong>Ô nhiễm đất và nước</strong>: Khai thác tại chỗ gây axit hóa đất và ô nhiễm nước ngầm. Tại mỏ Renju (Trung Quốc), khai thác đã gây mất <strong>1.599,6 tấn carbon trong đất</strong> và <strong>3.745,1 tấn carbon thực vật</strong>. Quá trình tinh luyện và tách chiết thải ra <strong>25,12 kg CO₂ cho mỗi kg REE</strong>.</li>
+    <li><strong>Tiêu thụ năng lượng và hóa chất</strong>: Lượng lớn axit, kiềm và dung môi hữu cơ.</li>
+    <li><strong>Tác động đến hệ sinh thái nước</strong>: Nghiên cứu năm 2026 phát hiện rằng khai thác đất hiếm không chỉ là nguồn nitơ mà còn làm suy yếu quá trình loại bỏ nitơ của vi sinh vật trầm tích, giảm khả năng đệm tự nhiên của sông.</li>
+    <li><strong>Ô nhiễm lan rộng</strong>: Tốc độ phát tán môi trường của REE vượt quá 90%, và ô nhiễm đã lan rộng từ các khu vực khai thác vào hệ sinh thái đô thị và nông nghiệp.</li>
+    <li><strong>Giải pháp</strong>: Luyện kim xanh, tái chế vòng kín, dung môi eutectic sâu (DES) và dung môi ion.</li>
+  </ul>
+  <p class="ref">Nguồn: <a href="https://www.sciencedirect.com/science/article/pii/S0959652626019736" target="_blank" rel="noopener">Integrated life cycle assessment for REE mining – ScienceDirect (2026)</a> · <a href="https://english.scib.ac.cn" target="_blank" rel="noopener">Rare-earth mining weakens nitrogen-sink function – Science Bulletin (2026)</a></p>
+</section>
+
+<!-- ===================== 11 ===================== -->
+<section id="s11">
+  <h2>11. Tái chế đất hiếm và kinh tế tuần hoàn</h2>
+  <ul>
+    <li><strong>Thủy luyện kim (Hydrometallurgy)</strong>: Dung dịch axit hòa tan đất hiếm từ phế liệu nam châm.</li>
+    <li><strong>Dung môi eutectic sâu (DES)</strong>: Kỹ thuật xanh tách chọn lọc đất hiếm từ phế liệu NdFeB, hiệu suất 97% với tỷ lệ rắn/lỏng 100 g/L.</li>
+    <li><strong>Điện hóa (Electrochemical recovery)</strong>: Xung điện trong môi trường clo — thu hồi &gt;90% đất hiếm, giảm 87% năng lượng, 54% chi phí.</li>
+    <li><strong>Điện kết tủa từ trường (Magneto-electrodeposition)</strong>: Kết hợp với chiết tách antisolvent — &gt;90% đất hiếm, độ tinh khiết 99%.</li>
+    <li><strong>Tích hợp HNO₃ + double-salt precipitation (2026)</strong>: Quy trình không cần chiết dung môi, đạt thu hồi Dy 97,76% từ nam châm NdFeB.</li>
+    <li><strong>Kết tinh antisolvent (2026)</strong>: Nghiên cứu tái chế kim loại đất hiếm từ nam châm NdFeB bằng kết tinh antisolvent, kết hợp mở rộng quy mô và đánh giá vòng đời. Kết quả LCA cho thấy tái chế tiết kiệm khoảng 25% tác động GWP cho thu hồi thủy luyện kim và 54,8% cho tái chế nam châm-sang-nam châm.</li>
+  </ul>
+  <p class="ref">Nguồn: <a href="https://www.sciencedirect.com/science/article/pii/S1385894726065666" target="_blank" rel="noopener">Recovery of rare earth metals from NdFeB magnets using antisolvent crystallization – ScienceDirect (2026)</a></p>
+</section>
+
+<!-- ===================== 12 ===================== -->
+<section id="s12">
+  <h2>12. Triển vọng và thách thức</h2>
+  <h3>12.1. Xu hướng công nghệ tương lai</h3>
+  <ul>
+    <li><strong>AI trong tách chiết</strong>: Tối ưu hóa quy trình tách và tinh chế. Mô hình XGBoost-SHAP (2026) hỗ trợ tối ưu hóa dữ liệu cho hòa tách REE từ đuôi thải.</li>
+    <li><strong>Theo dõi kỹ thuật số</strong>: Blockchain truy xuất nguồn gốc chuỗi cung ứng.</li>
+    <li><strong>Kinh tế tuần hoàn</strong>: Tăng cường tái chế, giảm khai thác nguyên sinh.</li>
+    <li><strong>Vật liệu thay thế</strong>: Nam châm không chứa HREE hoặc giảm hàm lượng Dy/Tb. Giảm hàm lượng Dy từ 4% xuống 1% khối lượng có thể ngăn chặn rò rỉ 480–840 kg quặng, tránh 12–17 kg CO₂-eq và giảm 11–64% mười lăm tác động môi trường khác.</li>
+  </ul>
+  <h3>12.2. Thách thức chính</h3>
+  <ul>
+    <li><strong>Khoảng trống công nghệ</strong>: Nhiều quốc gia có trữ lượng lớn nhưng thiếu công nghệ chế biến sâu.</li>
+    <li><strong>Rào cản môi trường</strong>: Chi phí xử lý chất thải phóng xạ và ô nhiễm hóa học cao.</li>
+    <li><strong>Biến động giá</strong>: Nhạy cảm với chính sách thương mại và địa chính trị.</li>
+    <li><strong>Tập trung chuỗi cung ứng</strong>: Mức độ tập trung cao tạo rủi ro gián đoạn nguồn cung. Chỉ có Lynas Malaysia là nhà sản xuất tách chiết đất hiếm nặng quy mô thương mại duy nhất ngoài Trung Quốc.</li>
+    <li><strong>Thiếu hụt nguồn cung HREE</strong>: Thị trường đất hiếm nặng ngoài Trung Quốc dự kiến tiếp tục đối mặt với tình trạng thiếu hụt nguồn cung trong năm 2026, đặc biệt đối với dysprosium và terbium.</li>
+  </ul>
+</section>
+
+<!-- ===================== 13 ===================== -->
+<section id="s13">
+  <h2>13. Kết luận</h2>
+  <p>Đất hiếm là nguyên liệu chiến lược không thể thay thế cho quá trình chuyển đổi năng lượng và công nghệ cao. Chuỗi cung ứng toàn cầu hiện đang tập trung cực độ vào Trung Quốc, đặc biệt ở khâu chế biến sâu và sản xuất nam châm. Các quốc gia như Hoa Kỳ, EU, Australia và Việt Nam đang nỗ lực xây dựng năng lực chế biến nội địa, nhưng còn nhiều thách thức về công nghệ, chi phí và môi trường.</p>
+  <p>Công nghệ khai thác, làm giàu và chiết tách đất hiếm đang có những bước tiến đáng kể với các phương pháp mới như hòa tách chọn lọc, sắc ký dịch chuyển ligand, tách từ trường và dung môi xanh. Nghiên cứu năm 2026 đã đạt được những bước đột phá quan trọng: quy trình rang oxy hóa – tuyển nổi kết hợp tách bastnaesite và monazite đạt độ tinh khiết 97,15%; hòa tách không chứa amoni bằng natri citrate đạt hiệu suất &gt;95% với độ tinh khiết REO 95–97%; tích hợp HNO₃ + double-salt precipitation thu hồi Dy 97,76% từ nam châm NdFeB; và kết tủa chiết với creatine phosphate làm giàu RE lên 198,73 g/L trong một bước, gấp 933,65 lần so với dung dịch ban đầu.</p>
+  <p>Tương lai của ngành đất hiếm sẽ phụ thuộc vào sự cân bằng giữa an ninh nguồn cung, phát triển công nghệ và bảo vệ môi trường. Tái chế, kinh tế tuần hoàn và hợp tác quốc tế sẽ là những yếu tố then chốt để xây dựng chuỗi cung ứng đất hiếm bền vững và đa dạng hóa nguồn cung toàn cầu.</p>
+</section>
+
+<!-- ===================== 15 ===================== -->
+<section id="s15">
+  <h2>15. Danh mục nguyên tố đất hiếm và ứng dụng chi tiết</h2>
+
+  <h3>15.1. Phân loại tổng quan</h3>
+  <table>
+    <thead><tr><th>Phân loại</th><th>Nguyên tố</th><th>Đặc điểm</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Đất hiếm nhẹ (LREE)</strong></td><td>La, Ce, Pr, Nd, Pm, Sm, Eu</td><td>Hàm lượng cao hơn, giá trị thấp hơn, chủ yếu từ bastnäsite và monazite</td></tr>
+      <tr><td><strong>Đất hiếm nặng (HREE)</strong></td><td>Gd, Tb, Dy, Ho, Er, Tm, Yb, Lu, Y</td><td>Hàm lượng thấp hơn, giá trị cao hơn, chủ yếu từ đất sét hấp phụ ion và xenotime</td></tr>
+      <tr><td><strong>Đặc biệt</strong></td><td>Sc</td><td>Thường được phân loại riêng, phân tán cao trong vỏ Trái Đất</td></tr>
+    </tbody>
+  </table>
+
+  <h3>15.2. Chi tiết từng nguyên tố và ứng dụng</h3>
+
+  <h4>15.2.1. Lanthanum (La, Z=57) – LREE</h4>
+  <table>
+    <thead><tr><th>Ứng dụng</th><th>Mô tả kỹ thuật</th></tr></thead>
+    <tbody>
+      <tr><td>Thủy tinh quang học</td><td>Oxit lanthanum tăng chiết suất và độ cứng của thủy tinh mà không tăng tán sắc đáng kể, dùng cho thấu kính máy ảnh, kính hiển vi, lăng kính quang học</td></tr>
+      <tr><td>Xúc tác FCC</td><td>Thêm vào xúc tác cracking dầu mỏ để tăng độ ổn định nhiệt và độ chọn lọc, giảm tích tụ cốc</td></tr>
+      <tr><td>Pin NiMH</td><td>Kim loại lanthanum là thành phần chính của hợp kim lưu trữ hydro trong pin nickel-metal hydride</td></tr>
+      <tr><td>Gốm điện tử</td><td>Oxit lanthanum là phụ gia cho tụ điện gốm, cải thiện tính chất điện và cấu trúc</td></tr>
+      <tr><td>Phosphor xanh</td><td>Oxit lanthanum là vật liệu tổng hợp quan trọng cho phosphor xanh</td></tr>
+      <tr><td>Màng nông nghiệp</td><td>Màng nông nghiệp chuyển đổi ánh sáng có chứa lanthanum, được các nhà khoa học gọi là "canxi siêu cấp" cho cây trồng</td></tr>
+    </tbody>
+  </table>
+
+  <h4>15.2.2. Cerium (Ce, Z=58) – LREE</h4>
+  <table>
+    <thead><tr><th>Ứng dụng</th><th>Mô tả kỹ thuật</th></tr></thead>
+    <tbody>
+      <tr><td>Kính ô tô</td><td>Cerium hấp thụ tia UV và hồng ngoại, giảm nhiệt độ trong xe, tiết kiệm điện điều hòa. Từ năm 1997, tất cả kính ô tô Nhật Bản đều chứa oxit cerium</td></tr>
+      <tr><td>Xúc tác ô tô</td><td>Xúc tác ba chiều cho xe hơi, chiếm 1/3 tổng tiêu thụ đất hiếm tại Hoa Kỳ</td></tr>
+      <tr><td>Đánh bóng chính xác</td><td>Bột đánh bóng oxit cerium cho thấu kính quang học, tấm LCD, wafer bán dẫn, kính điện thoại</td></tr>
+      <tr><td>Bột màu</td><td>Cerium sulfide thay thế chì và cadmium trong nhựa, sơn, mực in</td></tr>
+      <tr><td>Hợp kim lưu trữ hydro</td><td>Vật liệu lưu trữ hydro gốc cerium cho pin NiMH</td></tr>
+      <tr><td>Laser</td><td>Laser Ce:LiSAF của Hoa Kỳ, dùng để phát hiện vũ khí sinh học và ứng dụng y tế</td></tr>
+    </tbody>
+  </table>
+
+  <h4>15.2.3. Praseodymium (Pr, Z=59) – LREE</h4>
+  <table>
+    <thead><tr><th>Ứng dụng</th><th>Mô tả kỹ thuật</th></tr></thead>
+    <tbody>
+      <tr><td>Nam châm vĩnh cửu</td><td>Hợp kim Pr-Nd thay thế kim loại Nd nguyên chất trong nam châm, cải thiện khả năng chống oxy hóa và tính chất cơ học</td></tr>
+      <tr><td>Màu thủy tinh</td><td>Oxit praseodymium là chất tạo màu vàng cho thủy tinh, gốm và men. Kính Pr-Nd hấp thụ ánh sáng vàng và hồng ngoại, dùng cho kính bảo hộ hàn và kính lọc máy ảnh</td></tr>
+      <tr><td>Men gốm</td><td>"Praseodymium yellow" – men gốm màu vàng đậm vẫn có ứng dụng thương mại</td></tr>
+      <tr><td>Laser và quang tử</td><td>Ion Pr³⁺ được dùng làm chất pha tạp trong laser DPSS, bộ khuếch đại sợi quang, hạt nano chuyển đổi ngược</td></tr>
+      <tr><td>Làm lạnh từ</td><td>Hợp kim PrNi₅ có khả năng làm lạnh từ cực mạnh, đạt nhiệt độ 0,001K</td></tr>
+    </tbody>
+  </table>
+
+  <h4>15.2.4. Neodymium (Nd, Z=60) – LREE</h4>
+  <table>
+    <thead><tr><th>Ứng dụng</th><th>Mô tả kỹ thuật</th></tr></thead>
+    <tbody>
+      <tr><td>Nam châm vĩnh cửu</td><td>Nam châm NdFeB – nam châm mạnh nhất được biết đến, năng lượng từ tối đa vượt 400 kJ/m³. Chiếm hơn 80% tiêu thụ neodymium, dùng cho động cơ EV, tuabin gió, động cơ điện thoại</td></tr>
+      <tr><td>Vật liệu laser</td><td>Kính neodymium là "trái tim" của laser, là môi trường laser có thể phát ra năng lượng lớn nhất trên Trái Đất. Cơ sở của NIF (National Ignition Facility) Hoa Kỳ là laser kính neodymium</td></tr>
+      <tr><td>Laser y tế</td><td>Dao mổ laser từ YAG pha tạp neodymium</td></tr>
+      <tr><td>Thủy tinh quang học</td><td>Oxit neodymium nhuộm màu thủy tinh, tạo màu từ hồng ấm đến xanh lam tùy nguồn sáng</td></tr>
+      <tr><td>Hàng không vũ trụ</td><td>Neodymium được sử dụng rộng rãi trong vật liệu hàng không vũ trụ</td></tr>
+    </tbody>
+  </table>
+
+  <h4>15.2.5. Promethium (Pm, Z=61) – LREE</h4>
+  <table>
+    <thead><tr><th>Ứng dụng</th><th>Mô tả kỹ thuật</th></tr></thead>
+    <tbody>
+      <tr><td>Năng lượng hạt nhân</td><td>Promethium làm nguồn nhiệt cho vệ tinh nhân tạo và thiết bị thăm dò chân không</td></tr>
+      <tr><td>Công nghiệp</td><td>Sử dụng trong sản xuất thép, công nghiệp nhựa và công nghiệp giấy</td></tr>
+    </tbody>
+  </table>
+
+  <h4>15.2.6. Samarium (Sm, Z=62) – LREE</h4>
+  <table>
+    <thead><tr><th>Ứng dụng</th><th>Mô tả kỹ thuật</th></tr></thead>
+    <tbody>
+      <tr><td>Nam châm vĩnh cửu</td><td>Nam châm SmCo – nam châm đất hiếm đầu tiên được ứng dụng công nghiệp, có hai loại SmCo₅ và Sm₂Co₁₇. Duy trì từ tính trên 300°C, dùng cho hàng không vũ trụ, quốc phòng và động cơ chính xác. F-35 engine, tên lửa dẫn đường, hệ thống servo hàng không vũ trụ gần như chỉ có thể dùng SmCo</td></tr>
+      <tr><td>Công nghiệp hạt nhân</td><td>Đồng vị Sm-149 dùng cho thanh điều khiển lò phản ứng hạt nhân</td></tr>
+      <tr><td>Điện tử và gốm</td><td>Dùng trong công nghiệp điện tử và gốm, vật liệu laser, thiết bị vi sóng và hồng ngoại</td></tr>
+    </tbody>
+  </table>
+
+  <h4>15.2.7. Europium (Eu, Z=63) – LREE</h4>
+  <table>
+    <thead><tr><th>Ứng dụng</th><th>Mô tả kỹ thuật</th></tr></thead>
+    <tbody>
+      <tr><td>Phosphor đỏ</td><td>Phosphor đỏ kích hoạt Eu³⁺ phát huỳnh quang đỏ 611nm dưới kích thích gần UV 350–400nm, kết hợp với chip LED gần UV để tạo thiết bị chiếu sáng LED trắng</td></tr>
+      <tr><td>Màn hình LCD</td><td>Europium dùng cho thấu kính và màn hình LCD</td></tr>
+      <tr><td>LED trắng</td><td>Bù đắp thành phần đỏ còn thiếu trong LED trắng, cải thiện chỉ số hoàn màu</td></tr>
+      <tr><td>Laser và hạt nhân</td><td>Ứng dụng quan trọng trong vật liệu laser và công nghiệp năng lượng nguyên tử</td></tr>
+    </tbody>
+  </table>
+
+  <h4>15.2.8. Gadolinium (Gd, Z=64) – HREE</h4>
+  <table>
+    <thead><tr><th>Ứng dụng</th><th>Mô tả kỹ thuật</th></tr></thead>
+    <tbody>
+      <tr><td>Chất tương phản MRI</td><td>Gadolinium(III) là vật liệu khởi đầu chính cho thiết kế chất tương phản MRI. Tất cả chất tương phản MRI lâm sàng đều là phức gadolinium</td></tr>
+      <tr><td>Điện tử</td><td>Oxit gadolinium dùng cho tụ điện, màn tăng cường tia X</td></tr>
+      <tr><td>Năng lượng hạt nhân</td><td>Gadolinium có tiết diện hấp thụ neutron cao, dùng làm vật liệu che chắn lò phản ứng</td></tr>
+      <tr><td>Vật liệu từ</td><td>Hiệu ứng từ nhiệt của gadolinium là vật liệu lý tưởng cho công nghệ làm lạnh từ</td></tr>
+    </tbody>
+  </table>
+
+  <h4>15.2.9. Terbium (Tb, Z=65) – HREE</h4>
+  <table>
+    <thead><tr><th>Ứng dụng</th><th>Mô tả kỹ thuật</th></tr></thead>
+    <tbody>
+      <tr><td>Phosphor xanh</td><td>Hầu hết phosphor xanh đất hiếm đều dùng terbium làm chất kích hoạt, phát ánh sáng xanh dưới kích thích</td></tr>
+      <tr><td>Vật liệu từ giảo</td><td>Terfenol-D (hợp kim Tb-Dy-Fe) giãn nở hoặc co lại dưới từ trường, dùng cho sonar, hệ thống phun nhiên liệu, van điều khiển chất lỏng</td></tr>
+      <tr><td>Cảm biến</td><td>Terfenol-D dùng cho cảm biến chính xác và đầu dò siêu âm</td></tr>
+      <tr><td>Tinh thể laser</td><td>Terbium dùng cho vật liệu tinh thể laser</td></tr>
+      <tr><td>Kiểm tra không phá hủy</td><td>Terbium dùng để kiểm tra mối hàn tàu và đường ống</td></tr>
+    </tbody>
+  </table>
+
+  <h4>15.2.10. Dysprosium (Dy, Z=66) – HREE</h4>
+  <table>
+    <thead><tr><th>Ứng dụng</th><th>Mô tả kỹ thuật</th></tr></thead>
+    <tbody>
+      <tr><td>Nam châm vĩnh cửu</td><td>Dysprosium thay thế neodymium tại vị trí đất hiếm, tăng đáng kể lực kháng khử từ (coercivity) của nam châm NdFeB, là ứng dụng chiến lược chính của dysprosium</td></tr>
+      <tr><td>Lò phản ứng hạt nhân</td><td>Thanh điều khiển và vật liệu hấp thụ neutron. Oxit dysprosium-nickel cermet dùng cho thanh điều khiển lò phản ứng</td></tr>
+      <tr><td>Chiếu sáng và laser</td><td>Nguồn sáng mới, phosphor, vật liệu phát quang, xúc tác hóa dầu</td></tr>
+      <tr><td>Từ giảo</td><td>Thành phần chính của vật liệu từ giảo Terfenol-D</td></tr>
+    </tbody>
+  </table>
+
+  <h4>15.2.11. Holmium (Ho, Z=67) – HREE</h4>
+  <table>
+    <thead><tr><th>Ứng dụng</th><th>Mô tả kỹ thuật</th></tr></thead>
+    <tbody>
+      <tr><td>Laser y tế</td><td>Laser Ho:YAG phát tia hồng ngoại trung 2,1μm, tổn thương nhiệt nhỏ, dùng cho tán sỏi tiết niệu, phẫu thuật tuyến tiền liệt, chỉnh hình xâm lấn tối thiểu</td></tr>
+      <tr><td>Điều trị glaucoma</td><td>Laser holmium điều trị glaucoma, giảm đau đớn cho bệnh nhân</td></tr>
+      <tr><td>Viễn thông</td><td>Sợi quang và linh kiện thông tin quang</td></tr>
+      <tr><td>Chiếu sáng</td><td>Phụ gia cho đèn halogen kim loại</td></tr>
+    </tbody>
+  </table>
+
+  <h4>15.2.12. Erbium (Er, Z=68) – HREE</h4>
+  <table>
+    <thead><tr><th>Ứng dụng</th><th>Mô tả kỹ thuật</th></tr></thead>
+    <tbody>
+      <tr><td>Khuếch đại sợi quang (EDFA)</td><td>Nguyên liệu cốt lõi của EDFA là oxit erbium tinh khiết cao, dùng để khuếch đại tín hiệu quang ở cửa sổ 1550nm trong mạng trục, cáp quang đường dài, module quang trung tâm dữ liệu</td></tr>
+      <tr><td>Laser</td><td>Laser rắn gần hồng ngoại, đo khoảng cách laser, thiết bị laser y tế</td></tr>
+      <tr><td>Y tế</td><td>Thiết bị laser y tế erbium</td></tr>
+      <tr><td>Thủy tinh quang học</td><td>Hạ nguồn oxit erbium tập trung vào thông tin quang, laser, thủy tinh quang học, gốm điện tử và công nghiệp hạt nhân</td></tr>
+    </tbody>
+  </table>
+
+  <h4>15.2.13. Thulium (Tm, Z=69) – HREE</h4>
+  <table>
+    <thead><tr><th>Ứng dụng</th><th>Mô tả kỹ thuật</th></tr></thead>
+    <tbody>
+      <tr><td>Laser y tế</td><td>Laser thulium pha tạp YAG phát laser 1930–2040nm, máu đông nhanh, vết mổ nhỏ, cầm máu tốt, dùng cho phẫu thuật xâm lấn tối thiểu tuyến tiền liệt và mắt</td></tr>
+      <tr><td>Chẩn đoán lâm sàng</td><td>Thulium dùng để chẩn đoán và điều trị khối u</td></tr>
+      <tr><td>Công nghiệp</td><td>Laser sợi thulium cho hàn nhựa, lidar và dao động tham số quang</td></tr>
+      <tr><td>Nguồn sáng phóng điện</td><td>Thulium dạng halogenua tinh khiết cao được đưa vào nguồn sáng phóng điện cường độ cao</td></tr>
+    </tbody>
+  </table>
+
+  <h4>15.2.14. Ytterbium (Yb, Z=70) – HREE</h4>
+  <table>
+    <thead><tr><th>Ứng dụng</th><th>Mô tả kỹ thuật</th></tr></thead>
+    <tbody>
+      <tr><td>Laser sợi quang</td><td>Ion Yb³⁺ làm chất pha tạp hoạt tính laser, đặc biệt cho laser rắn và laser sợi double-clad. Hiệu suất chuyển đổi điện-quang đạt 70–80%, gấp đôi so với erbium</td></tr>
+      <tr><td>Máy tính điện tử</td><td>Ytterbium dùng làm phụ gia cho phần tử nhớ máy tính</td></tr>
+      <tr><td>Nguồn bức xạ</td><td>¹⁶⁹Yb dùng làm nguồn bức xạ cho máy X-quang di động</td></tr>
+      <tr><td>Nha khoa</td><td>Hợp kim ytterbium đã được ứng dụng trong nha khoa</td></tr>
+      <tr><td>Pin mặt trời</td><td>Ytterbium ổn định pin mặt trời perovskite, hiệu suất PCE vượt 15%</td></tr>
+    </tbody>
+  </table>
+
+  <h4>15.2.15. Lutetium (Lu, Z=71) – HREE</h4>
+  <table>
+    <thead><tr><th>Ứng dụng</th><th>Mô tả kỹ thuật</th></tr></thead>
+    <tbody>
+      <tr><td>Điều trị ung thư</td><td>Ion lutetium hấp thụ và lắng đọng năng lượng tia X hiệu quả, tạo nhiều loại oxy hoạt tính tiêu diệt tế bào ung thư. Xúc tác nano PCuLu có thể cảm ứng đồng chết và tăng cường hiệu quả xạ trị</td></tr>
+      <tr><td>Hình ảnh y học hạt nhân</td><td>Tinh thể scintillator gốc lutetium cho hệ thống detector tiên tiến trong hình ảnh y học và vật lý năng lượng cao</td></tr>
+      <tr><td>Hóa dầu</td><td>Đồng vị lutetium ổn định làm xúc tác cho cracking dầu mỏ, alkyl hóa, hydro hóa và polymer hóa</td></tr>
+      <tr><td>Năng lượng</td><td>Xúc tác gốc lutetium tăng tốc phản ứng pin nhiên liệu</td></tr>
+    </tbody>
+  </table>
+
+  <h4>15.2.16. Yttrium (Y, Z=39) – HREE</h4>
+  <table>
+    <thead><tr><th>Ứng dụng</th><th>Mô tả kỹ thuật</th></tr></thead>
+    <tbody>
+      <tr><td>Siêu dẫn</td><td>Hợp chất YBCO (yttrium barium copper oxide) thể hiện siêu dẫn ở 93K, trên điểm sôi của nitơ lỏng, cho phép làm lạnh thực tế. Yttrium là nguyên tố quan trọng cho siêu dẫn nhiệt độ cao</td></tr>
+      <tr><td>Laser</td><td>YAG pha tạp neodymium (Nd:YAG) là vật liệu laser tuyệt vời; yttrium iron garnet cũng là vật liệu laser tốt</td></tr>
+      <tr><td>Hàng không vũ trụ</td><td>Yttrium dùng cho lớp phủ chịu nhiệt trên cánh tuabin</td></tr>
+      <tr><td>Bán dẫn</td><td>Hợp chất đặc biệt của yttrium (như màng Y₂O₃) là lớp điện môi hiệu suất cao trong một số quy trình wafer</td></tr>
+      <tr><td>Phosphor</td><td>Yttrium phosphor tạo màu đỏ cho màn hình TV</td></tr>
+      <tr><td>Lò phản ứng hạt nhân</td><td>Yttrium dùng cho lớp phủ vỏ bọc lò phản ứng</td></tr>
+    </tbody>
+  </table>
+
+  <h4>15.2.17. Scandium (Sc, Z=21) – Đặc biệt</h4>
+  <table>
+    <thead><tr><th>Ứng dụng</th><th>Mô tả kỹ thuật</th></tr></thead>
+    <tbody>
+      <tr><td>Hợp kim nhôm</td><td>Scandium được gọi là "vua của hợp kim nhôm", có tác dụng tinh chỉnh hạt mạnh mẽ đối với hợp kim nhôm, cải thiện đáng kể độ ổn định nhiệt, tính chất cơ học và khả năng chống ăn mòn. Dùng cho hàng không vũ trụ và in 3D</td></tr>
+      <tr><td>Pin nhiên liệu</td><td>Lớp điện phân rắn zirconia ổn định scandium là thành phần quan trọng của SOFC (pin nhiên liệu oxit rắn)</td></tr>
+      <tr><td>Hàng không</td><td>Hợp kim scandium là vật liệu hàng không vũ trụ chính, là vật liệu kết cấu cho máy bay và phương tiện bay tốc độ cao</td></tr>
+      <tr><td>Chiếu sáng</td><td>Scandium dùng cho đèn halogenua scandium-natri (đèn HID) và các ứng dụng chiếu sáng cường độ cao khác</td></tr>
+      <tr><td>Laser</td><td>Oxit scandium dùng để chế tạo laser hiệu suất cao</td></tr>
+      <tr><td>Tấm lưỡng cực</td><td>Hợp kim nhôm pha tạp scandium dùng cho tấm lưỡng cực pin nhiên liệu màng trao đổi proton (PEMFC)</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ===================== 14. TÀI LIỆU CẬP NHẬT GẦN NHẤT ===================== -->
+<section id="s14">
+  <h2>14. Tài liệu cập nhật gần nhất (2025–2026)</h2>
+  <p>Dưới đây là các tài liệu khoa học, báo cáo ngành và tin tức mới nhất được thu thập trong quá trình cập nhật báo cáo:</p>
+
+  <h3>14.1. Nghiên cứu khoa học (2026)</h3>
+  <table>
+    <thead><tr><th>Tiêu đề</th><th>Nguồn</th><th>Ngày</th><th>Nội dung chính</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><a href="https://www.sciencedirect.com/science/article/abs/pii/S1002072126002772" target="_blank" rel="noopener">Mechanistic insights into separation of bastnaesite and monazite via roasting-flotation coupled process</a></td>
+        <td>ScienceDirect</td><td>15/07/2026</td>
+        <td>Quy trình rang oxy hóa – tuyển nổi kết hợp tách bastnaesite/monazite đạt độ tinh khiết 97,15%</td>
+      </tr>
+      <tr>
+        <td><a href="https://www.sciencedirect.com/science/article/pii/S0304386X26000885" target="_blank" rel="noopener">Ammonia-free recovery of REE from ion-adsorption clays using sodium citrate</a></td>
+        <td>ScienceDirect</td><td>06/04/2026</td>
+        <td>Hòa tách không chứa amoni bằng natri citrate, thu hồi &gt;95%, độ tinh khiết REO 95–97%</td>
+      </tr>
+      <tr>
+        <td><a href="https://www.sciencedirect.com/science/article/abs/pii/S1002072126003984" target="_blank" rel="noopener">Recovery of REE from NdFeB magnets: Integrated approach based on nitric acid leaching and double-salt precipitation</a></td>
+        <td>Journal of Rare Earths</td><td>24/09/2026</td>
+        <td>Tích hợp HNO₃ + double-salt precipitation, thu hồi Dy 97,76%, không cần chiết dung môi</td>
+      </tr>
+      <tr>
+        <td><a href="https://www.sciencedirect.com/science/article/abs/pii/S0959652626019736" target="_blank" rel="noopener">Acid mine drainage as a lixiviant for REE recovery from ion-adsorption clay mine tailings</a></td>
+        <td>ScienceDirect</td><td>09/09/2026</td>
+        <td>Sử dụng nước thải mỏ axit làm chất hòa tách, hiệu suất REE 70–92%</td>
+      </tr>
+      <tr>
+        <td><a href="https://www.sciencedirect.com/science/article/abs/pii/S0892687526008356" target="_blank" rel="noopener">Selective Recovery of High-Purity Rare Earth Oxides from a Turkish Ore Concentrate</a></td>
+        <td>ScienceDirect</td><td>19/09/2026</td>
+        <td>Quy trình sulfat hóa – rang chọn lọc, REO purity từ 93,8% lên 99,0%</td>
+      </tr>
+      <tr>
+        <td><a href="https://www.sciencedirect.com/science/article/abs/pii/S100207212600236X" target="_blank" rel="noopener">Green processing of bastnaesite and monazite for rare-earth production: A review</a></td>
+        <td>ScienceDirect</td><td>25/06/2026</td>
+        <td>Đánh giá toàn diện về quy trình xanh cho bastnaesite và monazite</td>
+      </tr>
+      <tr>
+        <td><a href="https://www.sciencedirect.com/science/article/pii/S2405829725007962" target="_blank" rel="noopener">Sustainable transformation of rare earth metals value chain for dual-use technologies</a></td>
+        <td>ScienceDirect</td><td>2025</td>
+        <td>Chuyển đổi bền vững chuỗi giá trị đất hiếm cho công nghệ lưỡng dụng</td>
+      </tr>
+      <tr>
+        <td><a href="https://kims-imio.com/index.php/main/article/download/675/585/4028" target="_blank" rel="noopener">Flowsheet Design and Modelling for High Purity Praseodymium and Neodymium by Solvent Extraction</a></td>
+        <td>KIMS</td><td>20/01/2026</td>
+        <td>Thiết kế quy trình SX bốn tầng cho Pr/Nd độ tinh khiết 4N</td>
+      </tr>
+      <tr>
+        <td><a href="https://www.sciencedirect.com/science/article/pii/S0304386X26000885" target="_blank" rel="noopener">Highly efficient and selective recovery of rare earths from NdFeB waste via water-regulated deep eutectic solvent</a></td>
+        <td>ScienceDirect</td><td>19/08/2026</td>
+        <td>DES điều chỉnh nước, thu hồi REE 97%, tái chế DES &gt;90%</td>
+      </tr>
+      <tr>
+        <td><a href="https://pubs.rsc.org" target="_blank" rel="noopener">Picolinate-based acyclic ligand for rare earth element extraction and separation</a></td>
+        <td>Chemical Science</td><td>13/04/2026</td>
+        <td>Chelator H4aapa chi phí thấp, hệ số phân tách Ce³⁺/Lu³⁺ = 38,6</td>
+      </tr>
+      <tr>
+        <td><a href="https://www.ameslab.gov" target="_blank" rel="noopener">Enhanced REE separations using dual neutral extractant approach</a></td>
+        <td>Ames Laboratory</td><td>01/06/2026</td>
+        <td>Quy trình SX mới tách chọn lọc NdPr, SEG và HREE trong 7 bậc</td>
+      </tr>
+      <tr>
+        <td><a href="https://www.sciencedirect.com/science/article/abs/pii/S089268752600717X" target="_blank" rel="noopener">Environmentally sustainable extraction and recovery of REE from alkali-activated carbonatite</a></td>
+        <td>ScienceDirect</td><td>2026</td>
+        <td>Quy trình rang kiềm → hòa tách kép → hấp phụ bằng đất sét tự nhiên trên carbonatite Amba Dongar (Ấn Độ)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>14.2. Báo cáo ngành và chính sách (2026)</h3>
+  <table>
+    <thead><tr><th>Tiêu đề</th><th>Nguồn</th><th>Ngày</th><th>Nội dung chính</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><a href="https://www.iea.org/reports/rare-earth-elements" target="_blank" rel="noopener">Rare Earth Elements – Analysis – IEA</a></td>
+        <td>IEA</td><td>08/04/2026</td>
+        <td>Báo cáo toàn diện về thị trường REE, động lực cung cầu, phát triển công nghệ và khuyến nghị chính sách</td>
+      </tr>
+      <tr>
+        <td><a href="https://www.mycaijing.com/article/detail/580369" target="_blank" rel="noopener">西方“稀土自主”进展追踪 – 《财经》</a></td>
+        <td>《财经》</td><td>04/09/2026</td>
+        <td>Phân tích 60 công ty, 81 dự án phi Trung Quốc; xác định 4 giai đoạn chuỗi cung ứng và mức độ tập trung của Trung Quốc</td>
+      </tr>
+      <tr>
+        <td><a href="https://www.spglobal.com" target="_blank" rel="noopener">Rare earth supply bottlenecks set to persist in 2026 – S&P Global</a></td>
+        <td>S&amp;P Global</td><td>27/01/2026</td>
+        <td>Điểm thắt cổ chai nguồn cung đất hiếm dự kiến tiếp diễn trong 2026, đặc biệt đối với HREE</td>
+      </tr>
+      <tr>
+        <td><a href="https://www.businessworld.in" target="_blank" rel="noopener">China's Rare Earth Export Curbs Threaten $6.5 Tn Global Production: IEA</a></td>
+        <td>BW Businessworld</td><td>16/07/2026</td>
+        <td>IEA cảnh báo hạn chế xuất khẩu đất hiếm Trung Quốc có thể đe dọa 6,5 nghìn tỷ USD sản xuất hạ nguồn toàn cầu</td>
+      </tr>
+      <tr>
+        <td><a href="https://www.vietnam.vn" target="_blank" rel="noopener">Hanoi approves pilot project for semi-industrial-scale production of rare earth oxides</a></td>
+        <td>Vietnam.vn</td><td>07/09/2026</td>
+        <td>Hà Nội phê duyệt dự án thí điểm sản xuất TREO &gt;95%, công suất 100 kg quặng/giờ</td>
+      </tr>
+      <tr>
+        <td><a href="https://www.tandfonline.com/doi/figure/10.1080/09512748.2026.2712405" target="_blank" rel="noopener">Residual dependency after diversification: Japan, China and the midstream power of rare earths</a></td>
+        <td>Taylor &amp; Francis</td><td>04/08/2026</td>
+        <td>Sơ đồ chuỗi sản xuất đất hiếm và phân tích "midstream chokepoint" – điểm thắt cổ chai trung nguồn</td>
+      </tr>
+      <tr>
+        <td><a href="https://source.benchmarkminerals.com/article/ex-china-heavy-rare-earths-continue-to-surge-q3-2026-rare-earths-price-review" target="_blank" rel="noopener">Ex-China heavy rare earths continue to surge: Q3 2026 Rare Earths Price Review</a></td>
+        <td>Benchmark Minerals</td><td>25/09/2026</td>
+        <td>Giá HREE ngoài Trung Quốc tăng mạnh, Dy₂O₃ CIF châu Âu đạt 3.500 USD/kg</td>
+      </tr>
+      <tr>
+        <td><a href="https://cordis.europa.eu" target="_blank" rel="noopener">Dismantling and recycling Rare Earth Elements from End-of-life products (REEPRODUCE)</a></td>
+        <td>CORDIS</td><td>26/08/2026</td>
+        <td>Dự án EU xây dựng chuỗi tái chế REE hoàn chỉnh từ WEEE đến nam châm</td>
+      </tr>
+      <tr>
+        <td><a href="https://cordis.europa.eu" target="_blank" rel="noopener">Eco-Friendly Hydrometallurgy for Rare Earths Recycling (FREECOVER)</a></td>
+        <td>CORDIS</td><td>11/09/2026</td>
+        <td>Sử dụng axit tự nhiên và dung môi ion thân thiện môi trường để tái chế nam châm thải</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ===================== THƯ VIỆN TÀI LIỆU THAM KHẢO ===================== -->
+<section id="library" class="lib-section">
+  <h2>Thư viện tài liệu tham khảo</h2>
+  <p>Dưới đây là danh mục các tài liệu tham khảo chính được sử dụng trong báo cáo này, được phân loại theo chủ đề và có kèm đường link trực tiếp.</p>
+
+  <div class="lib-category">
+    <h4>A. Nghiên cứu khoa học về công nghệ chế biến đất hiếm</h4>
+
+    <div class="lib-item">
+      <div class="lib-title"><a href="https://www.sciencedirect.com/science/article/abs/pii/S1002072126002772" target="_blank" rel="noopener">Mechanistic insights into separation of bastnaesite and monazite via roasting-flotation coupled process</a></div>
+      <div class="lib-source">ScienceDirect · 2026</div>
+      <div class="lib-desc">Quy trình rang oxy hóa – tuyển nổi kết hợp tách bastnaesite và monazite, đạt độ tinh khiết 97,15%. Sử dụng axit phthalic (5 kg/t) và phèn nhôm (4 kg/t) ở pH 4.</div>
+    </div>
+
+    <div class="lib-item">
+      <div class="lib-title"><a href="https://www.sciencedirect.com/science/article/pii/S0304386X26000885" target="_blank" rel="noopener">Ammonia-free recovery of REE from ion-adsorption clays using sodium citrate</a></div>
+      <div class="lib-source">ScienceDirect · 06/04/2026</div>
+      <div class="lib-desc">Hòa tách không chứa amoni bằng natri citrate (Na₃Cit) 0,15 M ở pH 6,4, đạt hiệu suất &gt;95% với độ tinh khiết REO 95–97%.</div>
+    </div>
+
+    <div class="lib-item">
+      <div class="lib-title"><a href="https://www.sciencedirect.com/science/article/abs/pii/S1002072126003984" target="_blank" rel="noopener">Recovery of rare earth elements from NdFeB magnets: An integrated approach based on nitric acid leaching and double-salt precipitation</a></div>
+      <div class="lib-source">Journal of Rare Earths · 24/09/2026</div>
+      <div class="lib-desc">Tích hợp HNO₃ + double-salt precipitation, thu hồi Dy 97,76% từ nam châm NdFeB mà không cần chiết dung môi.</div>
+    </div>
+
+    <div class="lib-item">
+      <div class="lib-title"><a href="https://www.sciencedirect.com/science/article/abs/pii/S0959652626019736" target="_blank" rel="noopener">Acid mine drainage as a lixiviant for REE recovery from ion-adsorption clay mine tailings</a></div>
+      <div class="lib-source">ScienceDirect · 09/09/2026</div>
+      <div class="lib-desc">Sử dụng nước thải mỏ axit (AMD) làm chất hòa tách tự duy trì, hiệu suất REE 70–92% với zero đầu vào hóa chất nguyên sinh.</div>
+    </div>
+
+    <div class="lib-item">
+      <div class="lib-title"><a href="https://www.sciencedirect.com/science/article/abs/pii/S0892687526008356" target="_blank" rel="noopener">Selective Recovery of High-Purity Rare Earth Oxides from a Turkish Ore Concentrate</a></div>
+      <div class="lib-source">ScienceDirect · 19/09/2026</div>
+      <div class="lib-desc">Quy trình sulfat hóa – rang chọn lọc, REO purity từ 93,8% lên 99,0%, REE extraction 90–99%.</div>
+    </div>
+
+    <div class="lib-item">
+      <div class="lib-title"><a href="https://www.sciencedirect.com/science/article/abs/pii/S100207212600236X" target="_blank" rel="noopener">Green processing of bastnaesite and monazite for rare-earth production: A review</a></div>
+      <div class="lib-source">ScienceDirect · 25/06/2026</div>
+      <div class="lib-desc">Đánh giá toàn diện về quy trình xanh cho bastnaesite và monazite, bao gồm quy trình tích hợp và xử lý màng dư lượng.</div>
+    </div>
+
+    <div class="lib-item">
+      <div class="lib-title"><a href="https://www.sciencedirect.com/science/article/abs/pii/S089268752600717X" target="_blank" rel="noopener">Environmentally sustainable extraction and recovery of REE from alkali-activated carbonatite</a></div>
+      <div class="lib-source">ScienceDirect · 2026</div>
+      <div class="lib-desc">Quy trình rang kiềm → hòa tách kép → hấp phụ bằng đất sét tự nhiên trên carbonatite Amba Dongar (Ấn Độ).</div>
+    </div>
+
+    <div class="lib-item">
+      <div class="lib-title"><a href="https://www.sciencedirect.com/science/article/pii/S1385894726065666" target="_blank" rel="noopener">Recovery of rare earth metals from NdFeB magnets using antisolvent crystallization</a></div>
+      <div class="lib-source">ScienceDirect · 2026</div>
+      <div class="lib-desc">Kết tinh antisolvent kết hợp mở rộng quy mô và đánh giá vòng đời, tiết kiệm 54,8% tác động GWP cho tái chế nam châm-sang-nam châm.</div>
+    </div>
+
+    <div class="lib-item">
+      <div class="lib-title"><a href="https://www.sciencedirect.com/science/article/abs/pii/S2213343726009905" target="_blank" rel="noopener">Selective enrichment of rare earth ions via extraction-precipitation strategy</a></div>
+      <div class="lib-source">ScienceDirect · 2026</div>
+      <div class="lib-desc">Kết tủa chiết với creatine phosphate làm giàu RE lên 198,73 g/L trong một bước, gấp 933,65 lần so với dung dịch ban đầu.</div>
+    </div>
+
+    <div class="lib-item">
+      <div class="lib-title"><a href="https://pubs.rsc.org" target="_blank" rel="noopener">Picolinate-based acyclic ligand for rare earth element extraction and separation</a></div>
+      <div class="lib-source">Chemical Science · 13/04/2026</div>
+      <div class="lib-desc">Chelator H4aapa chi phí thấp, hệ số phân tách Ce³⁺/Lu³⁺ = 38,6, làm giàu Nd³⁺ lên 56,9% từ phế liệu nam châm.</div>
+    </div>
+
+    <div class="lib-item">
+      <div class="lib-title"><a href="https://kims-imio.com/index.php/main/article/download/675/585/4028" target="_blank" rel="noopener">Flowsheet Design and Modelling for High Purity Praseodymium and Neodymium by Solvent Extraction</a></div>
+      <div class="lib-source">KIMS · 20/01/2026</div>
+      <div class="lib-desc">Thiết kế quy trình SX bốn tầng ngược dòng cho Pr/Nd độ tinh khiết 4N từ IAC Jeli (Malaysia), cần 62 bậc cân bằng.</div>
+    </div>
+
+    <div class="lib-item">
+      <div class="lib-title"><a href="https://beta.iopscience.iop.org/article/10.1088/1757-899X/1326/1/012006/pdf" target="_blank" rel="noopener">Phosphate removal and yttrium recovery from xenotime mineral via alkaline fusion</a></div>
+      <div class="lib-source">IOP Conference Series · 2025</div>
+      <div class="lib-desc">Nung NaOH tỷ lệ 1:2 ở 350°C trong 3 giờ, loại bỏ phosphate 100% khỏi xenotime.</div>
+    </div>
+
+    <div class="lib-item">
+      <div class="lib-title"><a href="https://www.ameslab.gov" target="_blank" rel="noopener">Enhanced REE separations using dual neutral extractant approach</a></div>
+      <div class="lib-source">Ames Laboratory · 01/06/2026</div>
+      <div class="lib-desc">Quy trình SX mới tách chọn lọc NdPr, SEG và HREE trong 7 bậc, giảm đáng kể lượng thuốc thử.</div>
+    </div>
+
+    <div class="lib-item">
+      <div class="lib-title"><a href="https://www.ameslab.gov/cmi/research-highlights/tailored-lixiviant-delivers-high-performance-separation-and-recovery-of" target="_blank" rel="noopener">Tailored lixiviant delivers high-performance separation and recovery of heavy REEs from mine tailings concentrate</a></div>
+      <div class="lib-source">Ames Laboratory · CMI</div>
+      <div class="lib-desc">Tác nhân hòa tách chọn lọc HREE đạt hiệu suất ~97% từ nguyên liệu thải mỏ, tách HREE và LREE trong một bước.</div>
+    </div>
+
+    <div class="lib-item">
+      <div class="lib-title"><a href="https://www.sciencedirect.com/science/article/abs/pii/S0304389426012719" target="_blank" rel="noopener">Liquid–liquid phase separation of designer EF-hand peptides for rare earth recovery</a></div>
+      <div class="lib-source">ScienceDirect · 2026</div>
+      <div class="lib-desc">Hệ thống LLPS lấy cảm hứng sinh học dựa trên peptide EF-hand, tăng dung lượng liên kết REE hơn 30%.</div>
+    </div>
+  </div>
+
+  <div class="lib-category">
+    <h4>B. Báo cáo ngành và chính sách</h4>
+
+    <div class="lib-item">
+      <div class="lib-title"><a href="https://www.iea.org/reports/rare-earth-elements" target="_blank" rel="noopener">Rare Earth Elements – Analysis – IEA</a></div>
+      <div class="lib-source">International Energy Agency · 08/04/2026</div>
+      <div class="lib-desc">Báo cáo toàn diện về thị trường REE, động lực cung cầu, phát triển công nghệ và khuyến nghị chính sách.</div>
+    </div>
+
+    <div class="lib-item">
+      <div class="lib-title"><a href="https://www.mycaijing.com/article/detail/580369" target="_blank" rel="noopener">西方“稀土自主”进展追踪 – 《财经》</a></div>
+      <div class="lib-source">《财经》· 04/09/2026</div>
+      <div class="lib-desc">Phân tích 60 công ty, 81 dự án phi Trung Quốc; xác định 4 giai đoạn chuỗi cung ứng và mức độ tập trung của Trung Quốc (khai thác ~59%, tách chiết ~84–91%, nam châm ~94%).</div>
+    </div>
+
+    <div class="lib-item">
+      <div class="lib-title"><a href="https://www.tandfonline.com/doi/figure/10.1080/09512748.2026.2712405" target="_blank" rel="noopener">Residual dependency after diversification: Japan, China and the midstream power of rare earths</a></div>
+      <div class="lib-source">Taylor &amp; Francis · 04/08/2026</div>
+      <div class="lib-desc">Sơ đồ chuỗi sản xuất đất hiếm và phân tích "midstream chokepoint" – điểm thắt cổ chai trung nguồn không thể bỏ qua.</div>
+    </div>
+
+    <div class="lib-item">
+      <div class="lib-title"><a href="https://source.benchmarkminerals.com/article/ex-china-heavy-rare-earths-continue-to-surge-q3-2026-rare-earths-price-review" target="_blank" rel="noopener">Ex-China heavy rare earths continue to surge: Q3 2026 Rare Earths Price Review</a></div>
+      <div class="lib-source">Benchmark Minerals · 25/09/2026</div>
+      <div class="lib-desc">Giá HREE ngoài Trung Quốc tăng mạnh, Dy₂O₃ CIF châu Âu tăng 150% trong Q3, đạt 3.500 USD/kg.</div>
+    </div>
+
+    <div class="lib-item">
+      <div class="lib-title"><a href="https://www.businessworld.in" target="_blank" rel="noopener">China's Rare Earth Export Curbs Threaten $6.5 Tn Global Production: IEA</a></div>
+      <div class="lib-source">BW Businessworld · 16/07/2026</div>
+      <div class="lib-desc">IEA cảnh báo hạn chế xuất khẩu đất hiếm Trung Quốc có thể đe dọa 6,5 nghìn tỷ USD sản xuất hạ nguồn toàn cầu mỗi năm.</div>
+    </div>
+
+    <div class="lib-item">
+      <div class="lib-title"><a href="https://www.spglobal.com" target="_blank" rel="noopener">Rare earth supply bottlenecks set to persist in 2026</a></div>
+      <div class="lib-source">S&amp;P Global · 27/01/2026</div>
+      <div class="lib-desc">Điểm thắt cổ chai nguồn cung đất hiếm dự kiến tiếp diễn trong 2026, đặc biệt đối với HREE.</div>
+    </div>
+
+    <div class="lib-item">
+      <div class="lib-title"><a href="https://www.sciencedirect.com/science/article/abs/pii/S2405829725007962" target="_blank" rel="noopener">Sustainable transformation of rare earth metals value chain for dual-use technologies</a></div>
+      <div class="lib-source">ScienceDirect · 2025</div>
+      <div class="lib-desc">Chuyển đổi bền vững chuỗi giá trị đất hiếm cho công nghệ lưỡng dụng.</div>
+    </div>
+  </div>
+
+  <div class="lib-category">
+    <h4>C. Nghiên cứu và dự án tại Việt Nam</h4>
+
+    <div class="lib-item">
+      <div class="lib-title"><a href="https://www.vietnam.vn" target="_blank" rel="noopener">Hanoi approves pilot project for semi-industrial-scale production of rare earth oxides</a></div>
+      <div class="lib-source">Vietnam.vn · 07/09/2026</div>
+      <div class="lib-desc">Hà Nội phê duyệt dự án thí điểm sản xuất TREO &gt;95% từ quặng Đông Pao (Lai Châu), công suất 100 kg quặng/giờ.</div>
+    </div>
+
+    <div class="lib-item">
+      <div class="lib-title"><a href="https://english.news.cn" target="_blank" rel="noopener">Pilot production of rare earth oxides approved in Vietnam's capital</a></div>
+      <div class="lib-source">Xinhua · 04/09/2026</div>
+      <div class="lib-desc">Dự án thí điểm 18 tháng sử dụng tối đa 100 tấn quặng từ mỏ Đông Pao (Lai Châu).</div>
+    </div>
+
+    <div class="lib-item">
+      <div class="lib-title"><a href="https://vietnamnews.vn" target="_blank" rel="noopener">Việt Nam, RoK strengthen cooperation in rare earth research, processing</a></div>
+      <div class="lib-source">Vietnam News · 27/08/2026</div>
+      <div class="lib-desc">Việt Nam và Hàn Quốc tăng cường hợp tác nghiên cứu và chế biến sâu đất hiếm, dự kiến thành lập Trung tâm Chuỗi cung ứng Khoáng sản Chiến lược.</div>
+    </div>
+
+    <div class="lib-item">
+      <div class="lib-title"><a href="https://english.mst.gov.vn" target="_blank" rel="noopener">Vietnam and India Promote Strategic Cooperation in Digital Technology and Rare Earths</a></div>
+      <div class="lib-source">MST · 06/05/2026</div>
+      <div class="lib-desc">Viện Công nghệ Xạ hiếm Việt Nam và IREL Ấn Độ ký thỏa thuận hợp tác nghiên cứu, chế biến sâu và tinh luyện đất hiếm.</div>
+    </div>
+
+    <div class="lib-item">
+      <div class="lib-title"><a href="https://inis.iaea.org/records/0vkhp-0ps17/files/51081767.pdf" target="_blank" rel="noopener">NGUYỄN BÀ TIẾN, NGUYỄN HUY CƯỜNG – Nghiên cứu tổng hợp phức chất xitrat đất hiếm từ quặng Đông Pao</a></div>
+      <div class="lib-source">INIS (IAEA) · Viện Công nghệ Xạ hiếm</div>
+      <div class="lib-desc">Sơ đồ công nghệ: hòa tan cacbonat đất hiếm bằng HCl 15%, kết tủa hydroxyt bằng NH₄OH 8%, hòa tan bằng axit xitric 4 M ở 90°C, hiệu suất 95%.</div>
+    </div>
+  </div>
+
+  <div class="lib-category">
+    <h4>D. Công nghệ và quy trình công nghiệp</h4>
+
+    <div class="lib-item">
+      <div class="lib-title"><a href="https://ddtp.tecnicasreunidas.es/en/raretech-technology/" target="_blank" rel="noopener">RARETECH® Technology – Técnicas Reunidas</a></div>
+      <div class="lib-source">Técnicas Reunidas · 27/10/2025</div>
+      <div class="lib-desc">Công nghệ thủy luyện kim cho monazite: chuẩn bị nguyên liệu → hòa tách kiềm → hòa tách axit → khử hoạt tính radionuclide → kết tủa Ce hydroxide → tinh chế REE.</div>
+    </div>
+
+    <div class="lib-item">
+      <div class="lib-title"><a href="https://niocorp.com" target="_blank" rel="noopener">NioCorp Elk Creek Project – NI 43-101 Technical Report</a></div>
+      <div class="lib-source">NioCorp · 2026</div>
+      <div class="lib-desc">Sơ đồ khối tách REE: Unit 700 – Primary Circuit (tách LREE, SEG, HREE), Unit 710 – NdPr Circuit, Unit 720 – Tb Circuit, Unit 730 – Dy Circuit.</div>
+    </div>
+
+    <div class="lib-item">
+      <div class="lib-title"><a href="https://www.freepatentsonline.com/y2026/0002235.html" target="_blank" rel="noopener">Method for Producing Rare Earth Metals via Thermite Reduction</a></div>
+      <div class="lib-source">FreePatentsOnline · 2026</div>
+      <div class="lib-desc">Quy trình nhiệt nhôm 9 bước: nguyên liệu oxit REE → trộn bột nhôm → tạo viên → đánh lửa → phản ứng nhiệt nhôm → tách xỉ → phản ứng giai đoạn 2 → tinh chế kim loại → sản phẩm kim loại REE.</div>
+    </div>
+
+    <div class="lib-item">
+      <div class="lib-title"><a href="https://www.osti.gov" target="_blank" rel="noopener">Process design for recovering rare-earth elements from mine tailings with low rare-earth concentrations</a></div>
+      <div class="lib-source">OSTI · 2026</div>
+      <div class="lib-desc">Thiết kế quy trình tách tích hợp hòa tách tuần tự và chiết dung môi 2 giai đoạn để thu hồi HREE và LREE từ đuôi thải mỏ.</div>
+    </div>
+
+    <div class="lib-item">
+      <div class="lib-title"><a href="https://www.sciencedirect.com" target="_blank" rel="noopener">Membrane-based solvent extraction for the recovery of rare earths from phosphate mining process streams</a></div>
+      <div class="lib-source">ScienceDirect · 17/04/2026</div>
+      <div class="lib-desc">Chiết dung môi màng (MSX) cho phép thu hồi REE liên tục, một bước từ dòng phosphate.</div>
+    </div>
+  </div>
+
+  <div class="lib-category">
+    <h4>E. Tái chế và kinh tế tuần hoàn</h4>
+
+    <div class="lib-item">
+      <div class="lib-title"><a href="https://cordis.europa.eu" target="_blank" rel="noopener">REcycling perManent Magnets: an Innovative Approach (REMMIA) – CORDIS</a></div>
+      <div class="lib-source">CORDIS (EU)</div>
+      <div class="lib-desc">Dự án EU về tái chế nam châm vĩnh cửu bằng phương pháp tiếp cận đổi mới.</div>
+    </div>
+
+    <div class="lib-item">
+      <div class="lib-title"><a href="https://cordis.europa.eu" target="_blank" rel="noopener">Dismantling and recycling Rare Earth Elements from End-of-life products (REEPRODUCE) – CORDIS</a></div>
+      <div class="lib-source">CORDIS (EU) · 26/08/2026</div>
+      <div class="lib-desc">Xây dựng chuỗi giá trị tái chế REE hoàn chỉnh từ WEEE đến sản xuất nam châm bằng vật liệu tái chế.</div>
+    </div>
+
+    <div class="lib-item">
+      <div class="lib-title"><a href="https://cordis.europa.eu" target="_blank" rel="noopener">Eco-Friendly Hydrometallurgy for Rare Earths Recycling (FREECOVER) – CORDIS</a></div>
+      <div class="lib-source">CORDIS (EU) · 11/09/2026</div>
+      <div class="lib-desc">Sử dụng axit tự nhiên để hòa tách nam châm thải, tách REE bằng dung môi ion thân thiện môi trường trên màng polymer.</div>
+    </div>
+
+    <div class="lib-item">
+      <div class="lib-title"><a href="https://www.nasdaq.com" target="_blank" rel="noopener">Recent Rare Earth Price Increases Continue to Enhance Ucore's Refining Strategy</a></div>
+      <div class="lib-source">Nasdaq · 2026</div>
+      <div class="lib-desc">Phân tích xu hướng giá đất hiếm và chiến lược tinh luyện của Ucore.</div>
+    </div>
+  </div>
+
+  <div class="lib-category">
+    <h4>F. Nguồn dữ liệu trữ lượng và sản lượng</h4>
+
+    <div class="lib-item">
+      <div class="lib-title"><a href="https://www.askci.com" target="_blank" rel="noopener">2026年全球稀土储量及产量分布情况预测分析</a></div>
+      <div class="lib-source">AskCI · 2026</div>
+      <div class="lib-desc">Dự báo phân bố trữ lượng và sản lượng đất hiếm toàn cầu năm 2026.</div>
+    </div>
+
+    <div class="lib-item">
+      <div class="lib-title"><a href="https://www.ctia.com.cn" target="_blank" rel="noopener">Global Rare Earth Reserves Decreased by Nearly 6% in 2025</a></div>
+      <div class="lib-source">CTIA · 2026</div>
+      <div class="lib-desc">Trữ lượng đất hiếm toàn cầu giảm gần 6% trong năm 2025.</div>
+    </div>
+
+    <div class="lib-item">
+      <div class="lib-title"><a href="https://www.cnfin.com" target="_blank" rel="noopener">新华指数·博鳌发布 | 精准洞察稀土价格</a></div>
+      <div class="lib-source">CNFIN · 2026</div>
+      <div class="lib-desc">Chỉ số giá đất hiếm Tân Hoa, cập nhật diễn biến giá thị trường.</div>
+    </div>
+
+    <div class="lib-item">
+      <div class="lib-title"><a href="https://mr.minmetals.com.cn" target="_blank" rel="noopener">前沿瞭望：全球矿业热点事件一周评述（2026.3.30-2026.4.5）</a></div>
+      <div class="lib-source">Minmetals · 2026</div>
+      <div class="lib-desc">Tổng quan sự kiện khai khoáng toàn cầu, bao gồm hợp tác Lynas – LS Eco Energy tại Việt Nam và dự trữ chiến lược của Australia.</div>
+    </div>
+
+    <div class="lib-item">
+      <div class="lib-title"><a href="https://www.iea.org" target="_blank" rel="noopener">With new export controls on critical minerals, supply concentration risks become reality – IEA</a></div>
+      <div class="lib-source">IEA · 2026</div>
+      <div class="lib-desc">Phân tích rủi ro tập trung nguồn cung khoáng sản quan trọng, bao gồm đất hiếm.</div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p><strong>SỔ TAY ĐẤT HIẾM – BÁO CÁO TỔNG HỢP ĐẶC BIỆT VỀ ĐẤT HIẾM TOÀN CẦU</strong></p>
+  <p>Hướng dẫn bởi TS. Nguyễn Huy Cường · Tổng hợp: TP</p>
+  <p>Phiên bản 2026 (Cập nhật đầy đủ) · Tổng hợp từ nguồn khoa học &amp; báo cáo ngành 2024–2026</p>
+  <p style="opacity:.8;font-size:.82rem;">Báo cáo mang tính chất tham khảo học thuật. Các số liệu trữ lượng, sản lượng và giá cả có thể thay đổi theo thời gian.</p>
+  <a class="back-top" href="#toc">↑ Về mục lục</a>
+</footer>
+
+</body>
+</html>
