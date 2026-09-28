@@ -1,0 +1,2153 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Báo cáo Đề xuất giải quyết Bài toán lớn số 29 - Kinh tế Xanh, Kinh tế Tuần hoàn Hà Nội</title>
+<meta name="description" content="Đề xuất giải pháp khoa học công nghệ giải quyết Bài toán lớn số 29 - Kinh tế xanh, kinh tế tuần hoàn Hà Nội 2026-2030">
+<style>
+  :root {
+    --primary: #1e3a8a;
+    --primary-light: #2563eb;
+    --primary-dark: #172554;
+    --accent: #f59e0b;
+    --danger: #dc2626;
+    --success: #16a34a;
+    --purple: #9333ea;
+    --cyan: #0891b2;
+    --gray-50: #f8fafc;
+    --gray-100: #f1f5f9;
+    --gray-200: #e2e8f0;
+    --gray-300: #cbd5e1;
+    --gray-500: #64748b;
+    --gray-600: #475569;
+    --gray-700: #334155;
+    --gray-900: #0f172a;
+    --link: #1d4ed8;
+    --link-hover: #dc2626;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; scroll-padding-top: 20px; }
+
+  body {
+    font-family: 'Segoe UI', 'Roboto', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+    line-height: 1.75;
+    color: var(--gray-900);
+    background: #eef2f6;
+    font-size: 15px;
+  }
+
+  .page {
+    max-width: 1150px;
+    margin: 0 auto;
+    background: #ffffff;
+    box-shadow: 0 4px 40px rgba(0,0,0,0.08);
+    padding: 60px 80px;
+    min-height: 100vh;
+    position: relative;
+  }
+
+  /* ==== NAVIGATION ==== */
+  .top-nav {
+    position: sticky;
+    top: 0;
+    background: rgba(255,255,255,0.97);
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid var(--gray-200);
+    padding: 12px 0;
+    margin: -60px -80px 30px -80px;
+    padding-left: 80px;
+    padding-right: 80px;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+  }
+
+  .top-nav .nav-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .top-nav .nav-links {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+
+  .top-nav .nav-links a {
+    font-size: 12px;
+    color: var(--gray-700);
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 6px;
+    transition: all 0.2s;
+    font-weight: 600;
+  }
+
+  .top-nav .nav-links a:hover {
+    background: var(--primary);
+    color: #fff;
+  }
+
+  /* ==== HEADER ==== */
+  .doc-header {
+    text-align: center;
+    margin-bottom: 50px;
+    padding-bottom: 30px;
+    border-bottom: 3px double var(--primary);
+  }
+
+  .quoc-hieu {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .quoc-hieu .ten-co-quan {
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .quoc-hieu .motto {
+    font-style: italic;
+    font-size: 13px;
+    margin-top: 4px;
+    font-weight: 600;
+  }
+
+  .doc-header h1 {
+    font-size: 25px;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+    line-height: 1.4;
+  }
+
+  .doc-header h2 {
+    font-size: 17px;
+    color: var(--gray-700);
+    font-weight: 600;
+    margin-bottom: 22px;
+    line-height: 1.5;
+  }
+
+  .doc-meta {
+    font-size: 13px;
+    color: var(--gray-600);
+    font-style: italic;
+    line-height: 1.8;
+  }
+
+  /* ==== TOC ==== */
+  .toc {
+    background: var(--gray-50);
+    border-left: 4px solid var(--primary);
+    padding: 25px 30px;
+    margin: 40px 0;
+    border-radius: 0 8px 8px 0;
+  }
+
+  .toc h3 {
+    font-size: 16px;
+    color: var(--primary);
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: none;
+    padding: 0;
+  }
+
+  .toc ol {
+    list-style: none;
+    counter-reset: toc-counter;
+    margin: 0;
+  }
+
+  .toc > ol > li {
+    counter-increment: toc-counter;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--gray-700);
+  }
+
+  .toc > ol > li::before {
+    content: "PHẦN " counter(toc-counter) ". ";
+    color: var(--primary);
+    font-weight: 700;
+  }
+
+  .toc a {
+    color: var(--gray-700);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .toc a:hover { color: var(--primary-light); }
+
+  .toc .toc-sub {
+    list-style: none;
+    margin-left: 30px;
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--gray-600);
+  }
+
+  .toc .toc-sub li { margin-bottom: 4px; }
+  .toc .toc-sub li::before { content: "→ "; color: var(--accent); }
+
+  /* ==== HEADINGS ==== */
+  h2.section-title {
+    font-size: 20px;
+    color: #ffffff;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+    padding: 14px 24px;
+    border-radius: 8px;
+    margin: 55px 0 25px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 12px rgba(30,58,138,0.2);
+    scroll-margin-top: 80px;
+    position: relative;
+  }
+
+  h2.section-title a.anchor {
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+    font-size: 16px;
+    margin-left: 10px;
+    transition: color 0.2s;
+  }
+
+  h2.section-title a.anchor:hover { color: #fff; }
+
+  h3 {
+    font-size: 17px;
+    color: var(--primary);
+    margin: 32px 0 15px 0;
+    padding-left: 14px;
+    border-left: 4px solid var(--accent);
+    scroll-margin-top: 80px;
+  }
+
+  h4 {
+    font-size: 15px;
+    color: var(--gray-700);
+    margin: 22px 0 12px 0;
+    font-weight: 700;
+  }
+
+  /* ==== PARAGRAPHS ==== */
+  p { margin-bottom: 14px; text-align: justify; }
+
+  ul, ol { margin: 12px 0 16px 32px; }
+  li { margin-bottom: 7px; }
+
+  /* ==== LINKS ==== */
+  a {
+    color: var(--link);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--link);
+    transition: all 0.2s;
+  }
+
+  a:hover {
+    color: var(--link-hover);
+    border-bottom: 1px solid var(--link-hover);
+  }
+
+  a.external::after {
+    content: " ↗";
+    font-size: 11px;
+    color: var(--gray-500);
+  }
+
+  /* ==== FOOTNOTE LINKS ==== */
+  .fn {
+    font-size: 11px;
+    vertical-align: super;
+    color: var(--primary-light);
+    text-decoration: none;
+    font-weight: 700;
+    border: none;
+    padding: 0 2px;
+  }
+
+  .fn:hover { color: var(--danger); }
+
+  /* ==== TABLES ==== */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 13.5px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  thead {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+    color: #ffffff;
+  }
+
+  th {
+    padding: 12px 14px;
+    text-align: left;
+    font-weight: 700;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+  }
+
+  td {
+    padding: 11px 14px;
+    border-bottom: 1px solid var(--gray-200);
+    vertical-align: top;
+  }
+
+  tbody tr:nth-child(even) { background: var(--gray-50); }
+  tbody tr:hover { background: #eff6ff; }
+
+  table caption {
+    caption-side: top;
+    text-align: left;
+    font-size: 12.5px;
+    color: var(--gray-600);
+    font-weight: 600;
+    padding: 8px 0;
+    font-style: italic;
+  }
+
+  /* ==== BOXES ==== */
+  .box {
+    padding: 18px 24px;
+    border-radius: 8px;
+    margin: 20px 0;
+    font-size: 14px;
+  }
+
+  .box-info { background: #eff6ff; border-left: 5px solid var(--primary-light); }
+  .box-warning { background: #fef2f2; border-left: 5px solid var(--danger); }
+  .box-success { background: #f0fdf4; border-left: 5px solid var(--success); }
+  .box-purple { background: #faf5ff; border-left: 5px solid var(--purple); }
+  .box-note { background: #fffbeb; border-left: 5px solid var(--accent); }
+  .box-cyan { background: #ecfeff; border-left: 5px solid var(--cyan); }
+
+  .box h4 { margin-top: 0; color: var(--primary); }
+  .box-warning h4 { color: var(--danger); }
+  .box-success h4 { color: var(--success); }
+  .box-purple h4 { color: var(--purple); }
+  .box-note h4 { color: #92400e; }
+  .box-cyan h4 { color: var(--cyan); }
+
+  .box-icon {
+    font-size: 18px;
+    margin-right: 6px;
+    vertical-align: middle;
+  }
+
+  /* ==== BADGES ==== */
+  .badge {
+    display: inline-block;
+    padding: 3px 12px;
+    border-radius: 20px;
+    font-size: 11.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+  }
+
+  .badge-red { background: #fee2e2; color: var(--danger); }
+  .badge-orange { background: #fff7ed; color: #ea580c; }
+  .badge-green { background: #dcfce7; color: var(--success); }
+  .badge-blue { background: #dbeafe; color: var(--primary-light); }
+  .badge-purple { background: #f3e8ff; color: var(--purple); }
+  .badge-cyan { background: #cffafe; color: var(--cyan); }
+  .badge-gray { background: #f1f5f9; color: var(--gray-600); }
+
+  /* ==== STAT CARDS ==== */
+  .stat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+    margin: 20px 0;
+  }
+
+  .stat-card {
+    background: var(--gray-50);
+    border-radius: 10px;
+    padding: 18px;
+    text-align: center;
+    border: 1px solid var(--gray-200);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .stat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  }
+
+  .stat-card .stat-value {
+    font-size: 26px;
+    font-weight: 800;
+    color: var(--primary);
+    line-height: 1.2;
+  }
+
+  .stat-card .stat-label {
+    font-size: 12px;
+    color: var(--gray-500);
+    margin-top: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+  }
+
+  /* ==== SIGNATURE ==== */
+  .signature {
+    margin-top: 50px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .signature-box {
+    text-align: center;
+    min-width: 280px;
+  }
+
+  .signature-box .role {
+    font-weight: 700;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: var(--gray-700);
+  }
+
+  .signature-box .name {
+    font-weight: 800;
+    font-size: 15px;
+    color: var(--primary);
+    margin-top: 70px;
+  }
+
+  /* ==== ROADMAP ==== */
+  .roadmap {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 25px 0;
+  }
+
+  .phase {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  }
+
+  .phase-header {
+    padding: 16px;
+    color: #ffffff;
+    text-align: center;
+  }
+
+  .phase-header .phase-name {
+    font-size: 14px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .phase-header .phase-time {
+    font-size: 12px;
+    margin-top: 4px;
+    opacity: 0.9;
+  }
+
+  .phase-body {
+    background: #ffffff;
+    padding: 16px;
+    font-size: 13px;
+  }
+
+  .phase-body ul { margin-left: 18px; }
+
+  .phase-1 .phase-header { background: linear-gradient(135deg, #dc2626, #991b1b); }
+  .phase-2 .phase-header { background: linear-gradient(135deg, #f59e0b, #b45309); }
+  .phase-3 .phase-header { background: linear-gradient(135deg, #16a34a, #15803d); }
+
+  /* ==== FOOTNOTES ==== */
+  .footnotes {
+    margin-top: 60px;
+    padding-top: 25px;
+    border-top: 2px solid var(--gray-300);
+    font-size: 12.5px;
+    color: var(--gray-600);
+  }
+
+  .footnotes h3 {
+    font-size: 14px;
+    color: var(--primary);
+    border: none;
+    padding: 0;
+    margin: 0 0 15px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .footnotes ol { margin-left: 20px; }
+  .footnotes li { margin-bottom: 8px; }
+  .footnotes a { font-size: 12px; word-break: break-word; }
+
+  /* ==== BACK TO TOP ==== */
+  .back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: var(--primary);
+    color: #fff;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border: none;
+    box-shadow: 0 4px 16px rgba(30,58,138,0.35);
+    font-size: 20px;
+    font-weight: 700;
+    transition: all 0.2s;
+    z-index: 999;
+  }
+
+  .back-to-top:hover {
+    background: var(--primary-light);
+    transform: translateY(-3px);
+    color: #fff;
+    border: none;
+  }
+
+  /* ==== PRINT BUTTON ==== */
+  .print-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 13px;
+    box-shadow: 0 4px 16px rgba(30,58,138,0.3);
+    transition: all 0.2s;
+    z-index: 1000;
+  }
+
+  .print-btn:hover {
+    background: var(--primary-light);
+    transform: translateY(-2px);
+  }
+
+  /* ==== DIVIDER ==== */
+  .divider {
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gray-300), transparent);
+    margin: 40px 0;
+  }
+
+  /* ==== RESPONSIVE ==== */
+  @media (max-width: 900px) {
+    .page { padding: 30px 20px; }
+    .roadmap { grid-template-columns: 1fr; }
+    .stat-grid { grid-template-columns: 1fr 1fr; }
+    .top-nav { margin: -30px -20px 20px -20px; padding: 12px 20px; }
+    .top-nav .nav-links { display: none; }
+    h2.section-title { font-size: 16px; padding: 12px 16px; }
+  }
+
+  /* ==== PRINT ==== */
+  @media print {
+    body { background: #fff; font-size: 11.5px; }
+    .page { box-shadow: none; padding: 15px; max-width: 100%; }
+    .top-nav, .print-btn, .back-to-top { display: none !important; }
+    h2.section-title, .phase-header, thead {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .box, .stat-card, .phase, table { page-break-inside: avoid; }
+    h2.section-title { page-break-after: avoid; }
+    a { color: #000; border-bottom: none; }
+    a.external::after { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<button class="print-btn no-print" onclick="window.print()">🖨️ In / Xuất PDF</button>
+<a href="#top" class="back-to-top no-print" title="Về đầu trang">↑</a>
+
+<div class="page" id="top">
+
+  <!-- ========== TOP NAV ========== -->
+  <nav class="top-nav no-print">
+    <div class="nav-title">📄 Báo cáo Bài toán số 29</div>
+    <div class="nav-links">
+      <a href="#phan-i">I. Mở đầu</a>
+      <a href="#phan-ii">II. Cơ sở KH</a>
+      <a href="#phan-iii">III. Thực trạng</a>
+      <a href="#phan-iv">IV. Giải pháp</a>
+      <a href="#phan-v">V. Kiến trúc</a>
+      <a href="#phan-vi">VI. Lộ trình</a>
+      <a href="#phan-vii">VII. Nguồn lực</a>
+      <a href="#phan-viii">VIII. Kết quả</a>
+      <a href="#phan-ix">IX. Rủi ro</a>
+      <a href="#phan-x">X. Kết luận</a>
+      <a href="#tai-lieu">Tài liệu</a>
+    </div>
+  </nav>
+
+  <!-- ========== HEADER ========== -->
+  <header class="doc-header">
+    <div class="quoc-hieu">
+      <div class="ten-co-quan">CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM</div>
+      <div class="motto">Độc lập – Tự do – Hạnh phúc</div>
+    </div>
+
+    <h1>BÁO CÁO ĐỀ XUẤT GIẢI PHÁP KHOA HỌC CÔNG NGHỆ</h1>
+    <h2>Giải quyết Bài toán lớn số 29: Phát triển kinh tế xanh, kinh tế tuần hoàn<br>trở thành động lực tăng trưởng của Thủ đô Hà Nội (2026–2030, tầm nhìn 2035)</h2>
+
+    <div class="doc-meta">
+      <p><strong>Kính gửi:</strong> Ủy ban nhân dân thành phố Hà Nội &amp; Sở Khoa học và Công nghệ thành phố Hà Nội</p>
+      <p><strong>Nhóm nghiên cứu:</strong> TS. Nguyễn Huy Cường và cộng sự</p>
+      <p><strong>Mã số văn bản:</strong> ĐX-KHCN-2026/29</p>
+      <p><strong>Hà Nội, tháng 09 năm 2026</strong></p>
+    </div>
+  </header>
+
+  <!-- ========== TÓM TẮT ĐIỀU HÀNH ========== -->
+  <div class="box box-cyan">
+    <h4><span class="box-icon">📌</span>Tóm tắt điều hành</h4>
+    <p><strong>Báo cáo này</strong> đề xuất giải pháp khoa học công nghệ tổng thể để giải quyết <strong>Bài toán lớn số 29</strong> – một trong 30 bài toán lớn của thành phố Hà Nội giai đoạn 2026–2030 theo <a href="https://hanoi.gov.vn" class="external" target="_blank" rel="noopener">Quyết định số 193/QĐ-UBND</a> ngày 18/3/2026.</p>
+    <p><strong>Giải pháp cốt lõi</strong> gồm <strong>6 hợp phần</strong> với <strong>4 trụ cột công nghệ</strong> (IoT, AI, Blockchain, Digital Twin), tổng nhu cầu vốn <strong>4.500–6.000 tỷ đồng</strong>, chia thành <strong>3 giai đoạn</strong> triển khai từ Q4/2026 đến hết 2030.</p>
+    <p><strong>Mục tiêu đột phá:</strong> Tỷ lệ rác hữu cơ xử lý tuần hoàn đạt ≥60%; tỷ lệ mua sắm công xanh ≥35%; tạo 9.600 việc làm xanh; giảm 500.000–750.000 tấn CO₂/năm; hình thành 5 khu công nghiệp sinh thái.</p>
+  </div>
+
+  <!-- ========== TOC ========== -->
+  <div class="toc">
+    <h3>📑 Mục lục</h3>
+    <ol>
+      <li><a href="#phan-i">Mở đầu</a>
+        <ul class="toc-sub">
+          <li><a href="#phan-i-1">1.1. Đặt vấn đề</a></li>
+          <li><a href="#phan-i-2">1.2. Mục tiêu của đề xuất</a></li>
+          <li><a href="#phan-i-3">1.3. Đối tượng và phạm vi nghiên cứu</a></li>
+          <li><a href="#phan-i-4">1.4. Phương pháp nghiên cứu</a></li>
+          <li><a href="#phan-i-5">1.5. Căn cứ pháp lý</a></li>
+        </ul>
+      </li>
+      <li><a href="#phan-ii">Tổng quan nghiên cứu và cơ sở khoa học</a></li>
+      <li><a href="#phan-iii">Phân tích thực trạng và chẩn đoán điểm nghẽn</a></li>
+      <li><a href="#phan-iv">Giải pháp khoa học công nghệ</a></li>
+      <li><a href="#phan-v">Kiến trúc tổng thể hệ thống</a></li>
+      <li><a href="#phan-vi">Lộ trình triển khai</a></li>
+      <li><a href="#phan-vii">Nhu cầu nguồn lực</a></li>
+      <li><a href="#phan-viii">Kết quả dự kiến</a></li>
+      <li><a href="#phan-ix">Rủi ro và biện pháp giảm thiểu</a></li>
+      <li><a href="#phan-x">Kết luận và kiến nghị</a></li>
+    </ol>
+    <p style="margin-top: 12px; font-size: 12.5px; color: var(--gray-600);">
+      <em>Phụ lục:</em> <a href="#tai-lieu">Tài liệu tham khảo</a> · <a href="#phu-luc-a">Phụ lục A – Ma trận RACI</a> · <a href="#phu-luc-b">Phụ lục B – Bảng KPI chi tiết</a>
+    </p>
+  </div>
+
+  <!-- ================================================================= -->
+  <!-- PHẦN I                                                            -->
+  <!-- ================================================================= -->
+  <h2 class="section-title" id="phan-i">PHẦN I. MỞ ĐẦU <a href="#top" class="anchor">↑</a></h2>
+
+  <h3 id="phan-i-1">1.1. Đặt vấn đề</h3>
+  <p>Thủ đô Hà Nội đang bước vào giai đoạn phát triển mới với mục tiêu xây dựng Thủ đô <em>"Văn hiến – Văn minh – Hiện đại"</em>. Trong bối cảnh đó, phát triển kinh tế xanh và kinh tế tuần hoàn không còn là lựa chọn mà đã trở thành yêu cầu tất yếu, là động lực tăng trưởng mới cho Thủ đô.</p>
+
+  <div class="box box-warning">
+    <h4><span class="box-icon">⚠️</span>Thực tiễn đòi hỏi cấp bách</h4>
+    <ul>
+      <li><strong>Áp lực chất thải:</strong> Khối lượng rác sinh hoạt vượt <strong>7.000 tấn/ngày</strong> (2025), dự báo đạt hơn <strong>8.000 tấn/ngày</strong> (2030). Rác hữu cơ chiếm <strong>62–78%</strong>.<a href="#fn1" class="fn">[1]</a></li>
+      <li><strong>Ô nhiễm không khí và biến đổi khí hậu:</strong> Hoạt động giao thông, công nghiệp, xây dựng là những nguồn phát thải chính.<a href="#fn2" class="fn">[2]</a></li>
+      <li><strong>Mô hình tuần hoàn còn rời rạc:</strong> Thiếu liên kết giữa phân loại, thu gom, xử lý, tái chế và tiêu thụ sản phẩm tái chế.</li>
+      <li><strong>Chính sách chưa tiếp cận được doanh nghiệp nhỏ và vừa:</strong> Khoảng cách giữa bộ tiêu chí và năng lực thực thi của doanh nghiệp còn lớn.<a href="#fn3" class="fn">[3]</a></li>
+    </ul>
+  </div>
+
+  <h3 id="phan-i-2">1.2. Mục tiêu của đề xuất</h3>
+  <p><strong>Mục tiêu tổng quát:</strong> Đề xuất giải pháp khoa học công nghệ tổng thể để giải quyết Bài toán lớn số 29, chuyển đổi phương thức phát triển kinh tế của Thủ đô từ mô hình tuyến tính sang mô hình tuần hoàn, hướng tới mục tiêu Net Zero vào năm 2050 và xây dựng Thủ đô <em>"Văn hiến – Văn minh – Hiện đại"</em>.</p>
+
+  <h3 id="phan-i-3">1.3. Đối tượng và phạm vi nghiên cứu</h3>
+  <table>
+    <caption>Bảng 1.1. Phạm vi nghiên cứu của đề xuất</caption>
+    <thead>
+      <tr>
+        <th style="width: 20%;">Tiêu chí</th>
+        <th>Nội dung</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Không gian</strong></td>
+        <td>Địa bàn thành phố Hà Nội, tập trung vào các khu vực nội thành và ngoại thành có tiềm năng phát triển kinh tế tuần hoàn</td>
+      </tr>
+      <tr>
+        <td><strong>Thời gian</strong></td>
+        <td>Giai đoạn 2026–2030, tầm nhìn đến 2035</td>
+      </tr>
+      <tr>
+        <td><strong>Lĩnh vực</strong></td>
+        <td>Quản lý chất thải rắn sinh hoạt và công nghiệp; sản xuất công nghiệp và dịch vụ môi trường; nông nghiệp và kinh tế nông thôn; xây dựng và vật liệu xây dựng; giao thông vận tải và logistics đô thị; thương mại và tiêu dùng bền vững</td>
+      </tr>
+      <tr>
+        <td><strong>Đối tượng</strong></td>
+        <td>Các sở, ban, ngành Thành phố; UBND xã, phường; doanh nghiệp, hợp tác xã, hộ kinh doanh; viện nghiên cứu, trường đại học; tổ chức, cá nhân liên quan</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3 id="phan-i-4">1.4. Phương pháp nghiên cứu</h3>
+  <table>
+    <caption>Bảng 1.2. Các phương pháp nghiên cứu được sử dụng</caption>
+    <thead>
+      <tr>
+        <th style="width: 5%;">STT</th>
+        <th style="width: 25%;">Phương pháp</th>
+        <th>Mô tả và ứng dụng</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td><strong>Phân tích tài liệu</strong></td>
+        <td>Thu thập, phân tích các văn bản pháp lý, báo cáo nghiên cứu, số liệu thống kê về kinh tế tuần hoàn tại Việt Nam và quốc tế</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td><strong>Điều tra, khảo sát</strong></td>
+        <td>Khảo sát doanh nghiệp, hộ gia đình, cơ quan quản lý về nhận thức, hành vi và rào cản trong chuyển đổi sang kinh tế tuần hoàn</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td><strong>Phỏng vấn chuyên gia</strong></td>
+        <td>Phỏng vấn sâu các chuyên gia trong lĩnh vực môi trường, kinh tế, công nghệ để thu thập ý kiến về giải pháp</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td><strong>Phân tích dòng vật chất (MFA)</strong></td>
+        <td>Áp dụng phương pháp MFA để định lượng dòng chảy vật chất qua hệ thống kinh tế đô thị</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td><strong>Phân tích chi phí – lợi ích</strong></td>
+        <td>Đánh giá hiệu quả kinh tế của các giải pháp đề xuất</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td><strong>Mô hình hóa</strong></td>
+        <td>Sử dụng mô hình toán học và mô phỏng để dự báo tác động của các kịch bản chính sách</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3 id="phan-i-5">1.5. Căn cứ pháp lý</h3>
+  <table>
+    <caption>Bảng 1.3. Các văn bản pháp lý chính (kèm liên kết tra cứu)</caption>
+    <thead>
+      <tr>
+        <th style="width: 5%;">STT</th>
+        <th style="width: 35%;">Văn bản</th>
+        <th>Nội dung chính</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td><a href="https://vanban.chinhphu.vn" class="external" target="_blank" rel="noopener">Luật Tổ chức chính quyền địa phương số 72/2025/QH15</a></td>
+        <td>Cơ sở pháp lý về tổ chức chính quyền địa phương</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td><a href="https://vanban.chinhphu.vn" class="external" target="_blank" rel="noopener">Luật Thủ đô số 39/2024/QH15</a></td>
+        <td>Cơ chế đặc thù phát triển Thủ đô Hà Nội</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td><a href="https://tulieuvankien.dangcongsan.vn" class="external" target="_blank" rel="noopener">Nghị quyết số 57-NQ/TW ngày 22/12/2024</a></td>
+        <td>Đột phá phát triển khoa học, công nghệ, đổi mới sáng tạo và chuyển đổi số quốc gia</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td><a href="https://vanban.chinhphu.vn" class="external" target="_blank" rel="noopener">Quyết định số 687/QĐ-TTg ngày 07/6/2022</a></td>
+        <td>Đề án phát triển kinh tế tuần hoàn ở Việt Nam</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td><a href="https://vanban.chinhphu.vn" class="external" target="_blank" rel="noopener">Quyết định số 46/2026/QĐ-TTg ngày 22/9/2026</a></td>
+        <td>Hướng dẫn xác định dự án xanh, dự án tuần hoàn và khung ESG</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td><a href="https://hanoi.gov.vn" class="external" target="_blank" rel="noopener">Nghị quyết số 39/2026/NQ-HĐND ngày 15/6/2026</a></td>
+        <td>Chính sách ưu đãi, hỗ trợ hoạt động sản xuất, kinh doanh áp dụng mô hình kinh tế tuần hoàn</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td><a href="https://hanoi.gov.vn" class="external" target="_blank" rel="noopener">Quyết định số 80/2026/QĐ-UBND ngày 07/01/2026</a></td>
+        <td>Tiêu chí khu công nghiệp, cụm công nghiệp sinh thái</td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td><a href="https://hanoi.gov.vn" class="external" target="_blank" rel="noopener">Quyết định số 193/QĐ-UBND ngày 18/3/2026</a></td>
+        <td>Danh mục các bài toán lớn của thành phố Hà Nội giai đoạn 2026–2030 (đợt 1)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="divider"></div>
+
+  <!-- ================================================================= -->
+  <!-- PHẦN II                                                           -->
+  <!-- ================================================================= -->
+  <h2 class="section-title" id="phan-ii">PHẦN II. TỔNG QUAN NGHIÊN CỨU VÀ CƠ SỞ KHOA HỌC <a href="#top" class="anchor">↑</a></h2>
+
+  <h3>2.1. Tổng quan nghiên cứu quốc tế</h3>
+  <p>Kinh tế tuần hoàn (Circular Economy) là một mô hình kinh tế trong đó các hoạt động thiết kế, sản xuất, tiêu dùng và xử lý chất thải được tổ chức nhằm kéo dài vòng đời của vật liệu, tái sử dụng và tái chế tối đa.<a href="#fn4" class="fn">[4]</a></p>
+
+  <table>
+    <caption>Bảng 2.1. Kinh nghiệm quốc tế về phát triển kinh tế tuần hoàn</caption>
+    <thead>
+      <tr>
+        <th style="width: 15%;">Quốc gia</th>
+        <th style="width: 35%;">Kinh nghiệm nổi bật</th>
+        <th>Kết quả đạt được</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>🇳🇴 Na Uy</strong></td>
+        <td>Hệ thống Đặt cọc Hoàn trả (DRS)</td>
+        <td>Tỷ lệ tái chế chai nhựa <strong>&gt;90%</strong> – cao nhất thế giới. Tiềm năng giảm 77.000 tấn bao bì nhựa/năm nếu áp dụng tại Việt Nam.<a href="#fn5" class="fn">[5]</a></td>
+      </tr>
+      <tr>
+        <td><strong>🇨🇳 Trung Quốc</strong></td>
+        <td>Luật Xúc tiến Kinh tế Tuần hoàn (2008), KCN sinh thái</td>
+        <td>Hệ thống chỉ tiêu PRP, EE; mô hình cộng sinh công nghiệp; nền tảng truy xuất nguồn gốc blockchain.</td>
+      </tr>
+      <tr>
+        <td><strong>🇪🇺 EU</strong></td>
+        <td>Kế hoạch Hành động Kinh tế Tuần hoàn (2020)</td>
+        <td>Mục tiêu 2030: 100% bao bì có thể tái sử dụng/tái chế với chi phí hợp lý. Khung chỉ số Eurostat.</td>
+      </tr>
+      <tr>
+        <td><strong>🇯🇵 Nhật Bản</strong></td>
+        <td>Hệ thống blockchain "Tapyrus"</td>
+        <td>Bằng chứng nguồn gốc vật liệu tái chế cho người mua; công nghệ lên men liên tục CT-1000.</td>
+      </tr>
+      <tr>
+        <td><strong>🇸🇬 Singapore<br>🇰🇷 Hàn Quốc</strong></td>
+        <td>Smart Waste Management System (SWMS)</td>
+        <td>Giảm <strong>30–40%</strong> quãng đường thu gom nhờ tối ưu hóa tuyến đường dựa trên IoT.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="box box-note">
+    <h4><span class="box-icon">💡</span>Bài học rút ra cho Hà Nội</h4>
+    <ul>
+      <li>Kinh tế tuần hoàn cần có <strong>cách tiếp cận hệ thống</strong>, không thể giải quyết bằng các giải pháp riêng lẻ.</li>
+      <li>Cần có sự <strong>tham gia của nhiều bên</strong>: Nhà nước, doanh nghiệp, người dân, viện nghiên cứu.</li>
+      <li>Cần có <strong>cơ chế tài chính đủ mạnh</strong> để tiếp cận được doanh nghiệp nhỏ và vừa.</li>
+      <li>Cần có <strong>công nghệ phù hợp</strong> với điều kiện thực tế địa phương.</li>
+      <li>Cần có <strong>dữ liệu để đo lường</strong> làm cơ sở đánh giá và điều chỉnh chính sách.</li>
+    </ul>
+  </div>
+
+  <h3>2.2. Tổng quan nghiên cứu trong nước</h3>
+
+  <h4>2.2.1. Các mô hình thí điểm tiêu biểu tại Việt Nam</h4>
+  <table>
+    <caption>Bảng 2.2. Các mô hình thí điểm kinh tế tuần hoàn tại Việt Nam</caption>
+    <thead>
+      <tr>
+        <th style="width: 5%;">STT</th>
+        <th style="width: 20%;">Mô hình</th>
+        <th style="width: 15%;">Địa điểm</th>
+        <th>Đặc điểm chính</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td><strong>Trạm MRF</strong></td>
+        <td>TP.HCM</td>
+        <td>Nền tảng số theo dõi hành trình rác thải từ phân loại đến tái chế; theo dõi chính xác khối lượng, truy xuất nguồn gốc vật liệu.</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td><strong>Trạm Phú Minh</strong></td>
+        <td>Phú Xuyên, Hà Nội</td>
+        <td>Công nghệ lên men bán khô 120 tấn/ngày, độ tinh khiết 99%; giảm 55.000 tấn CO₂/năm; tiết kiệm &gt;20% chi phí.<a href="#fn6" class="fn">[6]</a></td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td><strong>Hệ thống DRS</strong></td>
+        <td>TP. Huế</td>
+        <td>Máy thu gom tự động RVM tại trường học, siêu thị; hoàn tiền qua ví điện tử; thu hút hàng nghìn người tham gia.</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td><strong>HTX New Green Farm</strong></td>
+        <td>Nhiều tỉnh</td>
+        <td>Chuyển phụ phẩm nông nghiệp thành nấm, phân hữu cơ, lúa phát thải thấp; tạo doanh nghiệp tuần hoàn bền vững.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="divider"></div>
+
+  <!-- ================================================================= -->
+  <!-- PHẦN III                                                          -->
+  <!-- ================================================================= -->
+  <h2 class="section-title" id="phan-iii">PHẦN III. PHÂN TÍCH THỰC TRẠNG VÀ CHẨN ĐOÁN ĐIỂM NGHẼN <a href="#top" class="anchor">↑</a></h2>
+
+  <h3>3.1. Thực trạng kinh tế tuần hoàn tại Hà Nội</h3>
+
+  <div class="stat-grid">
+    <div class="stat-card">
+      <div class="stat-value">7.000+</div>
+      <div class="stat-label">Tấn rác/ngày (2025)</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value">62–78%</div>
+      <div class="stat-label">Rác hữu cơ</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value">~10%</div>
+      <div class="stat-label">Tỷ lệ tái chế (2024)</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value">83%</div>
+      <div class="stat-label">Xử lý bằng đốt phát điện</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value">828K</div>
+      <div class="stat-label">Tỷ đồng dư nợ tín dụng xanh</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value">82</div>
+      <div class="stat-label">Tổ chức tín dụng tham gia</div>
+    </div>
+  </div>
+
+  <h3>3.2. Các mô hình thí điểm đã triển khai tại Hà Nội</h3>
+
+  <table>
+    <caption>Bảng 3.1. Các mô hình thí điểm đã triển khai tại Hà Nội (2025–2026)</caption>
+    <thead>
+      <tr>
+        <th style="width: 25%;">Mô hình</th>
+        <th style="width: 20%;">Địa điểm / Thời gian</th>
+        <th>Kết quả ban đầu</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Mô hình túi tiêu chuẩn</strong></td>
+        <td>Phường Cửa Nam, từ 01/10/2026</td>
+        <td>500+ hộ gia đình tham gia; túi có mã QR phân loại 4 nhóm; thu phí 242,4–384 đồng/kg theo khối lượng.</td>
+      </tr>
+      <tr>
+        <td><strong>Xe điện thu gom</strong></td>
+        <td>Phường Hoàn Kiếm, từ 2025</td>
+        <td>URENCO tích hợp GPS giám sát hành trình; gắn cơ giới hóa với xanh hóa và số hóa quản lý.</td>
+      </tr>
+      <tr>
+        <td><strong>Vùng phát thải thấp (LEZ)</strong></td>
+        <td>Phường Hoàn Kiếm, từ 01/7/2026</td>
+        <td>Kiểm soát ô nhiễm không khí, giảm phát thải giao thông; kết quả kiểm kê nguồn thải nội tại.</td>
+      </tr>
+      <tr>
+        <td><strong>Trạm Phú Minh</strong></td>
+        <td>Phú Xuyên, từ 6/2025</td>
+        <td>Công nghệ lên men bán khô 120 tấn/ngày; độ tinh khiết 99%; không mùi, không nước rỉ rác.</td>
+      </tr>
+      <tr>
+        <td><strong>Hệ thống giám sát môi trường cộng đồng</strong></td>
+        <td>Toàn TP, từ 5/6/2026</td>
+        <td>Nền tảng số cho phép người dân phản ánh, theo dõi vấn đề môi trường; định vị trên bản đồ số.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>3.3. Chẩn đoán sáu điểm nghẽn chính</h3>
+
+  <table>
+    <caption>Bảng 3.2. Sáu điểm nghẽn chính trong phát triển kinh tế tuần hoàn tại Hà Nội</caption>
+    <thead>
+      <tr>
+        <th style="width: 5%;">STT</th>
+        <th style="width: 25%;">Điểm nghẽn</th>
+        <th>Mô tả chi tiết</th>
+        <th style="width: 15%;">Mức độ</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>1</strong></td>
+        <td><span class="badge badge-red">Chuỗi chưa khép kín</span></td>
+        <td>Rác sau phân loại vẫn bị thu gom chung vào một xe; cơ sở xử lý thiếu nguyên liệu đầu vào ổn định; tình trạng "phân loại rồi cũng như không".</td>
+        <td><span class="badge badge-red">Nghiêm trọng</span></td>
+      </tr>
+      <tr>
+        <td><strong>2</strong></td>
+        <td><span class="badge badge-orange">Chưa chuẩn hóa</span></td>
+        <td>Công nghệ Phú Minh hiệu quả vượt trội nhưng mới có 1 cơ sở; chưa có bộ tiêu chuẩn kỹ thuật, hướng dẫn vận hành và mô hình tài chính để nhân rộng.</td>
+        <td><span class="badge badge-orange">Cao</span></td>
+      </tr>
+      <tr>
+        <td><strong>3</strong></td>
+        <td><span class="badge badge-blue">Chính sách chưa tiếp cận</span></td>
+        <td>DN nhỏ và vừa không biết dự án có thuộc diện hỗ trợ; quy trình xác nhận dự án tuần hoàn còn phức tạp, kéo dài.</td>
+        <td><span class="badge badge-orange">Cao</span></td>
+      </tr>
+      <tr>
+        <td><strong>4</strong></td>
+        <td><span class="badge badge-green">Thiếu dữ liệu</span></td>
+        <td>Chỉ tiêu "giảm 7–7,5% nguyên liệu" chưa cụ thể hóa thành dữ liệu theo dõi được; thiếu hệ thống MFA cấp KCN và cấp Thành phố.</td>
+        <td><span class="badge badge-red">Nghiêm trọng</span></td>
+      </tr>
+      <tr>
+        <td><strong>5</strong></td>
+        <td><span class="badge badge-purple">Thiếu thị trường</span></td>
+        <td>Sản phẩm tái chế thiếu hệ thống phân phối, nhận diện thương hiệu, xác thực nguồn gốc; chưa có cơ chế mua sắm công xanh hiệu quả.</td>
+        <td><span class="badge badge-orange">Cao</span></td>
+      </tr>
+      <tr>
+        <td><strong>6</strong></td>
+        <td><span class="badge badge-cyan">Chưa lồng ghép</span></td>
+        <td>LEZ, nông nghiệp tuần hoàn, chuyển đổi số chất thải triển khai song song nhưng thiếu liên kết với mục tiêu kinh tế tuần hoàn.</td>
+        <td><span class="badge badge-orange">Cao</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="divider"></div>
+
+  <!-- ================================================================= -->
+  <!-- PHẦN IV                                                           -->
+  <!-- ================================================================= -->
+  <h2 class="section-title" id="phan-iv">PHẦN IV. GIẢI PHÁP KHOA HỌC CÔNG NGHỆ <a href="#top" class="anchor">↑</a></h2>
+
+  <p>Đề xuất này tập trung vào <strong>bốn trụ cột công nghệ</strong> có thể triển khai thực tế tại Hà Nội: <strong>(1)</strong> IoT và AI trong giám sát và tự động hóa; <strong>(2)</strong> Nền tảng số tích hợp và Blockchain; <strong>(3)</strong> Digital Twin và MFA; <strong>(4)</strong> Công nghệ xử lý tuần hoàn (lên men bán khô, DRS).</p>
+
+  <table>
+    <caption>Bảng 4.1. So sánh 4 trụ cột công nghệ chính</caption>
+    <thead>
+      <tr>
+        <th style="width: 20%;">Trụ cột</th>
+        <th style="width: 25%;">Công nghệ cốt lõi</th>
+        <th style="width: 20%;">Ứng dụng chính</th>
+        <th>Mức độ ưu tiên</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>IoT &amp; AI</strong></td>
+        <td>Cảm biến, camera AI, mô hình học sâu</td>
+        <td>Giám sát chuỗi thu gom, phân loại rác tự động</td>
+        <td><span class="badge badge-red">Ưu tiên 1</span></td>
+      </tr>
+      <tr>
+        <td><strong>Nền tảng số &amp; Blockchain</strong></td>
+        <td>Data Lakehouse, Hyperledger, API Gateway</td>
+        <td>Truy xuất nguồn gốc, đối soát dữ liệu, quản lý tài chính xanh</td>
+        <td><span class="badge badge-orange">Ưu tiên 2</span></td>
+      </tr>
+      <tr>
+        <td><strong>Digital Twin &amp; MFA</strong></td>
+        <td>Mô hình mô phỏng, phân tích dòng vật chất</td>
+        <td>Mô phỏng đô thị tuần hoàn, tối ưu hóa nguồn lực</td>
+        <td><span class="badge badge-blue">Ưu tiên 3</span></td>
+      </tr>
+      <tr>
+        <td><strong>Công nghệ xử lý tuần hoàn</strong></td>
+        <td>Lên men bán khô, DRS, hệ thống RVM</td>
+        <td>Xử lý rác hữu cơ, thu gom bao bì đồ uống</td>
+        <td><span class="badge badge-green">Ưu tiên 1</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>4.1. Hợp phần 1: Thiết lập chuỗi "phân loại – thu gom – xử lý" khép kín</h3>
+
+  <div class="box box-info">
+    <h4><span class="box-icon">🎯</span>Giải pháp khoa học công nghệ</h4>
+    <ul>
+      <li><strong>Hệ thống IoT giám sát thời gian thực:</strong> Cảm biến siêu âm, trọng lượng, khí gas, GPS trên thùng rác. Truyền dữ liệu qua LoRaWAN/Wi-Fi. Tối ưu tuyến thu gom giảm 30–40% quãng đường.<a href="#fn7" class="fn">[7]</a></li>
+      <li><strong>Ứng dụng AI nhận diện rác:</strong> Camera AI + mô hình học sâu. Tham chiếu EcoBin (0,8 giây), Binsity (độ chính xác &gt;86%).<a href="#fn8" class="fn">[8]</a></li>
+      <li><strong>Hệ thống "hộ chiếu số":</strong> Mã QR theo dõi hành trình rác thải từ hộ gia đình đến tái chế.</li>
+      <li><strong>Xe thu gom thông minh:</strong> Trang bị GPS, camera AI, cân điện tử; dữ liệu đồng bộ về trung tâm.</li>
+    </ul>
+  </div>
+
+  <h4>Sản phẩm dự kiến:</h4>
+  <ul>
+    <li>30–50 phường triển khai mô hình túi tiêu chuẩn vào năm 2028</li>
+    <li>100% xe thu gom được lắp GPS và camera giám sát</li>
+    <li>500.000+ người dùng ứng dụng di động</li>
+  </ul>
+
+  <h3>4.2. Hợp phần 2: Chuẩn hóa và nhân rộng công nghệ xử lý tuần hoàn</h3>
+
+  <table>
+    <caption>Bảng 4.2. Bộ tiêu chuẩn kỹ thuật công nghệ lên men bán khô tốc độ cao</caption>
+    <thead>
+      <tr>
+        <th style="width: 25%;">Nhóm tiêu chuẩn</th>
+        <th style="width: 30%;">Nội dung</th>
+        <th>Thông số kỹ thuật đề xuất</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Đầu vào</strong></td>
+        <td>Chất lượng rác hữu cơ đầu vào</td>
+        <td>Độ tinh khiết ≥ 95%; kích thước ≤ 40 mm; tỷ lệ C/N 20–25/1; độ ẩm 50–60%</td>
+      </tr>
+      <tr>
+        <td><strong>Vận hành</strong></td>
+        <td>Thông số quá trình lên men</td>
+        <td>Nhiệt độ 50–60°C; thời gian 7–10 ngày; độ ẩm duy trì 50–60%; pH 6.5–7.5</td>
+      </tr>
+      <tr>
+        <td><strong>Đầu ra</strong></td>
+        <td>Chất lượng sản phẩm</td>
+        <td>Xơ bã: độ ẩm ≤ 30%; bột hữu cơ: hàm lượng hữu cơ ≥ 30%; nước hữu cơ: pH 6.5–7.5</td>
+      </tr>
+      <tr>
+        <td><strong>Môi trường</strong></td>
+        <td>Kiểm soát ô nhiễm thứ cấp</td>
+        <td>H₂S &lt; 0.01 ppm; không nước rỉ rác; không khí nhà kính</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table>
+    <caption>Bảng 4.3. Mô-đun hóa công nghệ theo quy mô</caption>
+    <thead>
+      <tr>
+        <th>Quy mô</th>
+        <th>Công suất</th>
+        <th>Đối tượng áp dụng</th>
+        <th>Diện tích yêu cầu</th>
+        <th>Số mô-đun</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="badge badge-green">Nhỏ</span></td>
+        <td>50 tấn/ngày</td>
+        <td>Cấp xã, phường nội thành</td>
+        <td>1.000–1.500 m²</td>
+        <td>1–2</td>
+      </tr>
+      <tr>
+        <td><span class="badge badge-orange">Trung</span></td>
+        <td>120 tấn/ngày</td>
+        <td>Cấp liên xã, cụm xử lý</td>
+        <td>2.500–3.500 m²</td>
+        <td>2–3</td>
+      </tr>
+      <tr>
+        <td><span class="badge badge-red">Lớn</span></td>
+        <td>250 tấn/ngày</td>
+        <td>Cấp vùng, liên huyện</td>
+        <td>5.000–7.000 m²</td>
+        <td>4–5</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>4.3. Hợp phần 3: Hệ thống dữ liệu và đo lường kinh tế tuần hoàn</h3>
+
+  <table>
+    <caption>Bảng 4.4. Bảy nguồn dữ liệu chính tích hợp vào nền tảng Data Lakehouse</caption>
+    <thead>
+      <tr>
+        <th style="width: 5%;">STT</th>
+        <th style="width: 30%;">Nguồn dữ liệu</th>
+        <th style="width: 25%;">Cơ quan quản lý</th>
+        <th>Tần suất cập nhật</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Dữ liệu thu gom rác</td>
+        <td>Sở NN&amp;MT, URENCO</td>
+        <td>Hàng ngày</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Dữ liệu cân bằng vật chất KCN</td>
+        <td>Ban Quản lý các KCN</td>
+        <td>Hàng tháng</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Dữ liệu sản xuất công nghiệp</td>
+        <td>Sở Công Thương, Cục Thống kê</td>
+        <td>Hàng quý</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Dữ liệu quan trắc môi trường</td>
+        <td>Sở NN&amp;MT</td>
+        <td>Thời gian thực</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>Dữ liệu đất đai, quy hoạch</td>
+        <td>Sở TN&amp;MT, Sở Xây dựng</td>
+        <td>Hàng năm</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>Dữ liệu năng lượng tiêu thụ</td>
+        <td>EVN Hà Nội</td>
+        <td>Hàng tháng</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>Dữ liệu dân cư</td>
+        <td>Công an Thành phố</td>
+        <td>Hàng quý</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>4.4. Hợp phần 4: Cơ chế tài chính và hỗ trợ doanh nghiệp</h3>
+
+  <div class="box box-success">
+    <h4><span class="box-icon">💰</span>Giải pháp đột phá về tài chính</h4>
+    <ul>
+      <li><strong>Nền tảng số đánh giá dự án tuần hoàn:</strong> Doanh nghiệp tự đánh giá trong 10 phút theo QĐ 46/2026/QĐ-TTg.</li>
+      <li><strong>Cơ chế "một cửa" song song:</strong> API kết nối nền tảng TP với ngân hàng, thẩm định song song thay vì chờ xác nhận chính thức.<a href="#fn9" class="fn">[9]</a></li>
+      <li><strong>AI thẩm định tín dụng xanh:</strong> GBR, Random Forest, LSTM chấm điểm ESG; tham chiếu nền tảng i.GreenFinance của Tech Mahindra.</li>
+      <li><strong>Blockchain truy xuất dòng vốn:</strong> +37% khả năng tài trợ liên kết ESG.<a href="#fn10" class="fn">[10]</a></li>
+      <li><strong>Nền tảng đào tạo trực tuyến:</strong> 4 khóa học chính về chuyển đổi xanh cho DN nhỏ và vừa.</li>
+    </ul>
+  </div>
+
+  <h3>4.5. Hợp phần 5: Phát triển thị trường sản phẩm tuần hoàn</h3>
+
+  <table>
+    <caption>Bảng 4.5. Tiềm năng của hệ thống Đặt cọc Hoàn trả (DRS) số hóa</caption>
+    <thead>
+      <tr>
+        <th style="width: 40%;">Chỉ tiêu</th>
+        <th style="width: 30%;">Giá trị</th>
+        <th>Nguồn tham chiếu</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Giảm rác thải bao bì nhựa</td>
+        <td><strong>&gt; 77.000 tấn/năm</strong></td>
+        <td>Nghiên cứu Đại sứ quán Na Uy</td>
+      </tr>
+      <tr>
+        <td>Giảm phát thải CO₂</td>
+        <td><strong>~265.000 tấn/năm</strong></td>
+        <td>Nghiên cứu Đại sứ quán Na Uy</td>
+      </tr>
+      <tr>
+        <td>Tạo việc làm xanh</td>
+        <td><strong>~9.600 việc làm</strong></td>
+        <td>Nghiên cứu Đại sứ quán Na Uy</td>
+      </tr>
+      <tr>
+        <td>Tỷ lệ tái chế chai nhựa (Na Uy)</td>
+        <td><strong>&gt; 90%</strong></td>
+        <td>Mô hình DRS Na Uy</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>4.6. Hợp phần 6: Lồng ghép kinh tế tuần hoàn vào các lĩnh vực ưu tiên</h3>
+
+  <ul>
+    <li><strong>Data Fabric liên ngành:</strong> Kết nối dữ liệu LEZ + nông nghiệp tuần hoàn + chất thải số.</li>
+    <li><strong>Giám sát LEZ tích hợp:</strong> IoT + camera AI + GPS URENCO; tối ưu hóa lộ trình, hướng tới Net Zero.<a href="#fn11" class="fn">[11]</a></li>
+    <li><strong>Nền tảng nông nghiệp tuần hoàn:</strong> Quản lý trang trại, chứng nhận giảm phát thải (blockchain).</li>
+    <li><strong>Digital Twin đô thị tuần hoàn:</strong> Mô phỏng dòng vật chất, năng lượng, phát thải.<a href="#fn12" class="fn">[12]</a></li>
+  </ul>
+
+  <div class="divider"></div>
+
+  <!-- ================================================================= -->
+  <!-- PHẦN V                                                            -->
+  <!-- ================================================================= -->
+  <h2 class="section-title" id="phan-v">PHẦN V. KIẾN TRÚC TỔNG THỂ HỆ THỐNG <a href="#top" class="anchor">↑</a></h2>
+
+  <p>Hệ thống được thiết kế theo <strong>kiến trúc 5 tầng chức năng</strong>, đảm bảo khả năng mở rộng, tích hợp và vận hành hiệu quả:</p>
+
+  <table>
+    <caption>Bảng 5.1. Kiến trúc 5 tầng của hệ thống</caption>
+    <thead>
+      <tr>
+        <th style="width: 15%;">Tầng</th>
+        <th style="width: 40%;">Thành phần chính</th>
+        <th>Chức năng</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="badge badge-blue">Tầng 1</span><br>Ứng dụng</td>
+        <td>Dashboard, Cổng DN, App người dân, Cổng dữ liệu mở, IOC</td>
+        <td>Giao diện người dùng cuối cho lãnh đạo, doanh nghiệp, người dân</td>
+      </tr>
+      <tr>
+        <td><span class="badge badge-blue">Tầng 2</span><br>Nghiệp vụ</td>
+        <td>Quản lý chuỗi tuần hoàn, DRS, AI Engine, Blockchain, MFA, ESG Scoring</td>
+        <td>Xử lý logic nghiệp vụ, tự động hóa quy trình</td>
+      </tr>
+      <tr>
+        <td><span class="badge badge-green">Tầng 3</span><br>Dữ liệu</td>
+        <td>Data Lake, Data Warehouse, Blockchain, Data Catalog, CSDLQG</td>
+        <td>Lưu trữ và quản lý dữ liệu tập trung</td>
+      </tr>
+      <tr>
+        <td><span class="badge badge-orange">Tầng 4</span><br>Xử lý</td>
+        <td>Apache Spark, Airflow, Kafka, API Gateway</td>
+        <td>ETL/ELT, streaming dữ liệu thời gian thực, kết nối nguồn</td>
+      </tr>
+      <tr>
+        <td><span class="badge badge-red">Tầng 5</span><br>Thu thập</td>
+        <td>Sở NN&amp;MT, Ban QL KCN, Sở CT, EVN, Công an TP, IoT sensors</td>
+        <td>Nguồn dữ liệu và thiết bị đầu cuối</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="divider"></div>
+
+  <!-- ================================================================= -->
+  <!-- PHẦN VI                                                           -->
+  <!-- ================================================================= -->
+  <h2 class="section-title" id="phan-vi">PHẦN VI. LỘ TRÌNH TRIỂN KHAI <a href="#top" class="anchor">↑</a></h2>
+
+  <div class="roadmap">
+    <div class="phase phase-1">
+      <div class="phase-header">
+        <div class="phase-name">Giai đoạn 1: Khởi động</div>
+        <div class="phase-time">Q4/2026 – Q2/2027</div>
+      </div>
+      <div class="phase-body">
+        <ul>
+          <li>Nhân rộng túi tiêu chuẩn 5 phường</li>
+          <li>Chuẩn hóa công nghệ lên men bán khô</li>
+          <li>Công cụ tự đánh giá dự án tuần hoàn</li>
+          <li>Cân bằng vật chất 3 KCN thí điểm</li>
+          <li>Thí điểm DRS 5 siêu thị + 10 ĐH</li>
+          <li>Nền tảng Data Fabric</li>
+          <li>100% DN KCN phổ biến NQ 39/2026</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="phase phase-2">
+      <div class="phase-header">
+        <div class="phase-name">Giai đoạn 2: Mở rộng</div>
+        <div class="phase-time">Q3/2027 – Q4/2028</div>
+      </div>
+      <div class="phase-body">
+        <ul>
+          <li>Nhân rộng túi tiêu chuẩn 30–50 phường</li>
+          <li>Khởi công 3–5 cơ sở xử lý rác hữu cơ</li>
+          <li>Cơ chế "một cửa" tín dụng thí điểm</li>
+          <li>Ban hành Bộ chỉ số KTTH Thủ đô</li>
+          <li>100 điểm thu gom tái chế + 50 điểm DRS</li>
+          <li>Sàn TMĐT sản phẩm xanh</li>
+          <li>Digital Twin khu vực LEZ</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="phase phase-3">
+      <div class="phase-header">
+        <div class="phase-name">Giai đoạn 3: Hoàn thiện</div>
+        <div class="phase-time">2029 – 2030</div>
+      </div>
+      <div class="phase-body">
+        <ul>
+          <li>Vận hành 5–8 cơ sở xử lý rác hữu cơ</li>
+          <li>Đạt 5 KCN sinh thái</li>
+          <li>500 DN SME hỗ trợ chuyển đổi xanh</li>
+          <li>200 điểm thu gom tái chế + 200 DRS</li>
+          <li>500.000+ người dùng app xanh</li>
+          <li>35% mua sắm công từ SP xanh</li>
+          <li>Digital Twin toàn TP + tích hợp IOC</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <table>
+    <caption>Bảng 6.1. Tổng hợp các mốc triển khai chính theo quý</caption>
+    <thead>
+      <tr>
+        <th>Giai đoạn</th>
+        <th>Thời gian</th>
+        <th>Mốc quan trọng</th>
+        <th>Kết quả bàn giao</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td rowspan="4"><span class="badge badge-red">GĐ 1</span></td>
+        <td>Q4/2026</td>
+        <td>Hội thảo phổ biến NQ 39/2026</td>
+        <td>100% DN KCN được phổ biến</td>
+      </tr>
+      <tr>
+        <td>Q1/2027</td>
+        <td>Ban hành bộ tiêu chuẩn kỹ thuật</td>
+        <td>Bộ tiêu chuẩn kỹ thuật được phê duyệt</td>
+      </tr>
+      <tr>
+        <td>Q1/2027</td>
+        <td>Nhân rộng túi tiêu chuẩn 5 phường</td>
+        <td>5 phường vận hành ổn định</td>
+      </tr>
+      <tr>
+        <td>Q2/2027</td>
+        <td>Hoàn thành công cụ tự đánh giá và Data Fabric</td>
+        <td>Công cụ và kiến trúc sẵn sàng</td>
+      </tr>
+      <tr>
+        <td rowspan="4"><span class="badge badge-orange">GĐ 2</span></td>
+        <td>Q3/2027</td>
+        <td>Khởi công 3–5 cơ sở xử lý rác hữu cơ</td>
+        <td>Địa điểm được phê duyệt, khởi công</td>
+      </tr>
+      <tr>
+        <td>Q1/2028</td>
+        <td>Ban hành Bộ chỉ số KTTH Thủ đô</td>
+        <td>Bộ chỉ số được ban hành</td>
+      </tr>
+      <tr>
+        <td>Q3/2028</td>
+        <td>Vận hành nền tảng dữ liệu KTTH</td>
+        <td>Nền tảng hoạt động</td>
+      </tr>
+      <tr>
+        <td>Q4/2028</td>
+        <td>Hoàn thành 100 điểm thu gom + 50 điểm DRS</td>
+        <td>Các điểm đi vào hoạt động</td>
+      </tr>
+      <tr>
+        <td rowspan="4"><span class="badge badge-green">GĐ 3</span></td>
+        <td>Q2/2029</td>
+        <td>Vận hành 5–8 cơ sở xử lý rác hữu cơ</td>
+        <td>Tất cả cơ sở vận hành</td>
+      </tr>
+      <tr>
+        <td>Q4/2029</td>
+        <td>Đạt 5 KCN sinh thái</td>
+        <td>5 KCN được công nhận</td>
+      </tr>
+      <tr>
+        <td>Q2/2030</td>
+        <td>Hoàn thành 200 điểm thu gom + 200 điểm DRS</td>
+        <td>Mục tiêu đạt</td>
+      </tr>
+      <tr>
+        <td>Q4/2030</td>
+        <td>Tích hợp vào IOC, Digital Twin toàn TP</td>
+        <td>Báo cáo tổng kết</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="divider"></div>
+
+  <!-- ================================================================= -->
+  <!-- PHẦN VII                                                          -->
+  <!-- ================================================================= -->
+  <h2 class="section-title" id="phan-vii">PHẦN VII. NHU CẦU NGUỒN LỰC <a href="#top" class="anchor">↑</a></h2>
+
+  <h3>7.1. Nguồn lực tài chính</h3>
+  <p>Tổng nhu cầu vốn giai đoạn 2026–2030 khoảng <strong>4.500 – 6.000 tỷ đồng</strong>:</p>
+
+  <table>
+    <caption>Bảng 7.1. Cơ cấu nguồn vốn đầu tư</caption>
+    <thead>
+      <tr>
+        <th>Nguồn</th>
+        <th>Tỷ lệ</th>
+        <th>Giá trị (tỷ đồng)</th>
+        <th>Nội dung sử dụng</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Ngân sách Thành phố</td>
+        <td>25%</td>
+        <td>1.125 – 1.500</td>
+        <td>Đầu tư thiết bị, hạ tầng, đào tạo, truyền thông</td>
+      </tr>
+      <tr>
+        <td>Quỹ Đầu tư phát triển</td>
+        <td>35%</td>
+        <td>1.575 – 2.100</td>
+        <td>Cho vay ưu đãi theo NQ 39/2026</td>
+      </tr>
+      <tr>
+        <td>Xã hội hóa, PPP</td>
+        <td>30%</td>
+        <td>1.350 – 1.800</td>
+        <td>Đầu tư cơ sở xử lý, hệ thống thu gom, nền tảng số</td>
+      </tr>
+      <tr>
+        <td>Tài trợ quốc tế, ODA</td>
+        <td>10%</td>
+        <td>450 – 600</td>
+        <td>Chuyển giao công nghệ, đào tạo, nghiên cứu</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table>
+    <caption>Bảng 7.2. Phân bổ vốn theo 6 hợp phần</caption>
+    <thead>
+      <tr>
+        <th style="width: 10%;">STT</th>
+        <th style="width: 50%;">Hợp phần</th>
+        <th>Nhu cầu vốn (tỷ đồng)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>HP1</td>
+        <td>Chuỗi phân loại – thu gom – xử lý</td>
+        <td>110 – 155</td>
+      </tr>
+      <tr>
+        <td>HP2</td>
+        <td>Chuẩn hóa và nhân rộng công nghệ</td>
+        <td>420 – 610</td>
+      </tr>
+      <tr>
+        <td>HP3</td>
+        <td>Hệ thống dữ liệu và đo lường</td>
+        <td>85 – 125</td>
+      </tr>
+      <tr>
+        <td>HP4</td>
+        <td>Cơ chế tài chính và hỗ trợ doanh nghiệp</td>
+        <td>110 – 160</td>
+      </tr>
+      <tr>
+        <td>HP5</td>
+        <td>Thị trường sản phẩm tuần hoàn</td>
+        <td>130 – 180</td>
+      </tr>
+      <tr>
+        <td>HP6</td>
+        <td>Lồng ghép vào các lĩnh vực ưu tiên</td>
+        <td>120 – 170</td>
+      </tr>
+      <tr style="background: #dbeafe; font-weight: 700;">
+        <td colspan="2"><strong>TỔNG</strong></td>
+        <td><strong>975 – 1.400 (*)</strong></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p style="font-size: 13px; color: var(--gray-600); font-style: italic;">
+    (*) Ngoài ra, vốn cho các dự án đầu tư cơ sở xử lý (PPP) khoảng 1.500 – 2.000 tỷ đồng.
+  </p>
+
+  <h3>7.2. Nguồn lực nhân lực</h3>
+
+  <table>
+    <caption>Bảng 7.3. Nhu cầu nhân lực cho đề xuất</caption>
+    <thead>
+      <tr>
+        <th>Vị trí</th>
+        <th>Số lượng</th>
+        <th>Nhiệm vụ</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Chuyên gia IoT</td>
+        <td>3–5</td>
+        <td>Thiết kế, triển khai hệ thống cảm biến</td>
+      </tr>
+      <tr>
+        <td>Chuyên gia AI/ML</td>
+        <td>5–8</td>
+        <td>Phát triển mô hình nhận diện, dự báo, tối ưu hóa</td>
+      </tr>
+      <tr>
+        <td>Kỹ sư phần mềm</td>
+        <td>10–15</td>
+        <td>Xây dựng nền tảng, ứng dụng di động, dashboard</td>
+      </tr>
+      <tr>
+        <td>Chuyên gia blockchain</td>
+        <td>4–6</td>
+        <td>Thiết kế hệ thống truy xuất nguồn gốc</td>
+      </tr>
+      <tr>
+        <td>Chuyên gia GIS/Digital Twin</td>
+        <td>4–6</td>
+        <td>Xây dựng bản đồ số, mô phỏng đô thị</td>
+      </tr>
+      <tr>
+        <td>Chuyên gia MFA</td>
+        <td>3–5</td>
+        <td>Phân tích dòng vật chất</td>
+      </tr>
+      <tr>
+        <td>Chuyên gia tài chính xanh</td>
+        <td>3–5</td>
+        <td>Xây dựng mô hình tài chính, kết nối ngân hàng</td>
+      </tr>
+      <tr>
+        <td>Cán bộ đào tạo</td>
+        <td>5–7</td>
+        <td>Xây dựng chương trình, tổ chức đào tạo</td>
+      </tr>
+      <tr>
+        <td>Cán bộ vận hành</td>
+        <td>30–40</td>
+        <td>Vận hành hệ thống, hỗ trợ người dùng</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="divider"></div>
+
+  <!-- ================================================================= -->
+  <!-- PHẦN VIII                                                         -->
+  <!-- ================================================================= -->
+  <h2 class="section-title" id="phan-viii">PHẦN VIII. KẾT QUẢ DỰ KIẾN <a href="#top" class="anchor">↑</a></h2>
+
+  <h3>8.1. Kết quả định lượng đến 2030</h3>
+
+  <table>
+    <caption>Bảng 8.1. Bảng chỉ tiêu kết quả trước và sau triển khai</caption>
+    <thead>
+      <tr>
+        <th>Chỉ tiêu</th>
+        <th>Trước triển khai (2026)</th>
+        <th>Sau triển khai (2030)</th>
+        <th>Mức tăng</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Tỷ lệ rác hữu cơ xử lý tuần hoàn</td>
+        <td>10%</td>
+        <td><strong>≥ 60%</strong></td>
+        <td><span class="badge badge-green">+50 điểm %</span></td>
+      </tr>
+      <tr>
+        <td>Tỷ lệ chất thải rắn xây dựng tái chế</td>
+        <td>&lt; 20%</td>
+        <td><strong>≥ 60%</strong></td>
+        <td><span class="badge badge-green">+40 điểm %</span></td>
+      </tr>
+      <tr>
+        <td>Số khu công nghiệp sinh thái</td>
+        <td>0</td>
+        <td><strong>≥ 5</strong></td>
+        <td><span class="badge badge-green">+5</span></td>
+      </tr>
+      <tr>
+        <td>DN nhỏ và vừa hỗ trợ chuyển đổi xanh</td>
+        <td>0</td>
+        <td><strong>≥ 500</strong></td>
+        <td><span class="badge badge-green">+500</span></td>
+      </tr>
+      <tr>
+        <td>Số điểm thu gom chất thải tái chế</td>
+        <td>100</td>
+        <td><strong>≥ 200</strong></td>
+        <td><span class="badge badge-green">+100</span></td>
+      </tr>
+      <tr>
+        <td>Tỷ lệ mua sắm công từ sản phẩm xanh</td>
+        <td>&lt; 10%</td>
+        <td><strong>≥ 35%</strong></td>
+        <td><span class="badge badge-green">+25 điểm %</span></td>
+      </tr>
+      <tr>
+        <td>Số người dùng app tiêu dùng xanh</td>
+        <td>0</td>
+        <td><strong>≥ 500.000</strong></td>
+        <td><span class="badge badge-green">+500.000</span></td>
+      </tr>
+      <tr>
+        <td>Số điểm DRS</td>
+        <td>0</td>
+        <td><strong>200</strong></td>
+        <td><span class="badge badge-green">+200</span></td>
+      </tr>
+      <tr>
+        <td>Số cơ sở xử lý rác hữu cơ</td>
+        <td>1</td>
+        <td><strong>5–8</strong></td>
+        <td><span class="badge badge-green">+4 đến +7</span></td>
+      </tr>
+      <tr>
+        <td>Lượng phát thải CO₂ tránh được</td>
+        <td>55.000 tấn/năm</td>
+        <td><strong>500.000–750.000 tấn/năm</strong></td>
+        <td><span class="badge badge-green">+9 đến +13 lần</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>8.2. Kết quả định tính</h3>
+  <ul>
+    <li><strong>Chuyển đổi nhận thức và hành vi:</strong> Người dân, doanh nghiệp và cơ quan quản lý thay đổi hành vi theo hướng bền vững.</li>
+    <li><strong>Hình thành hệ sinh thái kinh tế tuần hoàn:</strong> Các mô hình được kết nối thành chuỗi giá trị hoàn chỉnh.</li>
+    <li><strong>Nâng cao năng lực cạnh tranh:</strong> Doanh nghiệp giảm chi phí, nâng cao năng suất tài nguyên.</li>
+    <li><strong>Cải thiện chất lượng môi trường:</strong> Giảm ô nhiễm, giảm phát thải khí nhà kính.</li>
+    <li><strong>Tạo việc làm xanh:</strong> Hệ thống DRS tạo 9.600 việc làm mới.</li>
+    <li><strong>Nâng cao vị thế của Hà Nội:</strong> Trở thành đô thị đi đầu trong khu vực về kinh tế tuần hoàn.</li>
+  </ul>
+
+  <div class="divider"></div>
+
+  <!-- ================================================================= -->
+  <!-- PHẦN IX                                                           -->
+  <!-- ================================================================= -->
+  <h2 class="section-title" id="phan-ix">PHẦN IX. RỦI RO VÀ BIỆN PHÁP GIẢM THIỂU <a href="#top" class="anchor">↑</a></h2>
+
+  <table>
+    <caption>Bảng 9.1. Ma trận rủi ro và biện pháp giảm thiểu</caption>
+    <thead>
+      <tr>
+        <th style="width: 5%;">STT</th>
+        <th style="width: 25%;">Rủi ro</th>
+        <th style="width: 15%;">Mức độ</th>
+        <th>Biện pháp giảm thiểu</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Phân loại rác tại nguồn không hiệu quả</td>
+        <td><span class="badge badge-red">Cao</span></td>
+        <td>Truyền thông; chế tài xử phạt; túi tiêu chuẩn gắn thu phí theo khối lượng</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>DN không tiếp cận được chính sách ưu đãi</td>
+        <td><span class="badge badge-orange">Trung bình</span></td>
+        <td>Công cụ tự đánh giá trực tuyến; cơ chế "một cửa"</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Công nghệ không phù hợp điều kiện địa phương</td>
+        <td><span class="badge badge-orange">Trung bình</span></td>
+        <td>Chuẩn hóa công nghệ nhiều quy mô; thí điểm trước khi nhân rộng</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Thiếu nguồn lực tài chính</td>
+        <td><span class="badge badge-orange">Trung bình</span></td>
+        <td>Huy động đa dạng nguồn; ưu tiên hợp phần hiệu quả nhanh</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>Mua sắm công xanh không thực thi nghiêm</td>
+        <td><span class="badge badge-green">Thấp</span></td>
+        <td>Đưa tiêu chí xanh vào quy trình đấu thầu; kiểm tra định kỳ</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>Thị trường sản phẩm tái chế không ổn định</td>
+        <td><span class="badge badge-orange">Trung bình</span></td>
+        <td>Mua sắm công xanh; nhãn sản phẩm; kết nối cung – cầu</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>Dữ liệu các sở ngành không đồng bộ</td>
+        <td><span class="badge badge-red">Cao</span></td>
+        <td>Từ điển dữ liệu chuẩn; kiểm tra chất lượng tự động; đào tạo</td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td>Nông dân thiếu kỹ năng số</td>
+        <td><span class="badge badge-orange">Trung bình</span></td>
+        <td>Giao diện đơn giản; tập huấn trực tiếp; hotline hỗ trợ</td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td>Rủi ro bảo mật dữ liệu</td>
+        <td><span class="badge badge-orange">Trung bình</span></td>
+        <td>Mã hóa; phân quyền; tuân thủ Nghị định 13/2023/NĐ-CP</td>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td>Thiếu nhân lực vận hành</td>
+        <td><span class="badge badge-orange">Trung bình</span></td>
+        <td>Đào tạo cán bộ; hợp tác trường đại học; thuê ngoài vận hành</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="divider"></div>
+
+  <!-- ================================================================= -->
+  <!-- PHẦN X                                                            -->
+  <!-- ================================================================= -->
+  <h2 class="section-title" id="phan-x">PHẦN X. KẾT LUẬN VÀ KIẾN NGHỊ <a href="#top" class="anchor">↑</a></h2>
+
+  <h3>10.1. Kết luận</h3>
+  <p>Bài toán lớn số 29 về phát triển kinh tế xanh, kinh tế tuần hoàn là một trong những nhiệm vụ chiến lược, có tính hệ thống và liên ngành cao của Thủ đô Hà Nội trong giai đoạn 2026–2030. Hà Nội đã có đầy đủ khung pháp lý, các mô hình thí điểm đã chứng minh hiệu quả, và nguồn lực tài chính tương đối thuận lợi.</p>
+
+  <h3>10.2. Bảy kiến nghị với UBND Thành phố và Sở KH&amp;CN</h3>
+
+  <div class="box box-purple">
+    <ol style="margin-left: 20px;">
+      <li><strong>Phê duyệt Đề xuất giải pháp KHCN này</strong> làm cơ sở để triển khai giải quyết Bài toán lớn số 29.</li>
+      <li><strong>Giao Sở Khoa học và Công nghệ</strong> chủ trì, phối hợp với các sở, ban, ngành liên quan xây dựng Kế hoạch chi tiết triển khai trong Quý IV/2026.</li>
+      <li><strong>Bố trí nguồn vốn</strong> cho các hoạt động của Đề xuất trong kế hoạch đầu tư công và dự toán ngân sách hàng năm, bắt đầu từ năm 2027, với tổng nhu cầu khoảng <strong>4.500 – 6.000 tỷ đồng</strong>.</li>
+      <li><strong>Thành lập Tổ công tác liên ngành</strong> về kinh tế tuần hoàn do lãnh đạo Sở Khoa học và Công nghệ làm Tổ trưởng.</li>
+      <li><strong>Báo cáo Thường trực HĐND Thành phố</strong> về Đề xuất và đề xuất bổ sung chính sách hỗ trợ chi phí tiền khả thi và chứng nhận dự án tuần hoàn vào Nghị quyết 39/2026/NQ-HĐND.</li>
+      <li><strong>Phối hợp với các Bộ, ngành Trung ương</strong> (Bộ KH&amp;CN, Bộ NN&amp;PTNT, Bộ TN&amp;MT, Bộ CT) và các tổ chức quốc tế để tranh thủ hỗ trợ kỹ thuật và tài chính.</li>
+      <li><strong>Báo cáo UBND Thành phố định kỳ 6 tháng/lần</strong> về tiến độ triển khai và kết quả đạt được.</li>
+    </ol>
+  </div>
+
+  <!-- ========== SIGNATURE ========== -->
+  <div class="signature">
+    <div class="signature-box">
+      <div class="role">NHÓM NGHIÊN CỨU</div>
+      <div class="role">CHỦ NHIỆM ĐỀ XUẤT</div>
+      <div class="name">TS. Nguyễn Huy Cường</div>
+      <div style="margin-top: 10px; font-size: 12px; color: #64748b; font-style: italic;">(Đã ký)</div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ================================================================= -->
+  <!-- PHỤ LỤC A: MA TRẬN RACI                                           -->
+  <!-- ================================================================= -->
+  <h2 class="section-title" id="phu-luc-a">PHỤ LỤC A. MA TRẬN RACI <a href="#top" class="anchor">↑</a></h2>
+
+  <p>Ma trận RACI (Responsible – Accountable – Consulted – Informed) xác định vai trò của các bên liên quan trong từng hợp phần:</p>
+
+  <table>
+    <caption>Bảng A.1. Ma trận RACI phân công trách nhiệm</caption>
+    <thead>
+      <tr>
+        <th style="width: 25%;">Hợp phần / Cơ quan</th>
+        <th>Sở KH&amp;CN</th>
+        <th>Sở NN&amp;MT</th>
+        <th>Sở CT</th>
+        <th>Sở TC</th>
+        <th>Ban QL KCN</th>
+        <th>UBND xã, phường</th>
+        <th>URENCO</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>HP1: Chuỗi phân loại – thu gom</strong></td>
+        <td>C</td>
+        <td><strong>A/R</strong></td>
+        <td>C</td>
+        <td>I</td>
+        <td>I</td>
+        <td><strong>R</strong></td>
+        <td><strong>R</strong></td>
+      </tr>
+      <tr>
+        <td><strong>HP2: Chuẩn hóa công nghệ</strong></td>
+        <td><strong>A/R</strong></td>
+        <td><strong>R</strong></td>
+        <td>I</td>
+        <td>C</td>
+        <td>C</td>
+        <td>I</td>
+        <td>C</td>
+      </tr>
+      <tr>
+        <td><strong>HP3: Hệ thống dữ liệu</strong></td>
+        <td><strong>A/R</strong></td>
+        <td><strong>R</strong></td>
+        <td><strong>R</strong></td>
+        <td>C</td>
+        <td><strong>R</strong></td>
+        <td>I</td>
+        <td>C</td>
+      </tr>
+      <tr>
+        <td><strong>HP4: Cơ chế tài chính</strong></td>
+        <td><strong>A/R</strong></td>
+        <td>C</td>
+        <td>I</td>
+        <td><strong>R</strong></td>
+        <td><strong>R</strong></td>
+        <td>I</td>
+        <td>I</td>
+      </tr>
+      <tr>
+        <td><strong>HP5: Thị trường sản phẩm</strong></td>
+        <td><strong>R</strong></td>
+        <td>C</td>
+        <td><strong>A/R</strong></td>
+        <td>C</td>
+        <td>C</td>
+        <td>I</td>
+        <td>C</td>
+      </tr>
+      <tr>
+        <td><strong>HP6: Lồng ghép lĩnh vực</strong></td>
+        <td><strong>A/R</strong></td>
+        <td><strong>R</strong></td>
+        <td>C</td>
+        <td>I</td>
+        <td>C</td>
+        <td><strong>R</strong></td>
+        <td><strong>R</strong></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p style="font-size: 13px; color: var(--gray-600);">
+    <strong>Chú thích:</strong> <strong>A</strong> = Accountable (Chịu trách nhiệm chính) · <strong>R</strong> = Responsible (Thực hiện) · <strong>C</strong> = Consulted (Tham vấn) · <strong>I</strong> = Informed (Được thông báo)
+  </p>
+
+  <div class="divider"></div>
+
+  <!-- ================================================================= -->
+  <!-- PHỤ LỤC B: BẢNG KPI CHI TIẾT                                      -->
+  <!-- ================================================================= -->
+  <h2 class="section-title" id="phu-luc-b">PHỤ LỤC B. BẢNG KPI CHI TIẾT THEO GIAI ĐOẠN <a href="#top" class="anchor">↑</a></h2>
+
+  <table>
+    <caption>Bảng B.1. Bộ KPI chi tiết theo giai đoạn triển khai</caption>
+    <thead>
+      <tr>
+        <th style="width: 30%;">KPI</th>
+        <th>GĐ1 (2027)</th>
+        <th>GĐ2 (2028)</th>
+        <th>GĐ3 (2030)</th>
+        <th>Cơ quan đo lường</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Số phường triển khai túi tiêu chuẩn</td>
+        <td>5</td>
+        <td>30–50</td>
+        <td>≥ 200</td>
+        <td>Sở NN&amp;MT</td>
+      </tr>
+      <tr>
+        <td>Số KCN có hệ thống cân bằng vật chất</td>
+        <td>3</td>
+        <td>5</td>
+        <td>5+</td>
+        <td>Sở KH&amp;CN</td>
+      </tr>
+      <tr>
+        <td>Số cơ sở xử lý rác hữu cơ</td>
+        <td>0</td>
+        <td>3–5</td>
+        <td>5–8</td>
+        <td>Sở NN&amp;MT</td>
+      </tr>
+      <tr>
+        <td>Số điểm DRS</td>
+        <td>15</td>
+        <td>50</td>
+        <td>200</td>
+        <td>Sở NN&amp;MT</td>
+      </tr>
+      <tr>
+        <td>Số điểm thu gom rác tái chế</td>
+        <td>30</td>
+        <td>100</td>
+        <td>200</td>
+        <td>Sở NN&amp;MT</td>
+      </tr>
+      <tr>
+        <td>Số DN sử dụng công cụ tự đánh giá</td>
+        <td>100</td>
+        <td>500</td>
+        <td>3.000</td>
+        <td>Sở KH&amp;CN</td>
+      </tr>
+      <tr>
+        <td>Số DN nhỏ và vừa được đào tạo</td>
+        <td>50</td>
+        <td>200</td>
+        <td>500</td>
+        <td>Sở KH&amp;CN</td>
+      </tr>
+      <tr>
+        <td>Số người dùng app tiêu dùng xanh</td>
+        <td>10.000</td>
+        <td>100.000</td>
+        <td>500.000</td>
+        <td>Sở TT&amp;TT</td>
+      </tr>
+      <tr>
+        <td>Tỷ lệ mua sắm công xanh</td>
+        <td>15%</td>
+        <td>25%</td>
+        <td>35%</td>
+        <td>Sở TC</td>
+      </tr>
+      <tr>
+        <td>Tỷ lệ rác hữu cơ tuần hoàn</td>
+        <td>20%</td>
+        <td>40%</td>
+        <td>60%</td>
+        <td>Sở NN&amp;MT</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="divider"></div>
+
+  <!-- ================================================================= -->
+  <!-- TÀI LIỆU THAM KHẢO                                                -->
+  <!-- ================================================================= -->
+  <h2 class="section-title" id="tai-lieu">TÀI LIỆU THAM KHẢO <a href="#top" class="anchor">↑</a></h2>
+
+  <div class="footnotes">
+    <h3>Chú thích và nguồn tham chiếu</h3>
+    <ol>
+      <li id="fn1">
+        UBND thành phố Hà Nội (2025), <em>Báo cáo công tác bảo vệ môi trường</em>, Sở Nông nghiệp và Môi trường Hà Nội.
+      </li>
+      <li id="fn2">
+        Sở Tài nguyên và Môi trường Hà Nội (2025), <em>Kết quả kiểm kê nguồn thải và đánh giá chất lượng không khí</em>.
+        <a href="https://hanoi.gov.vn" class="external" target="_blank" rel="noopener">hanoi.gov.vn</a>
+      </li>
+      <li id="fn3">
+        HĐND thành phố Hà Nội (2026), <em>Nghị quyết số 39/2026/NQ-HĐND ngày 15/6/2026</em> quy định chính sách ưu đãi, hỗ trợ hoạt động sản xuất, kinh doanh áp dụng mô hình kinh tế tuần hoàn.
+        <a href="https://hanoi.gov.vn" class="external" target="_blank" rel="noopener">hanoi.gov.vn</a>
+      </li>
+      <li id="fn4">
+        Ellen MacArthur Foundation (2013), <em>Towards the Circular Economy: Economic and Business Rationale for an Accelerated Transition</em>.
+        <a href="https://ellenmacarthurfoundation.org" class="external" target="_blank" rel="noopener">ellenmacarthurfoundation.org</a>
+      </li>
+      <li id="fn5">
+        Đại sứ quán Na Uy tại Việt Nam (2024), <em>Báo cáo nghiên cứu về tiềm năng áp dụng DRS tại Việt Nam</em>.
+      </li>
+      <li id="fn6">
+        Sở Khoa học và Công nghệ Hà Nội (2025), <em>Báo cáo kết quả thí điểm công nghệ lên men bán khô tại Trạm Phú Minh</em>.
+      </li>
+      <li id="fn7">
+        Viện Khoa học công nghệ xây dựng AIST (Nhật Bản), <em>Nghiên cứu ứng dụng IoT và dữ liệu số vào quản lý tuyến thu gom</em>.
+      </li>
+      <li id="fn8">
+        Nhóm nghiên cứu EcoBin (2024), <em>Thùng rác tích hợp AI phân loại rác</em>, Trường THPT Nhân Chính, Hà Nội; dự án Binsity (Hà Nội).
+      </li>
+      <li id="fn9">
+        Chính phủ Việt Nam (2026), <em>Quyết định số 46/2026/QĐ-TTg ngày 22/9/2026</em> hướng dẫn xác định dự án xanh, dự án tuần hoàn và áp dụng khung tiêu chuẩn ESG.
+        <a href="https://vanban.chinhphu.vn" class="external" target="_blank" rel="noopener">vanban.chinhphu.vn</a>
+      </li>
+      <li id="fn10">
+        Tech Mahindra (2024), <em>i.GreenFinance – AI-powered sustainable lending platform</em>.
+        <a href="https://www.techmahindra.com" class="external" target="_blank" rel="noopener">techmahindra.com</a>
+      </li>
+      <li id="fn11">
+        Sở Xây dựng Hà Nội (2026), <em>Đề án Vùng phát thải thấp (LEZ) tại Vành đai 1</em>.
+      </li>
+      <li id="fn12">
+        Nghiên cứu quốc tế về Digital Twin cho Smart Metabolic Circular Cities (2023–2025).
+        <a href="https://www.sciencedirect.com" class="external" target="_blank" rel="noopener">sciencedirect.com</a>
+      </li>
+    </ol>
+
+    <h3 style="margin-top: 25px;">Liên kết hữu ích</h3>
+    <ul style="font-size: 13px;">
+      <li><a href="https://ellenmacarthurfoundation.org" class="external" target="_blank" rel="noopener">Ellen MacArthur Foundation – Circular Economy</a></li>
+      <li><a href="https://ec.europa.eu/eurostat/web/circular-economy" class="external" target="_blank" rel="noopener">Eurostat – Circular Economy Indicators</a></li>
+      <li><a href="https://www.unep.org" class="external" target="_blank" rel="noopener">UN Environment Programme</a></li>
+      <li><a href="https://hanoi.gov.vn" class="external" target="_blank" rel="noopener">Cổng thông tin điện tử UBND thành phố Hà Nội</a></li>
+      <li><a href="https://vanban.chinhphu.vn" class="external" target="_blank" rel="noopener">Cơ sở dữ liệu văn bản pháp luật Chính phủ</a></li>
+      <li><a href="https://most.gov.vn" class="external" target="_blank" rel="noopener">Bộ Khoa học và Công nghệ</a></li>
+    </ul>
+  </div>
+
+  <!-- ========== FOOTER ========== -->
+  <div style="margin-top: 60px; padding-top: 20px; border-top: 2px solid var(--gray-200); text-align: center; font-size: 12px; color: var(--gray-500);">
+    <p><strong>Tài liệu tham mưu giải pháp khoa học công nghệ</strong></p>
+    <p>Bài toán lớn số 29 · Danh mục 30 bài toán lớn Hà Nội 2026–2030 · Quyết định 193/QĐ-UBND ngày 18/3/2026</p>
+    <p>Mã số văn bản: ĐX-KHCN-2026/29 · Nhóm nghiên cứu TS. Nguyễn Huy Cường</p>
+    <p style="margin-top: 10px;">© 2026 – Báo cáo được bảo vệ theo quy định về sở hữu trí tuệ</p>
+  </div>
+
+</div>
+
+<script>
+  // Back to top smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      const targetId = this.getAttribute('href');
+      if (targetId === '#') return;
+      const target = document.querySelector(targetId);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
+  // Highlight active section on scroll
+  window.addEventListener('scroll', () => {
+    const sections = document.querySelectorAll('h2.section-title');
+    const navLinks = document.querySelectorAll('.top-nav .nav-links a');
+    let current = '';
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      if (window.scrollY >= sectionTop - 100) {
+        current = section.getAttribute('id');
+      }
+    });
+    navLinks.forEach(link => {
+      link.style.background = '';
+      link.style.color = '';
+      if (link.getAttribute('href') === '#' + current) {
+        link.style.background = '#1e3a8a';
+        link.style.color = '#fff';
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
